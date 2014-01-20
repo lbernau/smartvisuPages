@@ -14,7 +14,11 @@ window.applicationCache.addEventListener('updateready',	updateSite, false);
  * timeout is in milliseconds; defaults to 30000
  */
 $(document).on('pageinit', function(event) {
-	if (jQuery().idleTimer && event.target.id !== 'qlock' && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i) != null) {
+	if (
+		jQuery().idleTimer && event.target.id !== 'qlock' 
+		&& navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i) != null
+		&& (Modernizr && Modernizr.mq('(min-width: 768px)'))
+	) {
 		$.idleTimer(120000, document); //2 minutes
 	}
 });
