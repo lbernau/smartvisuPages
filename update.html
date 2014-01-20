@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+{% include "stats/navigation.html" %}
+
+{% endblock %}
+		
+{% block content %}
+
+<h1><img class="icon" src='{{ icon0 }}light_light.png'/>Update VISU</h1>
+<hr />
+<div class="block" style="width: 100%">
+	<div class="set-5" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Run "git pull"</h3>
+			{{ basic.trigger('triggerUpdate', 'updateSmartVISU', '', 'refresh', 1, 'midi') }}
+		</div>
+	</div>
+</div>
+		
+{% endblock %}
