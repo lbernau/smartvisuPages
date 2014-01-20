@@ -1,0 +1,62 @@
+{% extends "rooms.html" %}
+
+{% block content %}
+{% import "widgets/widget_rtr_extended.html" as ext %}
+<h1><img class="icon" src="{{ icon0 }}scene_stairs.png"/>Flur</h1>
+<hr />
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Licht</h3>
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtFlurDecke', 'eg.licht.diele.decke', icon1~'light_ceiling_light.png', icon0~'light_ceiling_light.png') }} </td>
+					<td>Decke</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtFlurBoard', 'eg.steckdosen.diele.leuchte', icon1~'light_bedside.png', icon0~'light_bedside.png') }} </td>
+					<td>Sideboard</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtFlurTreppe', 'eg.licht.treppe.wand', icon1~'light_stairs.png', icon0~'light_stairs.png') }} </td>
+					<td>Treppe</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Heizung</h3>
+			{{ ext.rtr('heizenDiele', '', 'eg.heizen.diele.ist', '', '', 'eg.heizen.diele.modus', 'eg.heizen.diele.modus', 'eg.heizen.diele.modus', 'eg.heizen.diele.heizen') }}
+			<br /><br />
+			{{ basic.symbol('statusFensterDieleOffen', 'eg.fenster.diele', 'Fenster geöffnet', icon0~'fts_door_open.png', 1) }}
+			{{ basic.symbol('statusFensterDieleZu', 'eg.fenster.diele', 'Fenster geschlossen', icon1~'fts_door.png', 0) }}
+		</div>
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Rollladen</h3>
+			{{ device.shutter('rolladenDiele', '', 'eg.rollos.diele.fahren', 'eg.rollos.diele.stop', 'eg.rollos.diele.position') }}
+		</div>
+
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Temperaturverlauf</h3>
+			{{ plot.rtr('rtrPlotDiele', 'eg.heizen.diele.ist', 'eg.heizen.diele.soll', 'eg.heizen.diele.heizen')}}
+		</div>
+	</div>
+</div>
+		
+{% endblock %}
+

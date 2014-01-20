@@ -1,0 +1,117 @@
+{% import "widgets/widget_rtr_small.html" as smallrtr %}
+
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+{% include "stats/navigation.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div data-role="navbar" class="nav-custom visible-phone">
+	<ul>
+		<li><a href="index.php?page=stats/licht" class="licht" data-icon="custom">Licht</a></li>
+		<li><a href="index.php?page=stats/rolllaeden" class="rollos" data-icon="custom">Rollläden</a></li>
+		<li><a href="index.php?page=stats/heizung" class="ui-btn-active ui-state-persist heizung" data-icon="custom">Heizung</a></li>
+		<li><a href="index.php?page=stats/smarthome" class="smarthome" data-icon="custom">Smarthome</a></li>
+		<li><a href="index.php?page=stats/system" class="system" data-icon="custom">System</a></li>
+	</ul>
+</div>
+		
+<h1 class="visible-tablet"><img class="icon" src='{{ icon0 }}sani_heating_temp.png'/>Temperaturen Heizung</h1>
+<hr />
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Erdgeschoss</h3>
+			<table width="100%" style="text-align: left;">
+				<tr>
+					<td width="20%"></td>
+					<td width="10%">Ist</td>
+					<td width="10%"></td>
+					<td width="10%">Soll</td>
+					<td width="10%"></td>
+					<td width="10%">Heizen</td>
+				</tr>
+			</table>
+			{{ smallrtr.one ('srtr_kueche', 'Küche', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.sollwertverschiebung', 'eg.heizen.kueche.heizen') }}
+			{{ smallrtr.one ('srtr_wz', 'Wohnzimmer', 'eg.heizen.wohnzimmer.ist', 'eg.heizen.wohnzimmer.soll', 'eg.heizen.wohnzimmer.sollwertverschiebung', 'eg.heizen.wohnzimmer.heizen') }}
+			{{ smallrtr.one ('srtr_gwc', 'Gäste WC', 'eg.heizen.wc.ist', 'eg.heizen.wc.soll', 'eg.heizen.wc.sollwertverschiebung', 'eg.heizen.wc.heizen') }}
+			{{ smallrtr.one ('srtr_dieg', 'Flur', 'eg.heizen.diele.ist', 'eg.heizen.diele.soll', 'eg.heizen.diele.sollwertverschiebung', 'eg.heizen.diele.heizen') }}
+		</div>
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Obergeschoss</h3>
+			<table width="100%" style="text-align: left;">
+				<tr>
+					<td width="20%"></td>
+					<td width="10%">Ist</td>
+					<td width="10%"></td>
+					<td width="10%">Soll</td>
+					<td width="10%"></td>
+					<td width="10%">Heizen</td>
+				</tr>
+			</table>
+			{{ smallrtr.one ('srtr_kind2', 'Büro', 'og.heizen.kind_2.ist', 'og.heizen.kind_2.soll', 'og.heizen.kind_2.sollwertverschiebung', 'og.heizen.kind_2.heizen') }}
+			{{ smallrtr.one ('srtr_kind1', 'Gästezimmer', 'og.heizen.kind_1.ist', 'og.heizen.kind_1.soll', 'og.heizen.kind_1.sollwertverschiebung', 'og.heizen.kind_1.heizen') }}
+			{{ smallrtr.one ('srtr_schlafen', 'Schlafzimmer', 'og.heizen.schlafzimmer.ist', 'og.heizen.schlafzimmer.soll', 'og.heizen.schlafzimmer.sollwertverschiebung', 'og.heizen.schlafzimmer.heizen') }}
+			{{ smallrtr.one ('srtr_bad', 'Bad', 'og.heizen.bad.ist', 'og.heizen.bad.soll', 'og.heizen.bad.sollwertverschiebung', 'og.heizen.bad.heizen') }}
+		</div>
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Keller</h3>
+			<table width="100%" style="text-align: left;">
+				<tr>
+					<td width="20%"></td>
+					<td width="10%">Ist</td>
+					<td width="10%"></td>
+					<td width="10%">Soll</td>
+					<td width="10%"></td>
+					<td width="10%">Heizen</td>
+				</tr>
+			</table>
+			{{ smallrtr.one ('srtr_multimedia', 'Hobby', 'kg.heizen.multimedia.ist', 'kg.heizen.multimedia.soll', 'kg.heizen.multimedia.sollwertverschiebung', 'kg.heizen.multimedia.heizen') }}
+			{{ smallrtr.one ('srtr_waschen', 'Waschen', 'kg.heizen.waschen.ist', 'kg.heizen.waschen.soll', 'kg.heizen.waschen.sollwertverschiebung', 'kg.heizen.waschen.heizen') }}
+			{{ smallrtr.one ('srtr_hobby', 'Werkstatt', 'kg.heizen.hobby.ist', 'kg.heizen.hobby.soll', 'kg.heizen.hobby.sollwertverschiebung', 'kg.heizen.hobby.heizen') }}
+		</div>
+	</div>
+</div>	
+	
+<div class="block" style="width: 100%;">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Temperaturverlauf EG</h3>
+			{{ plot.period('tempEG', ['eg.heizen.kueche.ist', 'eg.heizen.wohnzimmer.ist','eg.heizen.wc.ist','eg.heizen.diele.ist'], 'max', '7d', '', '19.5', '24', '', ['Küche', 'Wohnzimmer','Gäste WC','Flur'], ['#3366ff', '#ff3366', '#ffff33', '#33ffff'], ['line', 'line', 'line', 'line'],['Temperatur in °C', ''] ) }}
+		</div>
+	</div>
+</div>
+
+<div class="block" style="width: 100%;">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Temperaturverlauf OG</h3>
+			{{ plot.period('tempOG', ['og.heizen.kind_2.ist', 'og.heizen.kind_1.ist','og.heizen.schlafzimmer.ist','og.heizen.bad.ist'], 'max', '7d', '', '19.5', '24', '', ['Büro', 'Gästezimmer','Schlafzimmer','Bad'], ['#3366ff', '#ff3366', '#ffff33', '#33ffff'], ['line', 'line', 'line', 'line'],['Temperatur in °C', ''] ) }}
+		</div>
+	</div>
+</div>
+
+<div class="block" style="width: 100%;">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Temperaturverlauf Keller</h3>
+			{{ plot.period('tempKG', ['kg.heizen.multimedia.ist', 'kg.heizen.waschen.ist','kg.heizen.hobby.ist'], 'max', '7d', '', '19.5', '24', '', ['Hobby', 'Waschen','Werkstatt'], ['#3366ff', '#ff3366', '#ffff33'], ['line', 'line', 'line'],['Temperatur in °C', ''] ) }}
+		</div>
+	</div>
+</div>
+{% endblock %}

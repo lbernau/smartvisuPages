@@ -1,0 +1,42 @@
+{% extends "rooms.html" %}
+
+{% block content %}
+
+<style>
+	.nav-custom .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+	.nav-custom .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+	.eingang .ui-icon { background:  url({{ icon0 }}status_away_2.png) 50% 50% no-repeat; background-size: 36px 36px; }
+	.garage .ui-icon { background:  url({{ icon0 }}fts_garage.png) 50% 50% no-repeat; background-size: 36px 36px;  }
+	.garten .ui-icon { background:  url({{ icon0 }}scene_garden.png) 50% 50% no-repeat;  background-size: 36px 36px; }
+</style>
+
+<h1><img class="icon" src='{{ icon0 }}control_building_outside.png' />Außenanlagen</h1>
+<div data-role="navbar" class="nav-custom">
+	<ul>
+		<li><a href="index.php?page=floors/eg/eingang" class="eingang" data-icon="custom">Eingang</a></li>
+		<li><a href="index.php?page=floors/eg/garten" class="garten" data-icon="custom">Garten</a></li>
+		<li><a href="index.php?page=floors/eg/garage" class="ui-btn-active ui-state-persist garage" data-icon="custom">Garage</a></li>
+	</ul>
+</div>
+
+<hr />	
+		
+<div class="block">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Licht</h3>
+		</div>
+	</div>
+</div>
+<div class="block">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Heizung</h3>
+		</div>
+	</div>
+</div>
+<h3>Temperaturverlauf</h3>
+{{ plot.period('p21', 'EG.Bad.temperature', 'avg', '12h') }}
+
+{% endblock %}
+

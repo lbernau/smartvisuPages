@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+{% include "stats/navigation.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div data-role="navbar" class="nav-custom visible-phone">
+	<ul>
+		<li><a href="index.php?page=stats/licht" class="ui-btn-active  ui-state-persist licht" data-icon="custom">Licht</a></li>
+		<li><a href="index.php?page=stats/rolllaeden" class="rollos" data-icon="custom">Rollläden</a></li>
+		<li><a href="index.php?page=stats/heizung" class="heizung" data-icon="custom">Heizung</a></li>
+		<li><a href="index.php?page=stats/smarthome" class="smarthome" data-icon="custom">Smarthome</a></li>
+		<li><a href="index.php?page=stats/system" class="system" data-icon="custom">System</a></li>
+	</ul>
+</div>
+
+<h1 class="visible-tablet"><img class="icon" src='{{ icon0 }}light_light.png'/>Licht</h1>
+<hr />
+<div class="block" style="width: 100%">
+	<div class="set-5" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Zentral aus</h3>
+			{{ basic.button('lichtZentralAus', 'zentral.licht', '', icon0~'control_on_off.png', 0, 'midi') }}
+		</div>
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Erdgeschoss</h3>
+	
+		</div>
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Obergeschoss</h3>
+
+		</div>
+	</div>
+</div>
+{% endblock %}

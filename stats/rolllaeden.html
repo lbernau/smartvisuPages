@@ -1,0 +1,69 @@
+{% import "widgets/widget_shutter_small.html" as smallshutter %}
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+{% include "stats/navigation.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div data-role="navbar" class="nav-custom visible-phone">
+	<ul>
+		<li><a href="index.php?page=stats/licht" class="licht" data-icon="custom">Licht</a></li>
+		<li><a href="index.php?page=stats/rolllaeden" class="ui-btn-active ui-state-persist  rollos" data-icon="custom">Rollläden</a></li>
+		<li><a href="index.php?page=stats/heizung" class="heizung" data-icon="custom">Heizung</a></li>
+		<li><a href="index.php?page=stats/smarthome" class="smarthome" data-icon="custom">Smarthome</a></li>
+		<li><a href="index.php?page=stats/system" class="system" data-icon="custom">System</a></li>
+	</ul>
+</div>
+		
+<h1 class="visible-tablet"><img class="icon" src='{{ icon0 }}fts_shutter.png'/>Status Rollläden</h1>
+<hr />
+<div class="block" style="width: 100%">
+	<div class="set-5" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Zentral</h3>
+			{{ smallshutter.smallshut('sshut_zentral', 'Rolladen Gesamt', 'zentral.rollos.fahren', 'zentral.rollos.stop', '') }}
+		</div>
+	</div>
+</div>
+		
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Erdgeschoss</h3>		
+			{{ smallshutter.smallshut('sshut_wohnzimmer_links', 'Wohnzimmer links', 'eg.rollos.wohnzimmer.links.fahren', 'eg.rollos.wohnzimmer.links.stop', 'eg.rollos.wohnzimmer.links.position') }}
+			{{ smallshutter.smallshut('sshut_wohnzimmer_rechts', 'Wohnzimmer rechts', 'eg.rollos.wohnzimmer.rechts.fahren', 'eg.rollos.wohnzimmer.rechts.stop', 'eg.rollos.wohnzimmer.rechts.position') }}
+			{{ smallshutter.smallshut('sshut_kueche_links', 'Küche Links', 'eg.rollos.kueche.links.fahren', 'eg.rollos.kueche.links.stop', 'eg.rollos.kueche.links.position') }}
+			{{ smallshutter.smallshut('sshut_kueche_rechts', 'Küche Rechts', 'eg.rollos.kueche.rechts.fahren', 'eg.rollos.kueche.rechts.stop', 'eg.rollos.kueche.rechts.position') }}
+			{{ smallshutter.smallshut('sshut_wc', 'Gäste WC', 'eg.rollos.wc.fahren', 'eg.rollos.wc.stop', 'eg.rollos.wc.position') }}
+			{{ smallshutter.smallshut('sshut_diele', 'Flur', 'eg.rollos.diele.fahren', 'eg.rollos.diele.stop', 'eg.rollos.diele.position') }}
+		</div>
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Obergeschoss</h3>
+			{{ smallshutter.smallshut('sshut_schlafen_fenster', 'Schlafzimmer Fenster', 'og.rollos.schlafzimmer.fenster.fahren', 'og.rollos.schlafzimmer.fenster.stop', 'og.rollos.schlafzimmer.fenster.position') }}
+			{{ smallshutter.smallshut('sshut_schlafen_gaube', 'Schlafzimmer Tür', 'og.rollos.schlafzimmer.gaube.fahren', 'og.rollos.schlafzimmer.gaube.stop', 'og.rollos.schlafzimmer.gaube.position') }}
+			{{ smallshutter.smallshut('sshut_kind_2', 'Büro', 'og.rollos.kind_2.fahren', 'og.rollos.kind_2.stop', 'og.rollos.kind_2.position') }}
+			{{ smallshutter.smallshut('sshut_kind_1', 'Gästezimmer', 'og.rollos.kind_1.fahren', 'og.rollos.kind_1.stop', 'og.rollos.kind_1.position') }}
+			{{ smallshutter.smallshut('sshut_bad_fenster', 'Bad Fenster', 'og.rollos.bad.fenster.fahren', 'og.rollos.bad.fenster.stop', 'og.rollos.bad.fenster.position') }}
+			{{ smallshutter.smallshut('sshut_bad_velux', 'Bad Velux', 'og.rollos.bad.velux.fahren', 'og.rollos.bad.velux.stop', 'og.rollos.bad.velux.position') }}
+		</div>
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Obergeschoss</h3>
+			{{ smallshutter.smallshut('sshut_multimedia', 'Hobby', 'kg.rollos.multimedia.fahren', 'kg.rollos.multimedia.stop', 'kg.rollos.multimedia.position') }}
+		</div>
+	</div>
+</div>
+{% endblock %}

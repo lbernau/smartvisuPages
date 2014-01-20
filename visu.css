@@ -1,0 +1,76 @@
+@CHARSET "UTF-8";
+
+/* display background only on larger displays */
+@media all and (min-width: 600px) {
+	.page-bg {
+		background-image: url('../../pics/bg/smoke_spectrum.png');
+	}
+}
+
+.ui-li-aside .symbol .icon {
+	width: 32px;
+	height: 32px;
+}
+
+.block .set-1 .ui-collapsible-content {
+	min-height: 250px;
+}
+
+.block .set-4 .ui-collapsible-content {
+	min-height: 110px;
+	padding: 10px 5px 10px 5px;
+}
+
+.sunIcon {
+	border: 0px;
+	padding: 0px;
+	vertical-align: text-bottom;
+	width: 35px;
+}
+
+.moonIcon {
+	border: 0px;
+	padding: 0px;
+	vertical-align: text-bottom;
+	width: 35px;
+}
+
+.nav-custom .ui-btn .ui-btn-inner {
+	padding-top: 40px !important;
+}
+
+.nav-custom .ui-btn .ui-icon {
+	width: 30px !important;
+	height: 30px !important;
+	margin-left: -15px !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+
+.nav-custom .heizung .ui-icon {
+	background: url(../../icons/ws/sani_heating_temp.png) 50% 50% no-repeat;
+	background-size: 36px 36px;
+}
+
+.nav-custom .licht .ui-icon {
+	background: url(../../icons/ws/light_light.png) 50% 50% no-repeat;
+	background-size: 36px 36px;
+}
+
+.nav-custom .rollos .ui-icon {
+	background: url(../../icons/ws/fts_shutter.png) 50% 50% no-repeat;
+	background-size: 36px 36px;
+}
+
+.nav-custom .smarthome .ui-icon {
+	background: url(../../icons/ws/time_graph.png) 50% 50% no-repeat;
+	background-size: 36px 36px;
+}
+
+.nav-custom .system .ui-icon {
+	background: url(../../icons/ws/it_server.png) 50% 50% no-repeat;
+	background-size: 36px 36px;
+}

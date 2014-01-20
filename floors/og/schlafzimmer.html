@@ -1,0 +1,74 @@
+{% extends "rooms.html" %}
+
+{% block content %}
+{% import "widgets/widget_rtr_extended.html" as ext %}
+<h1><img class="icon" src="{{ icon0 }}scene_sleeping_alternat.png"/>Schlafzimmer</h1>
+<hr />
+
+<div class="block" >
+	<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Licht</h3>
+			{{ device.dimmer('lichtSchlafzimmer', 'Decke', 'og.licht.schlafzimmer.decke', 'og.licht.schlafzimmer.decke.dimmen') }}
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseBettLinks', 'og.steckdosen.schlafzimmer.bett_links', icon1~'light_bedside.png', icon0~'light_bedside.png') }} </td>
+					<td>Nachttisch Lars</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseBettRechts', 'og.steckdosen.schlafzimmer.bett_rechts', icon1~'light_bedside.png', icon0~'light_bedside.png') }} </td>
+					<td>Nachttisch Sarah</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKleiderschrank', 'og.licht.schlafzimmer.schrank', icon1~'light_dressing_room.png', icon0~'light_dressing_room.png') }} </td>
+					<td>Kleiderschrank</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Heizung</h3>
+			{{ ext.rtr('heizenSchlafzimmer', '', 'og.heizen.schlafzimmer.ist', '', '', 'og.heizen.schlafzimmer.modus', 'og.heizen.schlafzimmer.modus', 'og.heizen.schlafzimmer.modus', 'og.heizen.schlafzimmer.heizen') }}
+			<br /><br />
+			{{ basic.symbol('statusFensterSchlafzimmerOffen', 'og.fenster.schlafzimmer', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
+			{{ basic.symbol('statusFensterSchlafzimmerZu', 'og.fenster.schlafzimmer', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+		</div>
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Rollladen Fenster</h3>
+			{{ device.shutter('rolladenFenster', '', 'og.rollos.schlafzimmer.fenster.fahren', 'og.rollos.schlafzimmer.fenster.stop', 'og.rollos.schlafzimmer.fenster.position') }}
+		</div>
+
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Rollladen Tür</h3>
+			{{ device.shutter('rolladenGaube', '', 'og.rollos.schlafzimmer.gaube.fahren', 'og.rollos.schlafzimmer.gaube.stop', 'og.rollos.schlafzimmer.gaube.position') }}
+		</div>
+
+	</div>
+</div>
+		
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Temperaturverlauf</h3>
+			{{ plot.rtr('rtrPlotSchlafen', 'og.heizen.schlafzimmer.ist', 'og.heizen.schlafzimmer.soll', 'og.heizen.schlafzimmer.heizen')}}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

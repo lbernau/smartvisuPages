@@ -1,0 +1,56 @@
+{% extends "rooms.html" %}
+
+{% block content %}
+{% import "widgets/widget_rtr_extended.html" as ext %}
+<h1><img class="icon" src="{{ icon0 }}scene_shower.png"/>Gäste WC</h1>
+<hr />
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Licht</h3>
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtWcDecke', 'eg.licht.wc.decke', icon1~'light_ceiling_light.png', icon0~'light_ceiling_light.png') }} </td>
+					<td>Decke</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtWcSpiegel', 'eg.licht.wc.spiegel', icon1~'light_mirror.png', icon0~'light_mirror.png') }} </td>
+					<td>Spiegel</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Heizung</h3>
+			{{ ext.rtr('heizenWc', '', 'eg.heizen.wc.ist', '', '', 'eg.heizen.wc.modus', 'eg.heizen.wc.modus', 'eg.heizen.wc.modus', 'eg.heizen.wc.heizen') }}
+			<br />
+			{{ basic.symbol('statusFensterWcOffen', 'eg.fenster.wc', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
+			{{ basic.symbol('statusFensterWcZu', 'eg.fenster.wc', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+		</div>
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Rollladen</h3>
+			{{ device.shutter('rolladenWC', '', 'eg.rollos.wc.fahren', 'eg.rollos.wc.stop', 'eg.rollos.wc.position') }}
+		</div>
+
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Temperaturverlauf</h3>
+			{{ plot.rtr('rtrPlotWc', 'eg.heizen.wc.ist', 'eg.heizen.wc.soll', 'eg.heizen.wc.heizen')}}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

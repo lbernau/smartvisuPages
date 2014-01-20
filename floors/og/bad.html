@@ -1,0 +1,74 @@
+{% extends "rooms.html" %}
+
+{% block content %}
+{% import "widgets/widget_rtr_extended.html" as ext %}
+<h1><img class="icon" src="{{ icon0 }}scene_shower.png"/>Gäste WC</h1>
+<hr />
+<div class="block" >
+	<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Licht</h3>
+			{{ device.dimmer('lichtBadDecke', 'Decke', 'og.licht.bad.decke', 'og.licht.bad.decke.dimmen') }}
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtBadDusche', 'og.licht.bad.dusche', icon1~'light_ceiling_light.png', icon0~'light_ceiling_light.png') }} </td>
+					<td>Dusche</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtBadSpiegel', 'og.licht.bad.spiegel', icon1~'light_mirror.png', icon0~'light_mirror.png') }} </td>
+					<td>Spiegel</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtBadKlo', 'og.steckdosen.bad.waschtisch', icon1~'light_wall_2.png', icon0~'light_wall_2.png') }} </td>
+					<td>Toilette</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Heizung</h3>
+			{{ ext.rtr('heizenBad', '', 'og.heizen.bad.ist', '', '', 'og.heizen.bad.modus', 'og.heizen.bad.modus', 'og.heizen.bad.modus', 'og.heizen.bad.heizen') }}
+			<br />
+			{{ basic.symbol('statusFensterBadOffen', 'og.fenster.bad.fenster', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
+			{{ basic.symbol('statusFensterBadZu', 'og.fenster.bad.fenster', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+			<br />
+			{{ basic.symbol('statusVeluxBadOffen', 'og.fenster.bad.velux', 'Velux geöffnet', icon0~'fts_fts_window_roof_open_2.png', 1) }}
+			{{ basic.symbol('statusVeluxBadZu', 'og.fenster.bad.velux', 'Velux geschlossen', icon1~'fts_window_roof.png', 0) }}
+		</div>
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Rollladen Fenster</h3>
+			{{ device.shutter('rolladenBadFenster', '', 'og.rollos.bad.fenster.fahren', 'og.rollos.bad.fenster.stop', 'og.rollos.bad.fenster.position') }}
+		</div>
+
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Rollladen Velux</h3>
+			{{ device.shutter('rolladenBadVelux', '', 'og.rollos.bad.velux.fahren', 'og.rollos.bad.velux.stop', 'og.rollos.bad.velux.position') }}
+		</div>
+
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Temperaturverlauf</h3>
+			{{ plot.rtr('rtrPlotBad', 'og.heizen.bad.ist', 'og.heizen.bad.soll', 'og.heizen.bad.heizen')}}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

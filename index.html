@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+	{% import "lib.html" as lib %}
+	{{ lib.updatecheck() }}
+
+	{% import "clock.html" as clock %}
+	{{ clock.digiclock('clock') }}
+
+	<div class="center">
+		{{ now|smartdate('l') }}, {{ now|smartdate() }}<br/>
+		<img src="lib/weather/pics/sun_up.png" class="sunIcon"/> {{ basic.formula('sunrise', 'env.location.sunrise', 'time') }} <img src="lib/weather/pics/sun_down.png" class="sunIcon"/> {{ basic.formula('sunset', 'env.location.sunset', 'time') }}&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src="lib/weather/pics/moon_up.png" class="moonIcon" /> {{ basic.formula('moonrise', 'env.location.moonrise', 'time') }} <img src="lib/weather/pics/moon_down.png" class="moonIcon"/> {{ basic.formula('moonset', 'env.location.moonset', 'time') }}<br/>
+	</div>
+
+	<hr>
+
+	{% import "weather.html" as weather %}
+	{{ weather.current('weather') }}
+
+	<hr>
+
+	{{ weather.forecastweek('weather_forecast') }}
+
+	<hr>
+	{% import "widgets/calendar.html" as calendar %}
+	{{ calendar.list('calendarlist', 'Müllabfuhr', 5, 'green', 60) }}
+
+	<hr>
+	{% import "phone.html" as phone %}
+	{{ phone.list('phonelist', 'Telefonliste', 5) }}
+
+{% endblock %}
+
+{% block content %}
+	{% include 'navigation.html' %}
+{% endblock %}
+

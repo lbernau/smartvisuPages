@@ -1,0 +1,79 @@
+{% extends "rooms.html" %}
+
+{% block content %}
+{% import "widgets/widget_rtr_extended.html" as ext %}
+<h1><img class="icon" src="{{ icon0 }}scene_livingroom.png"/>Wohnzimmer</h1>
+<hr />
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Licht</h3>
+			{{ device.dimmer('lichtWohnzimmerSofa', 'Sofa', 'eg.licht.wohnzimmer.sofa', 'eg.licht.wohnzimmer.sofa.dimmen') }}
+			{{ device.dimmer('lichtWohnzimmerEssen', 'Esstisch', 'eg.licht.wohnzimmer.essen', 'eg.licht.wohnzimmer.essen.dimmen') }}
+			{{ device.dimmer('lichtWohnzimmerWand', 'Wandleuchten', 'eg.licht.wohnzimmer.wand', 'eg.licht.wohnzimmer.wand.dimmen') }}
+		</div>
+	</div>
+</div>
+
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Heizung</h3>
+			{{ ext.rtr('heizenWohnzimmer', '', 'eg.heizen.wohnzimmer.ist', '', '', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.heizen') }}
+			<br /><br />
+			{{ basic.symbol('statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
+			{{ basic.symbol('statusFensterWohnzimmerZu', 'eg.fenster.wohnzimmer', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+		</div>
+	</div>
+</div>
+		
+<div class="block" style="width: 100%">
+	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Steckdosen</h3>
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmer1', 'eg.steckdosen.wohnzimmer.einundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Kamin</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmer2', 'eg.steckdosen.wohnzimmer.zweiundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>TV</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmer3', 'eg.steckdosen.wohnzimmer.vierundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Fenster</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmer4', 'eg.steckdosen.wohnzimmer.sechsundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Essbereich</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+	
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Rollladen links</h3>
+			{{ device.shutter('rolladenWohnzimmerLinks', '', 'eg.rollos.wohnzimmer.links.fahren', 'eg.rollos.wohnzimmer.links.stop', 'eg.rollos.wohnzimmer.links.position') }}
+		</div>
+
+	</div>
+</div>
+<div class="block" >
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Rollladen rechts</h3>
+			{{ device.shutter('rolladenWohnzimmerRechts', '', 'eg.rollos.wohnzimmer.rechts.fahren', 'eg.rollos.wohnzimmer.rechts.stop', 'eg.rollos.wohnzimmer.rechts.position') }}
+		</div>
+
+	</div>
+</div>
+
+<div class="block" style="width: 100%">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Temperaturverlauf</h3>
+			{{ plot.rtr('rtrPlotWohnzimmer', 'eg.heizen.wohnzimmer.ist', 'eg.heizen.wohnzimmer.soll', 'eg.heizen.wohnzimmer.heizen')}}
+		</div>
+	</div>
+</div>
+		
+{% endblock %}

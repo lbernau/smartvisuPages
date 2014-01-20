@@ -1,0 +1,168 @@
+<!-- Erdgeschoss -->
+<div data-role="collapsible" data-collapsed="false" data-theme="c" data-mini="false" data-inset="false">
+	<h4>Erdgeschoss</h4>
+	<ul data-role="listview">
+		<li data-icon="false">
+			<a href="index.php?page=floors/eg/kueche">
+				<img class="icon" src="{{ icon0 }}scene_dinner.png"/><h3>Küche</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterKuecheOffen', 'eg.fenster.kueche', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterKuecheZu', 'eg.fenster.kueche', '', icon1~'fts_window_2w.png', 0) }}
+					<br />{{ basic.float('nav_statusTempKueche', 'eg.heizen.kueche.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/eg/wohnzimmer">
+				<img class="icon" src="{{ icon0 }}scene_livingroom.png"/><h3>Wohnzimmer</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterWohnzimmerZu', 'eg.fenster.wohnzimmer', '', icon1~'fts_window_2w.png', 0) }}
+					<br />{{ basic.float('nav_statusTempWohnen', 'eg.heizen.wohnzimmer.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/eg/wc">
+				<img class="icon" src="{{ icon0 }}scene_shower.png"/><h3>Gäste WC</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterWCOffen', 'eg.fenster.wc', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterWCZu', 'eg.fenster.wc', '', icon1~'fts_window_2w.png', 0) }}
+					<br />{{ basic.float('nav_statusTempWc', 'eg.heizen.wc.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/eg/flur">
+				<img class="icon" src="{{ icon0 }}scene_stairs.png"/><h3>Flur / Treppe</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterDieleOffen', 'eg.fenster.diele', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterDieleZu', 'eg.fenster.diele', '', icon1~'fts_window_2w.png', 0) }}
+					<br />{{ basic.float('nav_statusTempFlur', 'eg.heizen.diele.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/eg/garten">
+				<img class="icon" src="{{ icon0 }}control_building_outside.png"/><h3>Außenanlagen</h3>
+				<div class="ui-li-aside">
+					{{ basic.float('nav_statusTempAussen', 'zentral.wetter.temperatur', 'temp') }}
+					&nbsp;&nbsp;&nbsp;{{ basic.float('nav_statusWind', 'zentral.wetter.wind', 'm/s') }} <br />
+					{{ basic.symbol('nav_statusRegen', 'zentral.wetter.niederschlag', '', icon1~'weather_rain.png', 1) }}
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+		
+<!-- Obergeschoss -->
+<div data-role="collapsible" data-collapsed="false" data-theme="c" data-mini="false" data-inset="false">
+	<h4>Obergeschoss</h4>
+	<ul data-role="listview">
+		<li data-icon="false">
+			<a href="index.php?page=floors/og/kind2">
+				<img class="icon" src="{{ icon0 }}scene_office.png"/><h3>Büro</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterKind2Offen', 'og.fenster.kind_2', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterKind2Zu', 'og.fenster.kind_2', '', icon1~'fts_window_2w.png', 0) }}
+					<br />{{ basic.float('nav_statusTempKind2', 'og.heizen.kind_2.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/og/kind1">
+				<img class="icon" src="{{ icon0 }}scene_visit_guests.png"/><h3>Gästezimmer</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterKind1Offen', 'og.fenster.kind_1', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterKind1Zu', 'og.fenster.kind_1', '', icon1~'fts_window_2w.png', 0) }}
+					<br />{{ basic.float('nav_statusTempKind1', 'og.heizen.kind_1.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/og/schlafzimmer">
+				<img class="icon" src="{{ icon0 }}scene_sleeping_alternat.png"/><h3>Schlafzimmer</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterSchlafenOffen', 'og.fenster.schlafzimmer', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterSchlafendZu', 'og.fenster.schlafzimmer', '', icon1~'fts_window_2w.png', 0) }}
+					<br />
+					{{ basic.float('nav_statusTempSchlafen', 'og.heizen.schlafzimmer.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/og/bad">
+				<img class="icon" src="{{ icon0 }}scene_bathroom.png"/><h3>Bad</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterBadOffen', 'og.fenster.bad.fenster', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterBadZu', 'og.fenster.bad.fenster', '', icon1~'fts_window_2w.png', 0) }}
+					&nbsp;{{ basic.symbol('nav_statusFensterBadVeluxOffen', 'og.fenster.bad.velux', '', icon0~'fts_window_roof_open_2.png', 1) }}
+					{{ basic.symbol('nav_statusFensterBadVeluxZu', 'og.fenster.bad.velux', '', icon1~'fts_window_roof.png', 0) }}
+					<br />
+					{{ basic.float('nav_statusTempBad', 'og.heizen.bad.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<!-- Keller -->
+<div data-role="collapsible" data-collapsed="false" data-theme="c" data-mini="false" data-inset="false">
+	<h4>Keller</h4>
+	<ul data-role="listview">
+		<li data-icon="false">
+			<a href="index.php?page=floors/kg/multimedia">
+				<img class="icon" src="{{ icon0 }}scene_cinema.png"/><h3>Hobby</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterMultimediaOffen', 'kg.fenster.multimedia', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterMultimediaZu', 'kg.fenster.multimedia', '', icon1~'fts_window_2w.png', 0) }}
+					<br />{{ basic.float('nav_statusTempMultimedia', 'kg.heizen.multimedia.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/kg/waschen">
+				<img class="icon" src="{{ icon0 }}scene_laundry_room_fem.png"/><h3>Waschen / Trocknen</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterWaschenOffen', 'kg.fenster.waschen', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterWaschenZu', 'kg.fenster.waschen', '', icon1~'fts_window_2w.png', 0) }}
+					<br />{{ basic.float('nav_statusTempWaschen', 'kg.heizen.waschen.ist', 'temp') }}
+
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/kg/hobby">
+				<img class="icon" src="{{ icon0 }}scene_workshop.png"/><h3>Werkstatt</h3>
+				<div class="ui-li-aside">
+					{{ basic.symbol('nav_statusFensterHobbyOffen', 'kg.fenster.hobby', '', icon0~'fts_window_2w_open_lr.png', 1) }}
+					{{ basic.symbol('nav_statusFensterHobbyZu', 'kg.fenster.hobby', '', icon1~'fts_window_2w.png', 0) }}
+					<br />{{ basic.float('nav_statusTempHobby', 'kg.heizen.hobby.ist', 'temp') }}
+				</div>
+			</a>
+		</li>
+		<li data-icon="false">
+			<a href="index.php?page=floors/kg/flur">
+				<img class="icon" src="{{ icon0 }}scene_stairs.png"/><h3>Flur / Vorratsraum</h3>
+				<div class="ui-li-aside">
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<!-- Dachgeschoss -->
+<div data-role="collapsible" data-collapsed="false" data-theme="c" data-mini="false" data-inset="false">
+	<h4>Dachgeschoss</h4>
+	<ul data-role="listview">
+		<li data-icon="false">
+			<a href="index.php?page=DG.Wohnen">
+				<img class="icon" src="{{ icon0 }}vent_ventilation.png"/><h3>Spitzboden</h3>
+				<div class="ui-li-aside">
+
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+
