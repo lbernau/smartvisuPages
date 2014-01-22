@@ -2,7 +2,7 @@
 <div data-role="collapsible" data-collapsed="false" data-theme="c" data-mini="false" data-inset="false">
 	<h4>Erdgeschoss</h4>
 	<ul data-role="listview">
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'kueche' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/eg/kueche">
 				<img class="icon" src="{{ icon0 }}scene_dinner.png"/><h3>Küche</h3>
 				<div class="ui-li-aside">
@@ -12,7 +12,7 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'wohnzimmer' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/eg/wohnzimmer">
 				<img class="icon" src="{{ icon0 }}scene_livingroom.png"/><h3>Wohnzimmer</h3>
 				<div class="ui-li-aside">
@@ -22,7 +22,7 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'wc' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/eg/wc">
 				<img class="icon" src="{{ icon0 }}scene_shower.png"/><h3>Gäste WC</h3>
 				<div class="ui-li-aside">
@@ -32,7 +32,7 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
+		<li data-icon="false" class="{{ pagepath matches '/eg/' and page == 'flur' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/eg/flur">
 				<img class="icon" src="{{ icon0 }}scene_stairs.png"/><h3>Flur / Treppe</h3>
 				<div class="ui-li-aside">
@@ -42,8 +42,8 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
-			<a href="index.php?page=floors/eg/garten">
+		<li data-icon="false" class="{{ pagepath matches '/outdoor/' ? 'ui-btn-active' : ''}}>
+			<a href="index.php?page=floors/outdoor/garten">
 				<img class="icon" src="{{ icon0 }}control_building_outside.png"/><h3>Außenanlagen</h3>
 				<div class="ui-li-aside">
 					{{ basic.float('nav_statusTempAussen', 'zentral.wetter.temperatur', 'temp') }}
@@ -59,7 +59,7 @@
 <div data-role="collapsible" data-collapsed="false" data-theme="c" data-mini="false" data-inset="false">
 	<h4>Obergeschoss</h4>
 	<ul data-role="listview">
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'kind2' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/og/kind2">
 				<img class="icon" src="{{ icon0 }}scene_office.png"/><h3>Büro</h3>
 				<div class="ui-li-aside">
@@ -69,7 +69,7 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'kind1' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/og/kind1">
 				<img class="icon" src="{{ icon0 }}scene_visit_guests.png"/><h3>Gästezimmer</h3>
 				<div class="ui-li-aside">
@@ -79,7 +79,7 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'schlafzimmer' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/og/schlafzimmer">
 				<img class="icon" src="{{ icon0 }}scene_sleeping_alternat.png"/><h3>Schlafzimmer</h3>
 				<div class="ui-li-aside">
@@ -90,7 +90,7 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'bad' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/og/bad">
 				<img class="icon" src="{{ icon0 }}scene_bathroom.png"/><h3>Bad</h3>
 				<div class="ui-li-aside">
@@ -110,7 +110,7 @@
 <div data-role="collapsible" data-collapsed="false" data-theme="c" data-mini="false" data-inset="false">
 	<h4>Keller</h4>
 	<ul data-role="listview">
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'multimedia' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/kg/multimedia">
 				<img class="icon" src="{{ icon0 }}scene_cinema.png"/><h3>Hobby</h3>
 				<div class="ui-li-aside">
@@ -120,7 +120,7 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'waschen' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/kg/waschen">
 				<img class="icon" src="{{ icon0 }}scene_laundry_room_fem.png"/><h3>Waschen / Trocknen</h3>
 				<div class="ui-li-aside">
@@ -131,7 +131,7 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
+		<li data-icon="false" class="{{ page == 'hobby' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/kg/hobby">
 				<img class="icon" src="{{ icon0 }}scene_workshop.png"/><h3>Werkstatt</h3>
 				<div class="ui-li-aside">
@@ -141,7 +141,7 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false">
+		<li data-icon="false" class="{{ pagepath matches '/kg/' and page == 'flur' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/kg/flur">
 				<img class="icon" src="{{ icon0 }}scene_stairs.png"/><h3>Flur / Vorratsraum</h3>
 				<div class="ui-li-aside">
@@ -155,8 +155,8 @@
 <div data-role="collapsible" data-collapsed="false" data-theme="c" data-mini="false" data-inset="false">
 	<h4>Dachgeschoss</h4>
 	<ul data-role="listview">
-		<li data-icon="false">
-			<a href="index.php?page=DG.Wohnen">
+		<li data-icon="false"  class="{{ page == 'hobby' ? 'ui-btn-active' : ''}}">
+			<a href="index.php?page=floors/dg/dg">
 				<img class="icon" src="{{ icon0 }}vent_ventilation.png"/><h3>Spitzboden</h3>
 				<div class="ui-li-aside">
 

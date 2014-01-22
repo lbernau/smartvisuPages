@@ -1,26 +1,26 @@
 <ul data-role="listview" data-dividertheme="c">
 	<li data-role="list-divider">Zentralfunktionen</li>
-	<li data-icon="false">
+	<li data-icon="false" class="{{ page == 'licht' ? 'ui-btn-active' : ''}}">
 		<a href="index.php?page=stats/licht">
 			<img class="icon" src="{{ icon0 }}light_light.png"/><h3>Licht</h3>
 		</a>
 	</li>
-	<li data-icon="false">
+	<li data-icon="false" class="{{ page == 'rolllaeden' ? 'ui-btn-active' : ''}}">
 		<a href="index.php?page=stats/rolllaeden">
 			<img class="icon" src="{{ icon0 }}fts_shutter.png"/><h3>Rollläden</h3>
 		</a>
 	</li>
-	<li data-icon="false">
+	<li data-icon="false" class="{{ page == 'heizung' ? 'ui-btn-active' : ''}}">
 		<a href="index.php?page=stats/heizung">
 			<img class="icon" src="{{ icon0 }}sani_heating_temp.png"/><h3>Heizung</h3>
 		</a>
 	</li>
-	<li data-icon="false">
+	<li data-icon="false" class="{{ page == 'smarthome' ? 'ui-btn-active' : ''}}">
 		<a href="index.php?page=stats/smarthome">
 			<img class="icon" src="{{ icon0 }}time_graph.png"/><h3>Smarthomeinfo</h3>
 		</a>
 	</li>
-	<li data-icon="false">
+	<li data-icon="false" class="{{ page == 'system' ? 'ui-btn-active' : ''}}">
 		<a href="index.php?page=stats/system">
 			<img class="icon" src="{{ icon0 }}it_server.png"/><h3>Systeminfo</h3>
 		</a>
