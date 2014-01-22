@@ -9,9 +9,6 @@ window.applicationCache.addEventListener('updateready',	updateSite, false);
 
 /**
  * enable screensaver "qlock"
- * 
- * idleTimer() takes an optional argument that defines the idle timeout
- * timeout is in milliseconds; defaults to 30000
  */
 $(document).on('pageinit', function(event) {
 	if (
@@ -19,7 +16,7 @@ $(document).on('pageinit', function(event) {
 		&& navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i) != null
 		&& (Modernizr && Modernizr.mq('(min-width: 768px)'))
 	) {
-		$.idleTimer(120000, document); //2 minutes
+		$.idleTimer(180000, document); //3 minutes
 	}
 });
 
