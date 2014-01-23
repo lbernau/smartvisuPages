@@ -25,11 +25,29 @@
 	</div>
 </div>
 
+<div class="block" style="width: 100%">
+	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Steckdosen</h3>
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimediaAudio', 'kg.steckdosen.multimedia.audio', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Audio</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimediaBeamer', 'kg.steckdosen.multimedia.beamer', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Beamer</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimedia3', 'kg.steckdosen.multimedia.zweiundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Schrank</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimedia4', 'kg.steckdosen.multimedia.dreiundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Leinwand</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
 <div class="block" >
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Rollladen</h3>
-			{{ device.shutter('rolladenMULTIMEDIA', '', 'kg.rollos.multimedia.fahren', 'kg.rollos.multimedia.stop', 'kg.rollos.multimedia.position') }}
+			{{ device.shutter('rolladenMultimedia', '', 'kg.rollos.multimedia.fahren', 'kg.rollos.multimedia.stop', 'kg.rollos.multimedia.position') }}
 		</div>
 
 	</div>

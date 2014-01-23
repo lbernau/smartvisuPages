@@ -1,0 +1,42 @@
+/**
+* Small garage gate.
+*
+* @param       unique id for this widget
+* @param       name of the shutter
+* @param       a gad/item for move up 
+* @param       a gad/item for move down
+* @param       a gad/item for state open
+* @param       a gad/item for state closed
+*/
+{% macro gate(id, txt, gad_up, gad_down, gad_open, gad_closed) %}
+{% import "basic.html" as basic %}
+
+{% set uid = uid(page, id) %}
+
+/** Design */
+<div id="{{ uid }}" class="gate">
+    <table style="width:100%; text-align: left;">
+        <tr>
+            <th style="width: 35%">{% if txt %} {{ txt }} {% endif %}</th>
+            <td style="width: 15%">
+                {% if gad_up %}
+                    {{ basic.button(id~'up', gad_up, '', 'arrow-u', '1', 'micro') }}
+                {% endif %}
+            </td>
+            <td style="width: 15%">
+                {% if gad_closed %}
+					{{ basic.symbol(id~'open', gad_open, '', icon0~'fts_garage_door_10.png', 1, 'micro') }}
+					{{ basic.symbol(id~'halfOpen', [gad_open, gad_closed], '', icon0~'fts_garage_door_50.png', 0, 'micro') }}
+					{{ basic.symbol(id~'closed', gad_closed, '', icon0~'fts_garage_door_100.png', 1, 'micro') }}
+                {% endif %}
+            </td>
+            <td style="width: 15%">
+                {% if gad_down %}
+                    {{ basic.button(id~'down', gad_down, '', 'arrow-d', '1', 'micro') }}
+                {% endif %}
+            </td>
+			<td  style="width: 20%"></td>
+        </tr>
+    </table>
+</div>
+{% endmacro %}
