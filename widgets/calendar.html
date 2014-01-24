@@ -47,8 +47,7 @@
 					line += '<li data-icon="false">' + ret + '</li>';
 				}
 				$('#' + uid + ' ul').html(line).trigger('prepare').listview('refresh').trigger('redraw');
-			})
-					.error(notify.json);
+			}).error(notify.json);
 		};
 
 		//returns the delay until dateChange in milliseconds

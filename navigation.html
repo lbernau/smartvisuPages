@@ -4,7 +4,7 @@
 	<ul data-role="listview">
 		<li data-icon="false" class="{{ page == 'kueche' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/eg/kueche">
-				<img class="icon" src="{{ icon0 }}scene_dinner.png"/><h3>Küche</h3>
+				<img class="icon" src="{{ icon0 }}scene_dinner.svg"/><h3>Küche</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterKuecheOffen', 'eg.fenster.kueche', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterKuecheZu', 'eg.fenster.kueche', '', icon1~'fts_window_2w.png', 0) }}
@@ -14,7 +14,7 @@
 		</li>
 		<li data-icon="false" class="{{ page == 'wohnzimmer' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/eg/wohnzimmer">
-				<img class="icon" src="{{ icon0 }}scene_livingroom.png"/><h3>Wohnzimmer</h3>
+				<img class="icon" src="{{ icon0 }}scene_livingroom.svg"/><h3>Wohnzimmer</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterWohnzimmerZu', 'eg.fenster.wohnzimmer', '', icon1~'fts_window_2w.png', 0) }}
@@ -24,7 +24,7 @@
 		</li>
 		<li data-icon="false" class="{{ page == 'wc' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/eg/wc">
-				<img class="icon" src="{{ icon0 }}scene_shower.png"/><h3>Gäste WC</h3>
+				<img class="icon" src="{{ icon0 }}scene_shower.svg"/><h3>Gäste WC</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterWCOffen', 'eg.fenster.wc', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterWCZu', 'eg.fenster.wc', '', icon1~'fts_window_2w.png', 0) }}
@@ -34,7 +34,7 @@
 		</li>
 		<li data-icon="false" class="{{ pagepath matches '/eg/' and page == 'flur' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/eg/flur">
-				<img class="icon" src="{{ icon0 }}scene_stairs.png"/><h3>Flur / Treppe</h3>
+				<img class="icon" src="{{ icon0 }}scene_stairs.svg"/><h3>Flur / Treppe</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterDieleOffen', 'eg.fenster.diele', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterDieleZu', 'eg.fenster.diele', '', icon1~'fts_window_2w.png', 0) }}
@@ -42,9 +42,9 @@
 				</div>
 			</a>
 		</li>
-		<li data-icon="false" class="{{ pagepath matches '/outdoor/' ? 'ui-btn-active' : ''}}"}>
+		<li data-icon="false" class="{{ pagepath matches '/outdoor/' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/outdoor/garten">
-				<img class="icon" src="{{ icon0 }}control_building_outside.png"/><h3>Außenanlagen</h3>
+				<img class="icon" src="{{ icon0 }}control_building_outside.svg"/><h3>Außenanlagen</h3>
 				<div class="ui-li-aside">
 					{{ basic.float('nav_statusTempAussen', 'zentral.wetter.temperatur', 'temp') }}
 					&nbsp;&nbsp;&nbsp;{{ basic.float('nav_statusWind', 'zentral.wetter.wind', 'm/s') }} <br />
@@ -61,7 +61,7 @@
 	<ul data-role="listview">
 		<li data-icon="false" class="{{ page == 'kind2' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/og/kind2">
-				<img class="icon" src="{{ icon0 }}scene_office.png"/><h3>Büro</h3>
+				<img class="icon" src="{{ icon0 }}scene_office.svg"/><h3>Büro</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterKind2Offen', 'og.fenster.kind_2', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterKind2Zu', 'og.fenster.kind_2', '', icon1~'fts_window_2w.png', 0) }}
@@ -71,7 +71,7 @@
 		</li>
 		<li data-icon="false" class="{{ page == 'kind1' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/og/kind1">
-				<img class="icon" src="{{ icon0 }}scene_visit_guests.png"/><h3>Gästezimmer</h3>
+				<img class="icon" src="{{ icon0 }}scene_visit_guests.svg"/><h3>Gästezimmer</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterKind1Offen', 'og.fenster.kind_1', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterKind1Zu', 'og.fenster.kind_1', '', icon1~'fts_window_2w.png', 0) }}
@@ -81,7 +81,7 @@
 		</li>
 		<li data-icon="false" class="{{ page == 'schlafzimmer' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/og/schlafzimmer">
-				<img class="icon" src="{{ icon0 }}scene_sleeping_alternat.png"/><h3>Schlafzimmer</h3>
+				<img class="icon" src="{{ icon0 }}scene_sleeping_alternat.svg"/><h3>Schlafzimmer</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterSchlafenOffen', 'og.fenster.schlafzimmer', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterSchlafendZu', 'og.fenster.schlafzimmer', '', icon1~'fts_window_2w.png', 0) }}
@@ -92,7 +92,7 @@
 		</li>
 		<li data-icon="false" class="{{ page == 'bad' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/og/bad">
-				<img class="icon" src="{{ icon0 }}scene_bathroom.png"/><h3>Bad</h3>
+				<img class="icon" src="{{ icon0 }}scene_bathroom.svg"/><h3>Bad</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterBadOffen', 'og.fenster.bad.fenster', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterBadZu', 'og.fenster.bad.fenster', '', icon1~'fts_window_2w.png', 0) }}
@@ -112,7 +112,7 @@
 	<ul data-role="listview">
 		<li data-icon="false" class="{{ page == 'multimedia' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/kg/multimedia">
-				<img class="icon" src="{{ icon0 }}scene_cinema.png"/><h3>Hobby</h3>
+				<img class="icon" src="{{ icon0 }}scene_cinema.svg"/><h3>Hobby</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterMultimediaOffen', 'kg.fenster.multimedia', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterMultimediaZu', 'kg.fenster.multimedia', '', icon1~'fts_window_2w.png', 0) }}
@@ -122,7 +122,7 @@
 		</li>
 		<li data-icon="false" class="{{ page == 'waschen' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/kg/waschen">
-				<img class="icon" src="{{ icon0 }}scene_laundry_room_fem.png"/><h3>Waschen / Trocknen</h3>
+				<img class="icon" src="{{ icon0 }}scene_laundry_room_fem.svg"/><h3>Waschen / Trocknen</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterWaschenOffen', 'kg.fenster.waschen', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterWaschenZu', 'kg.fenster.waschen', '', icon1~'fts_window_2w.png', 0) }}
@@ -133,7 +133,7 @@
 		</li>
 		<li data-icon="false" class="{{ page == 'hobby' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/kg/hobby">
-				<img class="icon" src="{{ icon0 }}scene_workshop.png"/><h3>Werkstatt</h3>
+				<img class="icon" src="{{ icon0 }}scene_workshop.svg"/><h3>Werkstatt</h3>
 				<div class="ui-li-aside">
 					{{ basic.symbol('nav_statusFensterHobbyOffen', 'kg.fenster.hobby', '', icon0~'fts_window_2w_open_lr.png', 1) }}
 					{{ basic.symbol('nav_statusFensterHobbyZu', 'kg.fenster.hobby', '', icon1~'fts_window_2w.png', 0) }}
@@ -143,7 +143,7 @@
 		</li>
 		<li data-icon="false" class="{{ pagepath matches '/kg/' and page == 'flur' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/kg/flur">
-				<img class="icon" src="{{ icon0 }}scene_stairs.png"/><h3>Flur / Vorratsraum</h3>
+				<img class="icon" src="{{ icon0 }}scene_stairs.svg"/><h3>Flur / Vorratsraum</h3>
 				<div class="ui-li-aside">
 				</div>
 			</a>
@@ -157,7 +157,7 @@
 	<ul data-role="listview">
 		<li data-icon="false"  class="{{ page == 'hobby' ? 'ui-btn-active' : ''}}">
 			<a href="index.php?page=floors/dg/dg">
-				<img class="icon" src="{{ icon0 }}vent_ventilation.png"/><h3>Spitzboden</h3>
+				<img class="icon" src="{{ icon0 }}vent_ventilation.svg"/><h3>Spitzboden</h3>
 				<div class="ui-li-aside">
 
 				</div>

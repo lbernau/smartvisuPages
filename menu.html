@@ -1,13 +1,13 @@
 <div id="menu" class="menu">
 	<a id="menu-rooms" href="index.php">
-		<img class="icon" src="{{ pagepath matches '/floors/' or page == 'index' ? icon1 : icon0 }}control_building_2_s_all.png" /></a>
+		<img class="icon {{ pagepath matches '/floors/' or page == 'index' ? 'icon1' : '' }}" src="{{ icon0 }}control_building_2_s_all.svg" /></a>
 
 	<a id="menu-wp" href="index.php?page=stats/licht">
-		<img class="icon" src="{{ pagepath matches '/stats/' ? icon1 : icon0 }}control_building_control.png"/></a>
+		<img class="icon {{ pagepath matches '/stats/' ? 'icon1' : '' }}" src="{{ icon0 }}control_building_control.svg"/></a>
 
 	<a id="menu-category" href="index.php?page=security/alarm">
-		<img class="icon" src="{{ pagepath matches '/security/' ? icon1 : icon0 }}status_protection.png" /></a>
+		<img class="icon {{ pagepath matches '/security/' ? 'icon1' : '' }}" src="{{ icon0 }}status_protection.svg" /></a>
 	
 	<a id="menu-system" data-ajax="false" href="index.php?page=config">
-		<img class="icon" src="{{ page == 'config' ? icon1 : icon0 }}edit_settings.png" /></a>
+		<img class="icon {{ page == 'config' ? 'icon1' : '' }}" src="{{ icon0 }}edit_settings.svg" /></a>
 </div>
