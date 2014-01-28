@@ -2,10 +2,26 @@
 
 {% block sidebar %}
 
-{% include "stats/navigation.html" %}
-
 {% endblock %}
 
 {% block content %}
+
+<h1 class="visible-tablet"><img class="icon" src="{{ icon0 }}edit_input_numeric.svg"/>Alarm</h1>
+<hr />
+<div class="block" style="width: 100%">
+	<div class="set-5" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Überwachnung</h3>
+			<table style="width: 70%; margin: auto">
+				<tr>
+					<td style="width: 100px;">&nbsp; {{ basic.switch('alarmGesamtEA', 'zentral.alarm.gesamt', icon1~'control_on_off.png', icon0~'control_on_off.png') }} </td>
+					<td style ="text-align: left">Gesamt</td>
+					<td style="width: 100px;">&nbsp; {{ basic.switch('alarmEGEA', 'zentral.alarm.erdgeschoss', icon1~'control_on_off.png', icon0~'control_on_off.png') }} </td>
+					<td style ="text-align: left">Erdgeschoss</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
 		
 {% endblock %}
