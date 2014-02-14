@@ -51,7 +51,7 @@
 }
 
 .icon.trash-yellow {
-	background-color: yellow;
+	background-color: rgb(209, 209, 83);
 }
 
 .icon.trash-green {
@@ -67,7 +67,7 @@
 }
 
 .icon.trash-blue {
-	background-color: blue;
+	background-color: rgb(42, 106, 219);;
 }
 
 .nav-custom .heizung .ui-icon {
