@@ -1,14 +1,4 @@
 /**
-* -----------------------------------------------------------------------------
-* @package     smartVISU
-* @author      Martin Gleiß
-* @copyright   2012
-* @license     GPL <http://www.gnu.de>
-* -----------------------------------------------------------------------------
-*/
-
-
-/**
 * Displays the calendarlist
 *
 * @param 	unique id for this widget
@@ -35,7 +25,7 @@
 				var line = '';
 				var sum = 1;
 				for (var i in data) {
-					ret  = '<img style="background: ' + data[i].color + ';" class="icon" src="' + data[i].icon + '" />';
+					ret  = '<img class="icon ' + getAppointmentType(data[i].title) + '" src="icons/ws/message_garbage.svg"/>';
 					ret += '<div class="color" style="background: {{ color|default('#666666') }};"></div>';
 					ret += '<h3>' + data[i].title + '</h3>';
 					ret += '<p>' + data[i].weekday + ',&nbsp;' + data[i].period + '&nbsp;</p>';
@@ -48,6 +38,28 @@
 				}
 				$('#' + uid + ' ul').html(line).trigger('prepare').listview('refresh').trigger('redraw');
 			}).error(notify.json);
+
+						var getAppointmentType =function(title) {
+				switch (title) {
+					case "Bioabfall":
+						return "trash-brown";
+						break;
+					case "Gelbe Tonne":
+						return "trash-yellow";
+						break;
+					case "Papier":
+						return "trash-green";
+						break;
+					case "Restmüll":
+						return "trash-grey";
+						break;
+					case "Glas":
+						return "trash-blue";
+						break;
+					default:
+						return "";
+				}
+			}
 		};
 
 		//returns the delay until dateChange in milliseconds

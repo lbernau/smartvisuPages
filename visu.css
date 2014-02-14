@@ -50,6 +50,26 @@
 	border-radius: 0 !important;
 }
 
+.icon .trash-yellow {
+	background-color: yellow;
+}
+
+.icon .trash-green {
+	background-color: #32cd32;
+}
+
+.icon .trash-grey {
+	background-color: dimgrey;
+}
+
+.icon .trash-brown {
+	background-color: saddlebrown;
+}
+
+.icon .trash-blue {
+	background-color: blue;
+}
+
 .nav-custom .heizung .ui-icon {
 	background: url(../../icons/ws/sani_heating_temp.png) 50% 50% no-repeat;
 	background-size: 36px 36px;
