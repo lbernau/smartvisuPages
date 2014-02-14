@@ -50,23 +50,23 @@
 	border-radius: 0 !important;
 }
 
-.icon .trash-yellow {
+.icon.trash-yellow {
 	background-color: yellow;
 }
 
-.icon .trash-green {
+.icon.trash-green {
 	background-color: #32cd32;
 }
 
-.icon .trash-grey {
+.icon.trash-grey {
 	background-color: dimgrey;
 }
 
-.icon .trash-brown {
+.icon.trash-brown {
 	background-color: saddlebrown;
 }
 
-.icon .trash-blue {
+.icon.trash-blue {
 	background-color: blue;
 }
 
