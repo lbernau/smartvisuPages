@@ -7,6 +7,17 @@
 	}
 }
 
+@media all and (min-width: 900px) {
+	.block.one-third {
+		width: 33%;
+	}
+}
+
+.window-status p {
+	margin: 0 0 0 1em;
+	text-align: left;
+}
+
 .ui-li-aside .symbol .icon {
 	width: 32px;
 	height: 32px;
