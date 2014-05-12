@@ -2,27 +2,61 @@
 {% extends "rooms.html" %}
 
 {% block content %}
-<h1><img class="icon" src='{{ icon0 }}control_building_outside.png' />Außenanlagen</h1>
+<h1><img class="icon" src="{{ icon0 }}control_building_outside.svg" />Außenanlagen</h1>
 <div data-role="navbar" class="nav-custom">
 	<ul>
-		<li><a href="index.php?page=floors/eg/eingang" class="eingang" data-icon="custom">Eingang</a></li>
-		<li><a href="index.php?page=floors/eg/garten" class="garten" data-icon="custom">Garten</a></li>
-		<li><a href="index.php?page=floors/eg/garage" class="ui-btn-active ui-state-persist garage" data-icon="custom">Garage</a></li>
+		<li><a href="index.php?page=floors/outdoor/eingang" class="eingang" data-icon="custom">Eingang</a></li>
+		<li><a href="index.php?page=floors/outdoor/garage" class="ui-btn-active ui-state-persist garage" data-icon="custom">Garage</a></li>
+		<li><a href="index.php?page=floors/outdoor/garten" class="garten" data-icon="custom">Garten</a></li>
 	</ul>
 </div>
 <hr />	
 <div class="block">
-	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
-			<h3>Licht</h3>
+			<h3>Schalten</h3>
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtGarage', 'garage.licht', icon1~'light_garage.png', icon0~'light_garage.png') }} </td>
+					<td>Licht</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('pumpe', 'garage.pumpe', icon1~'sani_domestic_waterworks.png', icon0~'sani_domestic_waterworks.png') }} </td>
+					<td>Pumpe</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 </div>
 <div class="block">
-	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Tor</h3>
-			{{ garage.gate('garageGate', '', 'garage.tor.auf', 'garage.tor.zu', 'garage.tor.offen', 'garage.tor.geschlossen') }}
+			{{ basic.button('garage.tor.auf', 'garage.tor.auf', 'Auf', 'arrow-u', '', 'midi') }}
+			{{ basic.symbol('statusTorOffen', 'garage.tor.offen', '', icon0~'fts_garage.png', 1) }}
+			{{ basic.symbol('statusTorZu', 'garage.tor.geschlossen', '', icon1~'fts_garage_door_100.png', 0) }}
+			{{ basic.button('garage.tor.ab', 'garage.tor.ab', 'Ab', 'arrow-d', '', 'midi') }}
+		</div>
+	</div>
+</div>
+<div class="block" style="width: 100%">
+	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Sicherheit</h3>
+			<table width="90%">
+				<tr>
+					<td>
+						{{ basic.symbol('statusFensterGarageOffen', 'garage.fenster', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
+						{{ basic.symbol('statusFensterGarageZu', 'garage.fenster', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ basic.symbol('statusTuerGarageOffen', 'garage.tuer', 'Tür geöffnet', icon0~'fts_door_open.png', 1) }}
+						{{ basic.symbol('statusTuerGarageZu', 'garage.tuer', 'Tür geschlossen', icon1~'fts_door.png', 0) }}
+					</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 </div>

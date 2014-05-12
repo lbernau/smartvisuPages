@@ -5,8 +5,8 @@
 <div data-role="navbar" class="nav-custom">
 	<ul>
 		<li><a href="index.php?page=floors/outdoor/eingang" class="eingang" data-icon="custom">Eingang</a></li>
-		<li><a href="index.php?page=floors/outdoor/garten" class="ui-btn-active ui-state-persist garten" data-icon="custom">Garten</a></li>
 		<li><a href="index.php?page=floors/outdoor/garage" class="garage" data-icon="custom">Garage</a></li>
+		<li><a href="index.php?page=floors/outdoor/garten" class="ui-btn-active ui-state-persist garten" data-icon="custom">Garten</a></li>
 	</ul>
 </div>
 <hr />
@@ -17,10 +17,12 @@
 		</div>
 	</div>
 </div>
-<div class="block">
+<div class="block" style="width: 100%">
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
-			<h3>Heizung</h3>
+			<h3>Temperaturverlauf</h3>
+			{{ plot.period('tempOutdoor', 'zentral.wetter.temperatur', 'max', '14d', '', '', '', '', 'Außentemperatur', '#3366ff', 'line','Temperatur in °C') }}
+			{{ plot.period('rain', 'zentral.wetter.niederschlag', 'avg', '14d', '', '', '', '', 'Niederschlag', '#3366ff', 'line', 'Niederschlag in %') }}
 		</div>
 	</div>
 </div>

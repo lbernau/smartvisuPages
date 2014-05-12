@@ -1,28 +1,30 @@
 {% extends "rooms.html" %}
 
 {% block content %}
-<h1><img class="icon" src='{{ icon0 }}control_building_outside.png' />Außenanlagen</h1>
+<h1><img class="icon" src="{{ icon0 }}control_building_outside.svg" />Außenanlagen</h1>
 <div data-role="navbar" class="nav-custom">
 	<ul>
 		<li><a href="index.php?page=floors/outdoor/eingang" class="ui-btn-active ui-state-persist eingang" data-icon="custom">Eingang</a></li>
-		<li><a href="index.php?page=floors/outdoor/garten" class="garten" data-icon="custom">Garten</a></li>
 		<li><a href="index.php?page=floors/outdoor/garage" class="garage" data-icon="custom">Garage</a></li>
+		<li><a href="index.php?page=floors/outdoor/garten" class="garten" data-icon="custom">Garten</a></li>
 	</ul>
 </div>
 <hr />
 <div class="block">
-	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Licht</h3>
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtAußenEingang', 'aussen.licht.eingang', icon1~'light_outdoor.png', icon0~'light_outdoor.png') }} </td>
+					<td>Eingang</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtAußenVorgarten', 'aussen.licht.vorgarten', icon1~'light_light_dim_100.png', icon0~'light_light.png') }} </td>
+					<td>Vorgarten</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 </div>
-<div class="block">
-	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-		<div data-role="collapsible" data-collapsed="false">
-			<h3>Heizung</h3>
-		</div>
-	</div>
-</div>
-
 {% endblock %}
