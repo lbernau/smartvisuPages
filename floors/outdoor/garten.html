@@ -20,9 +20,9 @@
 <div class="block" style="width: 100%">
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
-			<h3>Temperaturverlauf</h3>
-			{{ plot.period('tempOutdoor', 'zentral.wetter.temperatur', 'max', '14d', '', '', '', '', 'Außentemperatur', '#3366ff', 'line','Temperatur in °C') }}
-			{{ plot.period('rain', 'zentral.wetter.niederschlag', 'avg', '14d', '', '', '', '', 'Niederschlag', '#3366ff', 'line', 'Niederschlag in %') }}
+			<h3>Wetterverlauf</h3>
+			{{ plot.period('tempOutdoor', 'zentral.wetter.temperatur', 'max', '7d', '', '', '', '', 'Außentemperatur', '#3366ff', 'line','Temperatur in °C') }}
+			{{ plot.period('rain', 'zentral.wetter.niederschlag', 'avg', '7d', '', '', '', '', 'Niederschlag', '#3366ff', 'line', 'Niederschlag in %') }}
 		</div>
 	</div>
 </div>
