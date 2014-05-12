@@ -23,5 +23,39 @@
 		</div>
 	</div>
 </div>
-		
+<div class="block">
+	<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Fenster Erdgeschoss</h3>
+			<p>{{ basic.symbol('statusFensterEgZu', 'eg.fenster.gesamt', 'Alle Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}</p>
+			<p>{{ basic.symbol('statusFensterKuecheOffen', 'eg.fenster.kueche', 'Küche geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+			<p>{{ basic.symbol('statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', 'Wohnzimmer geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+			<p>{{ basic.symbol('statusFensterWcOffen', 'eg.fenster.wc', 'Gäste WC geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+			<p>{{ basic.symbol('statusFensterDieleOffen', 'eg.fenster.diele', 'Flur geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+		</div>
+	</div>
+</div>
+<div class="block">
+	<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Fenster Obergeschoss</h3>
+			<p>{{ basic.symbol('statusFensterOgZu', 'og.fenster.gesamt', 'Alle Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}</p>
+			<p>{{ basic.symbol('statusFensterBadOffen', ['og.fenster.bad.velux', 'og.fenster.bad.velux'], 'Badezimmer geöffnet', icon0~'fts_window_2w_open_lr.png', 1, 'or') }}</p>
+			<p>{{ basic.symbol('statusFensterSchlafenOffen', 'og.fenster.schlafzimmer', 'Schlafzimmer geöffnet', icon0~'fts_window_2w_open_lr.png', 1, 'or') }}</p>
+			<p>{{ basic.symbol('statusFensterKind1Offen', 'og.fenster.kind1', 'Gästezimmer geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+			<p>{{ basic.symbol('statusFensterKind2Offen', 'og.fenster.kind2', 'Büro geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+		</div>
+	</div>
+</div>
+<div class="block">
+	<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Fenster Keller</h3>
+			<p>{{ basic.symbol('statusFensterKgZu', 'kg.fenster.gesamt', 'Alle Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}</p>
+			<p>{{ basic.symbol('statusFensterMultimediaOffen', 'kg.fenster.multimedia', 'Hobby geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+			<p>{{ basic.symbol('statusFensterWaschenOffen', 'kg.fenster.waschen', 'Waschen geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+			<p>{{ basic.symbol('statusFensterHobbyOffen', 'kg.fenster.hobby', 'Werkstatt geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+		</div>
+	</div>
+</div>
 {% endblock %}
