@@ -21,25 +21,23 @@
 		
 <h1 class="visible-tablet"><img class="icon" src="{{ icon0 }}fts_shutter.svg"/>Status Rollläden</h1>
 <hr />
-<div class="block" style="width: 100%">
-	<div class="set-5" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-		<div data-role="collapsible" data-collapsed="false">
-			<h3>Zentral</h3>
-			{{ smallshutter.smallshut('sshut_zentral', 'Rolladen Gesamt', 'zentral.rollos.fahren', 'zentral.rollos.stop', '') }}
-			<br />
-			<table style="width: 70%; margin: auto">
-				<tr>
-					<td style="width: 100px;">&nbsp; {{ basic.switch('rolloAutomatik', 'zentral.rollos.automatik', icon1~'fts_shutter_daynight_auto.png', icon0~'fts_shutter_manual.png') }} </td>
-					<td style ="text-align: left">Automatik</td>
-					<td style="width: 100px;">&nbsp; {{ basic.switch('rolloSonnenschutz', 'zentral.rollos.sonnenschutz', icon0~'fts_shutter_manual.png', icon1~'fts_shutter_auto.png') }} </td>
-					<td style ="text-align: left">Sonnenschutz</td>
-				</tr>
-			</table>
-		</div>
+<div class="block full-width">
+	<div class="ui-bar-c ui-li-divider ui-corner-top">Zentral</div>
+	<div class="ui-fixed ui-body-a ui-corner-bottom" style="min-height: 50px">
+		{{ smallshutter.smallshut('sshut_zentral', 'Rolladen Gesamt', 'zentral.rollos.fahren', 'zentral.rollos.stop', '') }}
+		<br />
+		<table style="width: 70%; margin: auto">
+			<tr>
+				<td style="width: 100px;">&nbsp; {{ basic.switch('rolloAutomatik', 'zentral.rollos.automatik', icon1~'fts_shutter_daynight_auto.png', icon0~'fts_shutter_manual.png') }} </td>
+				<td style ="text-align: left">Automatik</td>
+				<td style="width: 100px;">&nbsp; {{ basic.switch('rolloSonnenschutz', 'zentral.rollos.sonnenschutz', icon0~'fts_shutter_manual.png', icon1~'fts_shutter_auto.png') }} </td>
+				<td style ="text-align: left">Sonnenschutz</td>
+			</tr>
+		</table>
 	</div>
 </div>
 		
-<div class="block" style="width: 100%">
+<div class="block full-width">
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Erdgeschoss</h3>		
@@ -53,7 +51,7 @@
 	</div>
 </div>
 
-<div class="block" style="width: 100%">
+<div class="block full-width">
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Obergeschoss</h3>
@@ -67,7 +65,7 @@
 	</div>
 </div>
 
-<div class="block" style="width: 100%">
+<div class="block full-width">
 	<div class="set-5" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Keller</h3>

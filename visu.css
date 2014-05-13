@@ -13,6 +13,10 @@
 	}
 }
 
+.block.full-width {
+	width: 100%;
+}
+
 .block.window-status .ui-fixed {
 	min-height: 50px;
 }
