@@ -11,9 +11,32 @@
 </div>
 <hr />
 <div class="block">
-	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
-			<h3>Licht</h3>
+			<h3>Terasse</h3>
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtTerasse', 'aussen.licht.terrasse', icon1~'light_wall_2.png', icon0~'light_wall_2.png') }} </td>
+					<td>Licht</td>
+				</tr>
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdosenTerasse', 'aussen.steckdosen.terrasse', icon1~'message_socket.png', icon0~'message_socket.png') }} </td>
+					<td>Steckdosen</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="block">
+	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Beete</h3>
+			<table width="90%">
+				<tr>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKugeln', 'aussen.licht.beete', icon1~'light_uplight.png', icon0~'light_uplight.png') }} </td>
+					<td>Kugelleuchten</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 </div>
