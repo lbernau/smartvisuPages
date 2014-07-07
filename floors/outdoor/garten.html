@@ -33,7 +33,7 @@
 			<h3>Beete</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKugeln', 'aussen.licht.beete', icon1~'light_uplight.png', icon0~'light_uplight.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKugeln', 'aussen.licht.beete', icon1~'light_ball.png', icon0~'light_ball.png') }} </td>
 					<td>Kugelleuchten</td>
 				</tr>
 			</table>
@@ -45,7 +45,6 @@
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Wetterverlauf</h3>
 			{{ plot.period('tempOutdoor', 'zentral.wetter.temperatur', 'max', '7d', '', '', '', '', 'Außentemperatur', '#3366ff', 'line','Temperatur in °C') }}
-			{{ plot.period('rain', 'zentral.wetter.niederschlag', 'avg', '7d', '', '', '', '', 'Niederschlag', '#3366ff', 'line', 'Niederschlag in %') }}
 		</div>
 	</div>
 </div>
