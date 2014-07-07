@@ -34,7 +34,8 @@
 			<h3>Tor</h3>
 			{{ basic.button('garage.tor.auf', 'garage.tor.auf', 'Auf', 'arrow-u', '', 'midi') }}
 			{{ basic.symbol('statusTorOffen', 'garage.tor.offen', '', icon0~'fts_garage.png', 1) }}
-			{{ basic.symbol('statusTorZu', 'garage.tor.geschlossen', '', icon1~'fts_garage_door_100.png', 0) }}
+			{{ basic.symbol('statusTorHalbOffen', ['garage.tor.offen', 'garage.tor.geschlossen'], '', icon1~'fts_garage_door_50.png', 0, 'and') }}
+			{{ basic.symbol('statusTorZu', 'garage.tor.geschlossen', '', icon1~'fts_garage_door_100.png', 1) }}
 			{{ basic.button('garage.tor.ab', 'garage.tor.ab', 'Ab', 'arrow-d', '', 'midi') }}
 		</div>
 	</div>
