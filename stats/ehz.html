@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+{% include "stats/navigation.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div data-role="navbar" class="nav-custom visible-phone">
+    <ul>
+        <li><a href="index.php?page=stats/licht" class="licht" data-icon="custom">Licht</a></li>
+        <li><a href="index.php?page=stats/rolllaeden" class="rollos" data-icon="custom">Rollläden</a></li>
+        <li><a href="index.php?page=stats/heizung" class="heizung" data-icon="custom">Heizung</a></li>
+        <li><a href="index.php?page=stats/ehz" class="ui-btn-active ui-state-persist ehz" data-icon="custom">Stromverbrauch</a></li>
+        <li><a href="index.php?page=stats/smarthome" class="smarthome" data-icon="custom">Smarthome</a></li>
+        <li><a href="index.php?page=stats/system" class="system" data-icon="custom">System</a></li>
+    </ul>
+</div>
+
+<h1 class="visible-tablet"><img class="icon" src='{{ icon0 }}measure_power_meter.png' />Stromverbrauch</h1>
+<hr />
+
+<div class="block">
+	<div class="ui-bar-c ui-li-divider ui-corner-top">Haushalt </div>
+	<div class="ui-fixed ui-body-a ui-corner-bottom" style="min-height: 50px">
+      <table height="90%" width="80%" align="center">
+        <tr>
+          <td colspan="2" align="left">
+            Aktuelle Leistung:
+            <center>
+                <font size="104">
+                {{ basic.float('akt_leistung_haus', 'ehz.haus.leistung_aktuell', 'kwh') }}
+                </font>
+            </center>
+          </td>
+        </tr>
+        <tr>
+            <td width="55%" align="left">
+            Heutiger Verbrauch
+            </td>
+            <td width="45%" align="right">
+                {{ basic.float('verbrauch_heute_haus', 'ehz.haus.verbrauch.aktuell', 'kwh') }}
+            </td>
+        </tr>
+        <tr>
+            <td width="55%" align="left">
+            Heutige Kosten
+            </td>
+            <td width="45%" align="right">
+                {{ basic.float('kosten_heute_haus', 'ehz.haus.kosten.heute', '€') }}
+            </td>
+        </tr>
+        </table>
+	</div>
+</div>
+
+<div class="block">
+	<div class="ui-bar-c ui-li-divider ui-corner-top">Verbräuche (gestern)</div>
+	<div class="ui-fixed ui-body-a ui-corner-bottom" style="min-height: 50px">
+      <table height="90%" width="80%" align="center">
+        <tr>
+          <td width="55%" align="left">
+            Haushalt
+          </td>
+          <td width="45%" align="right">
+            {{ basic.float('ehz.verbrauch_haus_gestern', 'ehz.haus.verbrauch.gestern', 'kwh') }} / {{ basic.float('ehz.kosten_haus_gestern', 'ehz.haus.kosten.gestern', '€') }}
+          </td>
+        </tr>
+      </table>
+	</div>
+</div>
+
+<div class="block">
+	<div class="ui-bar-c ui-li-divider ui-corner-top">Zählerstände</div>
+	<div class="ui-fixed ui-body-a ui-corner-bottom" style="min-height: 50px">
+      <table height="90%" width="80%" align="center">
+        <tr>
+          <td width="55%" align="left">
+            Haushalt
+          </td>
+          <td width="45%" align="right">
+            {{ basic.float('ehz.haus', 'ehz.haus', 'kwh') }}
+          </td>
+        </tr>
+      </table>
+	</div>
+</div>
+
+
+
+<div class="block full-width">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Stromverbrauch pro Tag (kwh)</h3>
+	{{ plot.stacked('p1verbrauchprotag', ['ehz.haus.verbrauch.gestern'], 'avg', '8d', '', '', '', ['Haushalt'], 'true', '', ['column'], '8', true) }}
+    </div>
+  </div>
+</div>
+
+<div class="block full-width">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Stromverbrauch pro Stunde (kwh)</h3>
+      {{ plot.stacked('p2', ['ehz.haus.verbrauch.stuendlich'], 'max', '48h', '', '', '', ['Haushalt'], 'false', '', ['column'], '48', false) }}
+    </div>
+  </div>
+</div>
+
+<div class="block full-width">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Kosten pro Tag (EUR)</h3>
+      {{ plot.stacked('p3', ['ehz.haus.kosten.gestern', 'ehz.kosten.gestern.weekly_avg'], 'max', '8d', '', '', '', ['Haushalt', 'Wochendurchschnitt'], 'true', '', ['column', 'line'], '8', true) }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

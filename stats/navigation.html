@@ -15,6 +15,11 @@
 			<img class="icon" src="{{ icon0 }}sani_heating_temp.svg"/><h3>Heizung</h3>
 		</a>
 	</li>
+        <li data-icon="false" class="{{ page == 'ehz' ? 'ui-btn-active' : ''}}">
+                <a href="index.php?page=stats/ehz">
+                        <img class="icon" src="{{ icon0 }}measure_power_meter.svg"/><h3>Stromverbrauch</h3>
+                </a>
+        </li>	
 	<li data-icon="false" class="{{ page == 'smarthome' ? 'ui-btn-active' : ''}}">
 		<a href="index.php?page=stats/smarthome">
 			<img class="icon" src="{{ icon0 }}time_graph.svg"/><h3>Smarthomeinfo</h3>

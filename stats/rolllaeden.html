@@ -14,11 +14,12 @@
 		<li><a href="index.php?page=stats/licht" class="licht" data-icon="custom">Licht</a></li>
 		<li><a href="index.php?page=stats/rolllaeden" class="ui-btn-active ui-state-persist  rollos" data-icon="custom">Rollläden</a></li>
 		<li><a href="index.php?page=stats/heizung" class="heizung" data-icon="custom">Heizung</a></li>
+		<li><a href="index.php?page=stats/ehz" class="ehz" data-icon="custom">Stromverbrauch</a></li>
 		<li><a href="index.php?page=stats/smarthome" class="smarthome" data-icon="custom">Smarthome</a></li>
 		<li><a href="index.php?page=stats/system" class="system" data-icon="custom">System</a></li>
 	</ul>
 </div>
-		
+
 <h1 class="visible-tablet"><img class="icon" src="{{ icon0 }}fts_shutter.svg"/>Status Rollläden</h1>
 <hr />
 <div class="block full-width">
@@ -36,11 +37,11 @@
 		</table>
 	</div>
 </div>
-		
+
 <div class="block full-width">
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
-			<h3>Erdgeschoss</h3>		
+			<h3>Erdgeschoss</h3>
 			{{ smallshutter.smallshut('sshut_wohnzimmer_links', 'Wohnzimmer links', 'eg.rollos.wohnzimmer.links.fahren', 'eg.rollos.wohnzimmer.links.stop', 'eg.rollos.wohnzimmer.links.position') }}
 			{{ smallshutter.smallshut('sshut_wohnzimmer_rechts', 'Wohnzimmer rechts', 'eg.rollos.wohnzimmer.rechts.fahren', 'eg.rollos.wohnzimmer.rechts.stop', 'eg.rollos.wohnzimmer.rechts.position') }}
 			{{ smallshutter.smallshut('sshut_kueche_links', 'Küche Links', 'eg.rollos.kueche.links.fahren', 'eg.rollos.kueche.links.stop', 'eg.rollos.kueche.links.position') }}
