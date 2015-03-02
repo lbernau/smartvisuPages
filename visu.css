@@ -94,6 +94,11 @@
 	background-size: 36px 36px;
 }
 
+.nav-custom .ehz .ui-icon {
+	background: url(../../icons/ws/measure_power_meter.png) 50% 50% no-repeat;
+	background-size: 36px 36px;
+}
+
 .nav-custom .licht .ui-icon {
 	background: url(../../icons/ws/light_light.png) 50% 50% no-repeat;
 	background-size: 36px 36px;
