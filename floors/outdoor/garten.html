@@ -43,8 +43,9 @@
 <div class="block full-width">
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
-			<h3>Wetterverlauf</h3>
-			{{ plot.period('tempOutdoor', 'zentral.wetter.temperatur', 'max', '7d', '', '', '', '', 'Außentemperatur', '#3366ff', 'line','Temperatur in °C') }}
+			<h3>Temperaturverlauf</h3>
+			<!-- minmaxavg(id, gad, tmin, tmax, ymin, ymax, unit, axes, count) -->
+			{{ plot.minmaxavg('tempOutdoor', 'zentral.wetter.temperatur', '14d', '', '', '', '°', ['', 'Temperatur in °C'], '14') }}
 		</div>
 	</div>
 </div>
