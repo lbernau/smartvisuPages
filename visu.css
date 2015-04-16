@@ -40,6 +40,10 @@
 	padding: 10px 5px 10px 5px;
 }
 
+div.ui-slider-switch {
+	width: 4.8em;
+}
+
 .sunIcon {
 	border: 0;
 	padding: 0;
