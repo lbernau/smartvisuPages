@@ -103,8 +103,9 @@
   <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
     <div data-role="collapsible" data-collapsed="false">
       <h3>Stromverbrauch pro Stunde (kwh)</h3>
-      {{ plot.stacked('p2', ['ehz.haus.verbrauch.stuendlich'], 'max', '48h', '', '', '', ['Haushalt'], 'false', '', ['column'], '48', false) }}
-    </div>
+      <!-- plot.stacked('p2', ['ehz.haus.verbrauch.stuendlich'], 'max', '48h', '', '', '', ['Haushalt'], 'false', '', ['column'], '48', false) }} -->
+      {{ plot.period('p2', ['ehz.haus.verbrauch.stuendlich'], 'max', '48h', '', '', '', '48', ['Haushalt'], '', ['column']) }}
+     </div>
   </div>
 </div>
 
