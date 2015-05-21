@@ -13,9 +13,9 @@
 	<div class="ui-fixed ui-body-a ui-corner-bottom" style="min-height: 50px">
 		<table style="width: 70%; margin: auto">
 			<tr>
-				<td style="width: 100px;">&nbsp; {{ basic.switch('alarmGesamtEA', 'zentral.alarm.gesamt', icon1~'secur_alarm_enabled.png', icon0~'secur_alarm_disabled.png') }} </td>
+				<td style="width: 100px;">&nbsp; {{ basic.switch('alarmGesamtEA', 'zentral.alarm.gesamt', 'secur_alarm_enabled.svg', 'secur_alarm_disabled.svg') }} </td>
 				<td style ="text-align: left">Gesamt</td>
-				<td style="width: 100px;">&nbsp; {{ basic.switch('alarmEGEA', 'zentral.alarm.erdgeschoss', icon1~'secur_alarm_enabled.png', icon0~'secur_alarm_disabled.png') }} </td>
+				<td style="width: 100px;">&nbsp; {{ basic.switch('alarmEGEA', 'zentral.alarm.erdgeschoss', 'secur_alarm_enabled.svg', 'secur_alarm_disabled.svg') }} </td>
 				<td style ="text-align: left">Erdgeschoss</td>
 			</tr>
 		</table>
@@ -25,32 +25,32 @@
 <div class="block one-third window-status">
 	<div class="ui-bar-c ui-li-divider ui-corner-top">Fenster Erdgeschoss</div>
 	<div class="ui-fixed ui-body-a ui-corner-bottom">
-		<p>{{ basic.symbol('statusFensterEgZu', 'eg.fenster.gesamt', 'Alle Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}</p>
-		<p>{{ basic.symbol('statusFensterKuecheOffen', 'eg.fenster.kueche', 'Küche geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
-		<p>{{ basic.symbol('statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', 'Wohnzimmer geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
-		<p>{{ basic.symbol('statusFensterWcOffen', 'eg.fenster.wc', 'Gäste WC geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
-		<p>{{ basic.symbol('statusFensterDieleOffen', 'eg.fenster.diele', 'Flur geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+		<p>{{ basic.symbol('statusFensterEgZu', 'eg.fenster.gesamt', 'Alle Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}</p>
+		<p>{{ basic.symbol('statusFensterKuecheOffen', 'eg.fenster.kueche', 'Küche geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
+		<p>{{ basic.symbol('statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', 'Wohnzimmer geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
+		<p>{{ basic.symbol('statusFensterWcOffen', 'eg.fenster.wc', 'Gäste WC geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
+		<p>{{ basic.symbol('statusFensterDieleOffen', 'eg.fenster.diele', 'Flur geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
 	</div>
 </div>
 
 <div class="block one-third window-status">
 	<div class="ui-bar-c ui-li-divider ui-corner-top">Fenster Obergeschoss</div>
 	<div class="ui-fixed ui-body-a ui-corner-bottom">
-		<p>{{ basic.symbol('statusFensterOgZu', 'og.fenster.gesamt', 'Alle Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}</p>
-		<p>{{ basic.symbol('statusFensterBadOffen', ['og.fenster.bad.velux', 'og.fenster.bad.velux'], 'Badezimmer geöffnet', icon0~'fts_window_2w_open_lr.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusFensterSchlafenOffen', 'og.fenster.schlafzimmer', 'Schlafzimmer geöffnet', icon0~'fts_window_2w_open_lr.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusFensterKind1Offen', 'og.fenster.kind_1', 'Gästezimmer geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
-		<p>{{ basic.symbol('statusFensterKind2Offen', 'og.fenster.kind_2', 'Büro geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+		<p>{{ basic.symbol('statusFensterOgZu', 'og.fenster.gesamt', 'Alle Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}</p>
+		<p>{{ basic.symbol('statusFensterBadOffen', ['og.fenster.bad.velux', 'og.fenster.bad.velux'], 'Badezimmer geöffnet', 'fts_window_2w_open_lr.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusFensterSchlafenOffen', 'og.fenster.schlafzimmer', 'Schlafzimmer geöffnet', 'fts_window_2w_open_lr.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusFensterKind1Offen', 'og.fenster.kind_1', 'Gästezimmer geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
+		<p>{{ basic.symbol('statusFensterKind2Offen', 'og.fenster.kind_2', 'Büro geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
 	</div>
 </div>
 
 <div class="block one-third window-status">
 	<div class="ui-bar-c ui-li-divider ui-corner-top">Fenster Keller</div>
 	<div class="ui-fixed ui-body-a ui-corner-bottom">
-		<p>{{ basic.symbol('statusFensterKgZu', 'kg.fenster.gesamt', 'Alle Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}</p>
-		<p>{{ basic.symbol('statusFensterMultimediaOffen', 'kg.fenster.multimedia', 'Hobby geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
-		<p>{{ basic.symbol('statusFensterWaschenOffen', 'kg.fenster.waschen', 'Waschen geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
-		<p>{{ basic.symbol('statusFensterHobbyOffen', 'kg.fenster.hobby', 'Werkstatt geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}</p>
+		<p>{{ basic.symbol('statusFensterKgZu', ['kg.fenster.multimedia', 'kg.fenster.waschen', 'kg.fenster.hobby'], 'Alle Fenster geschlossen', 'fts_window_2w.svg', 0, 'and', 'icon1') }}</p>
+		<p>{{ basic.symbol('statusFensterMultimediaOffen', 'kg.fenster.multimedia', 'Hobby geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
+		<p>{{ basic.symbol('statusFensterWaschenOffen', 'kg.fenster.waschen', 'Waschen geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
+		<p>{{ basic.symbol('statusFensterHobbyOffen', 'kg.fenster.hobby', 'Werkstatt geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
 	</div>
 </div>
 {% endblock %}

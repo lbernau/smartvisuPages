@@ -22,30 +22,30 @@
 			<h3>Heizung</h3>
 			{{ ext.rtr('heizenWohnzimmer', '', 'eg.heizen.wohnzimmer.ist', '', '', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.heizen') }}
 			<br /><br />
-			{{ basic.symbol('statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
-			{{ basic.symbol('statusFensterWohnzimmerZu', 'eg.fenster.wohnzimmer', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+			{{ basic.symbol('statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', 'Fenster geöffnet', 'fts_window_2w_open_lr.svg', 1) }}
+			{{ basic.symbol('statusFensterWohnzimmerZu', 'eg.fenster.wohnzimmer', 'Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 		</div>
 	</div>
 </div>
-		
+
 <div class="block full-width">
 	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Steckdosen</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmerKamin', 'eg.steckdosen.wohnzimmer.einundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Kamin</td>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmerTV', 'eg.steckdosen.wohnzimmer.zweiundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>TV</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmerKamin', 'eg.steckdosen.wohnzimmer.einundsechzig', 'message_socket.svg', 'message_socket.svg') }} </td><td>Kamin</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmerTV', 'eg.steckdosen.wohnzimmer.zweiundsechzig', 'message_socket.svg', 'message_socket.svg') }} </td><td>TV</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmerFenster', 'eg.steckdosen.wohnzimmer.vierundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Fenster</td>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmerEssen', 'eg.steckdosen.wohnzimmer.sechsundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Essbereich</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmerFenster', 'eg.steckdosen.wohnzimmer.vierundsechzig', 'message_socket.svg', 'message_socket.svg') }} </td><td>Fenster</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseWohnzimmerEssen', 'eg.steckdosen.wohnzimmer.sechsundsechzig', 'message_socket.svg', 'message_socket.svg') }} </td><td>Essbereich</td>
 				</tr>
 			</table>
 		</div>
 	</div>
 </div>
-	
+
 <div class="block" >
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 
@@ -75,5 +75,5 @@
 		</div>
 	</div>
 </div>
-		
+
 {% endblock %}

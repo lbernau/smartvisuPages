@@ -3,9 +3,9 @@
 *
 * @param       unique id for this widget
 * @param       name of the shutter
-* @param       a gad/item for long move 
+* @param       a gad/item for long move
 * @param       a gad/item for short move
-* @param       a gad/item for the actual position 
+* @param       a gad/item for the actual position
 */
 {% macro smallshut(id, txt, gad_move, gad_stop, gad_position) %}
 {% import "basic.html" as basic %}
@@ -25,7 +25,7 @@
             </td>
             <td width="15%">
                 {% if gad_stop %}
-                    {{ basic.button(id~'stop', gad_stop, '', icon0~'audio_stop.png', '1', 'micro') }}
+                    {{ basic.button(id~'stop', gad_stop, '', 'audio_stop.svg', '1', 'micro') }}
                 {% endif %}
             </td>
             <td width="15%">

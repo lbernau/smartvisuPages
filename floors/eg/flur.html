@@ -10,15 +10,15 @@
 			<h3>Licht</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtFlurDecke', 'eg.licht.diele.decke', icon1~'light_ceiling_light.png', icon0~'light_ceiling_light.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtFlurDecke', 'eg.licht.diele.decke', 'light_ceiling_light.svg', 'light_ceiling_light.svg') }} </td>
 					<td>Decke</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtFlurBoard', 'eg.steckdosen.diele.leuchte', icon1~'light_bedside.png', icon0~'light_bedside.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtFlurBoard', 'eg.steckdosen.diele.leuchte', 'light_bedside.svg', 'light_bedside.svg') }} </td>
 					<td>Sideboard</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtFlurTreppe', 'eg.licht.treppe.wand', icon1~'light_stairs.png', icon0~'light_stairs.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtFlurTreppe', 'eg.licht.treppe.wand', 'light_stairs.svg', 'light_stairs.svg') }} </td>
 					<td>Treppe</td>
 				</tr>
 			</table>
@@ -32,8 +32,8 @@
 			<h3>Heizung</h3>
 			{{ ext.rtr('heizenDiele', '', 'eg.heizen.diele.ist', '', '', 'eg.heizen.diele.modus', 'eg.heizen.diele.modus', 'eg.heizen.diele.modus', 'eg.heizen.diele.heizen') }}
 			<br /><br />
-			{{ basic.symbol('statusFensterDieleOffen', 'eg.fenster.diele', 'Fenster geöffnet', icon0~'fts_door_open.png', 1) }}
-			{{ basic.symbol('statusFensterDieleZu', 'eg.fenster.diele', 'Fenster geschlossen', icon1~'fts_door.png', 0) }}
+			{{ basic.symbol('statusFensterDieleOffen', 'eg.fenster.diele', 'Fenster geöffnet', 'fts_door_open.svg', 1) }}
+			{{ basic.symbol('statusFensterDieleZu', 'eg.fenster.diele', 'Fenster geschlossen', 'fts_door.svg', 0, 'or', 'icon1', 'icon1') }}
 		</div>
 	</div>
 </div>
@@ -57,6 +57,6 @@
 		</div>
 	</div>
 </div>
-		
+
 {% endblock %}
 

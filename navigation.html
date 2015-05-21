@@ -6,8 +6,8 @@
 			<a href="index.php?page=floors/eg/kueche">
 				<img class="icon" src="{{ icon0 }}scene_dinner.svg"/><h3>Küche</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterKuecheOffen', 'eg.fenster.kueche', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterKuecheZu', 'eg.fenster.kueche', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterKuecheOffen', 'eg.fenster.kueche', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterKuecheZu', 'eg.fenster.kueche', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />{{ basic.float('nav_statusTempKueche', 'eg.heizen.kueche.ist', 'temp') }}
 				</div>
 			</a>
@@ -16,8 +16,8 @@
 			<a href="index.php?page=floors/eg/wohnzimmer">
 				<img class="icon" src="{{ icon0 }}scene_livingroom.svg"/><h3>Wohnzimmer</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterWohnzimmerZu', 'eg.fenster.wohnzimmer', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterWohnzimmerOffen', 'eg.fenster.wohnzimmer', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterWohnzimmerZu', 'eg.fenster.wohnzimmer', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />{{ basic.float('nav_statusTempWohnen', 'eg.heizen.wohnzimmer.ist', 'temp') }}
 				</div>
 			</a>
@@ -26,8 +26,8 @@
 			<a href="index.php?page=floors/eg/wc">
 				<img class="icon" src="{{ icon0 }}scene_shower.svg"/><h3>Gäste WC</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterWCOffen', 'eg.fenster.wc', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterWCZu', 'eg.fenster.wc', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterWCOffen', 'eg.fenster.wc', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterWCZu', 'eg.fenster.wc', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />{{ basic.float('nav_statusTempWc', 'eg.heizen.wc.ist', 'temp') }}
 				</div>
 			</a>
@@ -36,8 +36,8 @@
 			<a href="index.php?page=floors/eg/flur">
 				<img class="icon" src="{{ icon0 }}scene_stairs.svg"/><h3>Flur / Treppe</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterDieleOffen', 'eg.fenster.diele', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterDieleZu', 'eg.fenster.diele', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterDieleOffen', 'eg.fenster.diele', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterDieleZu', 'eg.fenster.diele', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />{{ basic.float('nav_statusTempFlur', 'eg.heizen.diele.ist', 'temp') }}
 				</div>
 			</a>
@@ -49,13 +49,13 @@
 					{{ basic.float('nav_statusTempAussen', 'zentral.wetter.temperatur', 'temp') }}
 					&nbsp;&nbsp;&nbsp;{{ basic.float('nav_statusWind', 'zentral.wetter.wind', 'km/s') }} <br />
 					{{ basic.float('nav_statusLuxAussen', 'zentral.wetter.helligkeit', 'lux') }}
-					&nbsp;&nbsp;&nbsp;{{ basic.symbol('nav_statusRegen', 'zentral.wetter.niederschlag', '', icon1~'weather_rain.png', 1) }}
+					&nbsp;&nbsp;&nbsp;{{ basic.symbol('nav_statusRegen', 'zentral.wetter.niederschlag', '', 'weather_rain.svg', 1) }}
 				</div>
 			</a>
 		</li>
 	</ul>
 </div>
-		
+
 <!-- Obergeschoss -->
 <div data-role="collapsible" data-collapsed="false" data-theme="c" data-mini="false" data-inset="false">
 	<h4>Obergeschoss</h4>
@@ -64,8 +64,8 @@
 			<a href="index.php?page=floors/og/kind2">
 				<img class="icon" src="{{ icon0 }}scene_office.svg"/><h3>Büro</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterKind2Offen', 'og.fenster.kind_2', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterKind2Zu', 'og.fenster.kind_2', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterKind2Offen', 'og.fenster.kind_2', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterKind2Zu', 'og.fenster.kind_2', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />{{ basic.float('nav_statusTempKind2', 'og.heizen.kind_2.ist', 'temp') }}
 				</div>
 			</a>
@@ -74,8 +74,8 @@
 			<a href="index.php?page=floors/og/kind1">
 				<img class="icon" src="{{ icon0 }}scene_visit_guests.svg"/><h3>Gästezimmer</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterKind1Offen', 'og.fenster.kind_1', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterKind1Zu', 'og.fenster.kind_1', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterKind1Offen', 'og.fenster.kind_1', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterKind1Zu', 'og.fenster.kind_1', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />{{ basic.float('nav_statusTempKind1', 'og.heizen.kind_1.ist', 'temp') }}
 				</div>
 			</a>
@@ -84,8 +84,8 @@
 			<a href="index.php?page=floors/og/schlafzimmer">
 				<img class="icon" src="{{ icon0 }}scene_sleeping_alternat.svg"/><h3>Schlafzimmer</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterSchlafenOffen', 'og.fenster.schlafzimmer', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterSchlafendZu', 'og.fenster.schlafzimmer', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterSchlafenOffen', 'og.fenster.schlafzimmer', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterSchlafendZu', 'og.fenster.schlafzimmer', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />
 					{{ basic.float('nav_statusTempSchlafen', 'og.heizen.schlafzimmer.ist', 'temp') }}
 				</div>
@@ -95,10 +95,10 @@
 			<a href="index.php?page=floors/og/bad">
 				<img class="icon" src="{{ icon0 }}scene_bathroom.svg"/><h3>Bad</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterBadOffen', 'og.fenster.bad.fenster', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterBadZu', 'og.fenster.bad.fenster', '', icon1~'fts_window_2w.png', 0) }}
-					&nbsp;{{ basic.symbol('nav_statusFensterBadVeluxOffen', 'og.fenster.bad.velux', '', icon0~'fts_window_roof_open_2.png', 1) }}
-					{{ basic.symbol('nav_statusFensterBadVeluxZu', 'og.fenster.bad.velux', '', icon1~'fts_window_roof.png', 0) }}
+					{{ basic.symbol('nav_statusFensterBadOffen', 'og.fenster.bad.fenster', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterBadZu', 'og.fenster.bad.fenster', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
+					&nbsp;{{ basic.symbol('nav_statusFensterBadVeluxOffen', 'og.fenster.bad.velux', '', 'fts_window_roof_open_2.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterBadVeluxZu', 'og.fenster.bad.velux', '', 'fts_window_roof.svg', 0, 'or', 'icon1') }}
 					<br />
 					{{ basic.float('nav_statusTempBad', 'og.heizen.bad.ist', 'temp') }}
 				</div>
@@ -115,8 +115,8 @@
 			<a href="index.php?page=floors/kg/multimedia">
 				<img class="icon" src="{{ icon0 }}scene_cinema.svg"/><h3>Hobby</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterMultimediaOffen', 'kg.fenster.multimedia', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterMultimediaZu', 'kg.fenster.multimedia', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterMultimediaOffen', 'kg.fenster.multimedia', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterMultimediaZu', 'kg.fenster.multimedia', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />{{ basic.float('nav_statusTempMultimedia', 'kg.heizen.multimedia.ist', 'temp') }}
 				</div>
 			</a>
@@ -125,8 +125,8 @@
 			<a href="index.php?page=floors/kg/waschen">
 				<img class="icon" src="{{ icon0 }}scene_laundry_room_fem.svg"/><h3>Waschen / Trocknen</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterWaschenOffen', 'kg.fenster.waschen', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterWaschenZu', 'kg.fenster.waschen', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterWaschenOffen', 'kg.fenster.waschen', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterWaschenZu', 'kg.fenster.waschen', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />{{ basic.float('nav_statusTempWaschen', 'kg.heizen.waschen.ist', 'temp') }}
 
 				</div>
@@ -136,8 +136,8 @@
 			<a href="index.php?page=floors/kg/hobby">
 				<img class="icon" src="{{ icon0 }}scene_workshop.svg"/><h3>Werkstatt</h3>
 				<div class="ui-li-aside">
-					{{ basic.symbol('nav_statusFensterHobbyOffen', 'kg.fenster.hobby', '', icon0~'fts_window_2w_open_lr.png', 1) }}
-					{{ basic.symbol('nav_statusFensterHobbyZu', 'kg.fenster.hobby', '', icon1~'fts_window_2w.png', 0) }}
+					{{ basic.symbol('nav_statusFensterHobbyOffen', 'kg.fenster.hobby', '', 'fts_window_2w_open_lr.svg', 1) }}
+					{{ basic.symbol('nav_statusFensterHobbyZu', 'kg.fenster.hobby', '', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					<br />{{ basic.float('nav_statusTempHobby', 'kg.heizen.hobby.ist', 'temp') }}
 				</div>
 			</a>

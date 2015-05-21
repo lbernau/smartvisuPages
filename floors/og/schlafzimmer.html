@@ -12,15 +12,15 @@
 			{{ device.dimmer('lichtSchlafzimmer', 'Decke', 'og.licht.schlafzimmer.decke', 'og.licht.schlafzimmer.decke.dimmen') }}
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseBettRechts', 'og.steckdosen.schlafzimmer.bett_rechts', icon1~'light_bedside.png', icon0~'light_bedside.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseBettRechts', 'og.steckdosen.schlafzimmer.bett_rechts', 'light_bedside.svg', 'light_bedside.svg') }} </td>
 					<td>Nachttisch Lars</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseBettLinks', 'og.steckdosen.schlafzimmer.bett_links', icon1~'light_bedside.png', icon0~'light_bedside.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseBettLinks', 'og.steckdosen.schlafzimmer.bett_links', 'light_bedside.svg', 'light_bedside.svg') }} </td>
 					<td>Nachttisch Sarah</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKleiderschrank', 'og.licht.schlafzimmer.schrank', icon1~'light_dressing_room.png', icon0~'light_dressing_room.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKleiderschrank', 'og.licht.schlafzimmer.schrank', 'light_dressing_room.svg', 'light_dressing_room.svg') }} </td>
 					<td>Kleiderschrank</td>
 				</tr>
 			</table>
@@ -34,8 +34,8 @@
 			<h3>Heizung</h3>
 			{{ ext.rtr('heizenSchlafzimmer', '', 'og.heizen.schlafzimmer.ist', '', '', 'og.heizen.schlafzimmer.modus', 'og.heizen.schlafzimmer.modus', 'og.heizen.schlafzimmer.modus', 'og.heizen.schlafzimmer.heizen') }}
 			<br /><br />
-			{{ basic.symbol('statusFensterSchlafzimmerOffen', 'og.fenster.schlafzimmer', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
-			{{ basic.symbol('statusFensterSchlafzimmerZu', 'og.fenster.schlafzimmer', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+			{{ basic.symbol('statusFensterSchlafzimmerOffen', 'og.fenster.schlafzimmer', 'Fenster geöffnet', 'fts_window_2w_open_lr.svg', 1) }}
+			{{ basic.symbol('statusFensterSchlafzimmerZu', 'og.fenster.schlafzimmer', 'Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 		</div>
 	</div>
 </div>
@@ -61,7 +61,7 @@
 
 	</div>
 </div>
-		
+
 <div class="block full-width">
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">

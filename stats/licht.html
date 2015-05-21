@@ -24,22 +24,22 @@
 <div class="block full-width">
 	<div class="ui-bar-c ui-li-divider ui-corner-top">Zentral aus</div>
 	<div class="ui-fixed ui-body-a ui-corner-bottom" style="min-height: 50px">
-		{{ basic.button('lichtZentralAus', 'zentral.aus', '', icon0~'control_on_off.png', 0, 'midi') }}
+		{{ basic.button('lichtZentralAus', 'zentral.aus', '', 'control_on_off.svg', 0, 'midi') }}
 	</div>
 </div>
 
 <div class="block one-third window-status">
 	<div class="ui-bar-c ui-li-divider ui-corner-top">Status Erdgeschoss</div>
 	<div class="ui-fixed ui-body-a ui-corner-bottom">
-		<p>{{ basic.symbol('statusEgGesamt', ['eg.licht.treppe.wand', 'eg.licht.treppe.orientierung', 'eg.licht.diele.decke', 'eg.licht.diele.orientierung', 'eg.licht.wc.decke', 'eg.licht.wc.spiegel', 'eg.licht.kueche.vorrat','eg.steckdosen.kueche.radio','eg.licht.kueche.essen', 'eg.steckdosen.kueche.arbeitsplatte', 'eg.licht.wohnzimmer.sofa', 'eg.licht.wohnzimmer.essen', 'eg.licht.wohnzimmer.wand', 'eg.steckdosen.wohnzimmer.einundsechzig', 'eg.steckdosen.wohnzimmer.zweiundsechzig', 'eg.steckdosen.wohnzimmer.vierundsechzig', 'eg.steckdosen.wohnzimmer.sechsundsechzig'], 'Alles ausgeschaltet.', icon0~'message_ok.png', 0, 'and') }}</p>
-		<p>{{ basic.symbol('statusLichtWohnzimmer', ['eg.licht.wohnzimmer.sofa', 'eg.licht.wohnzimmer.essen', 'eg.licht.wohnzimmer.wand'], 'Wohnzimmer: Licht an.', icon0~'scene_livingroom.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusSSWohnzimmer', ['eg.steckdosen.wohnzimmer.einundsechzig', 'eg.steckdosen.wohnzimmer.zweiundsechzig', 'eg.steckdosen.wohnzimmer.vierundsechzig', 'eg.steckdosen.wohnzimmer.sechsundsechzig'], 'Wohnzimmer: Steckdose aktiv.', icon0~'message_socket.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusLichtKueche', ['eg.licht.kueche.essen', 'eg.steckdosen.kueche.arbeitsplatte'], 'Küche: Licht an.', icon0~'scene_dinner.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusSSKueche', 'eg.steckdosen.kueche.radio', 'Küche: Radio eingeschaltet.', icon0~'message_socket.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusLichtVorrat', 'eg.licht.kueche.vorrat', 'Vorrat: Licht an.', icon0~'scene_cubby.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusLichtWc', ['eg.licht.wc.decke', 'eg.licht.wc.spiegel'], 'Gäste-WC: Licht an.', icon0~'scene_shower.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusLichtDiele', ['eg.licht.diele.decke', 'eg.licht.diele.orientierung'], 'Flur: Licht an.', icon0~'scene_corridor.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusLichtTreppe', ['eg.licht.treppe.wand', 'eg.licht.treppe.orientierung'], 'Treppenhaus: Licht an.', icon0~'scene_stairs.png', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusEgGesamt', ['eg.licht.treppe.wand', 'eg.licht.treppe.orientierung', 'eg.licht.diele.decke', 'eg.licht.diele.orientierung', 'eg.licht.wc.decke', 'eg.licht.wc.spiegel', 'eg.licht.kueche.vorrat','eg.steckdosen.kueche.radio','eg.licht.kueche.essen', 'eg.steckdosen.kueche.arbeitsplatte', 'eg.licht.wohnzimmer.sofa', 'eg.licht.wohnzimmer.essen', 'eg.licht.wohnzimmer.wand', 'eg.steckdosen.wohnzimmer.einundsechzig', 'eg.steckdosen.wohnzimmer.zweiundsechzig', 'eg.steckdosen.wohnzimmer.vierundsechzig', 'eg.steckdosen.wohnzimmer.sechsundsechzig'], 'Alles ausgeschaltet.', 'message_ok.svg', 0, 'and', 'icon1') }}</p>
+		<p>{{ basic.symbol('statusLichtWohnzimmer', ['eg.licht.wohnzimmer.sofa', 'eg.licht.wohnzimmer.essen', 'eg.licht.wohnzimmer.wand'], 'Wohnzimmer: Licht an.', 'scene_livingroom.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusSSWohnzimmer', ['eg.steckdosen.wohnzimmer.einundsechzig', 'eg.steckdosen.wohnzimmer.zweiundsechzig', 'eg.steckdosen.wohnzimmer.vierundsechzig', 'eg.steckdosen.wohnzimmer.sechsundsechzig'], 'Wohnzimmer: Steckdose aktiv.', 'message_socket.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusLichtKueche', ['eg.licht.kueche.essen', 'eg.steckdosen.kueche.arbeitsplatte'], 'Küche: Licht an.', 'scene_dinner.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusSSKueche', 'eg.steckdosen.kueche.radio', 'Küche: Radio eingeschaltet.', 'message_socket.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusLichtVorrat', 'eg.licht.kueche.vorrat', 'Vorrat: Licht an.', 'scene_cubby.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusLichtWc', ['eg.licht.wc.decke', 'eg.licht.wc.spiegel'], 'Gäste-WC: Licht an.', 'scene_shower.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusLichtDiele', ['eg.licht.diele.decke', 'eg.licht.diele.orientierung'], 'Flur: Licht an.', 'scene_corridor.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusLichtTreppe', ['eg.licht.treppe.wand', 'eg.licht.treppe.orientierung'], 'Treppenhaus: Licht an.', 'scene_stairs.svg', 1, 'or') }}</p>
 	</div>
 </div>
 
@@ -53,16 +53,16 @@
 <div class="block one-third window-status">
 	<div class="ui-bar-c ui-li-divider ui-corner-top">Status Keller</div>
 	<div class="ui-fixed ui-body-a ui-corner-bottom">
-		<p>{{ basic.symbol('statusKgGesamt', ['kg.licht.treppe.wand', 'kg.licht.treppe.orientierung', 'kg.licht.diele', 'kg.licht.vorrat', 'kg.steckdosen.multimedia.beamer', 'kg.steckdosen.multimedia.audio', 'kg.licht.waschen', 'kg.licht.hobby', 'kg.steckdosen.multimedia.zweiundsechzig', 'kg.steckdosen.multimedia.dreiundsechzig'], 'Alles ausgeschaltet.', icon0~'message_ok.png', 0, 'and') }}</p>
-		<p>{{ basic.symbol('statusLichtWaschen', 'kg.licht.waschen', 'Waschen: Licht an.', icon0~'scene_laundry_room_fem.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusLichtWerkstatt', 'kg.licht.hobby', 'Werkstatt: Licht an.', icon0~'scene_workshop.png', 1, 'or') }}</p>
-		<!--<p>todo: basic.symbol('statusLichtMultimedia', ['eg.licht.kueche.essen', 'eg.steckdosen.kueche.arbeitsplatte'], 'Hobby: Licht an.', icon0~'scene_dinner.png', 1, 'or') </p>-->
-		<p>{{ basic.symbol('statusSSMultimedia', ['kg.steckdosen.multimedia.zweiundsechzig', 'kg.steckdosen.multimedia.dreiundsechzig'], 'Hobby: Steckdose eingeschaltet.', icon0~'message_socket.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusSSAudio', 'kg.steckdosen.multimedia.audio', 'Hobby: Audio eingeschaltet.', icon0~'audio_volume_high.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusSSBeamer', 'kg.steckdosen.multimedia.beamer', 'Hobby: Beamer eingeschaltet.', icon0~'scene_cinema.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusLichtVorratKg', 'kg.licht.vorrat', 'Vorrat: Licht an.', icon0~'scene_cubby.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusLichtDieleKg', 'kg.licht.diele', 'Flur: Licht an.', icon0~'scene_corridor.png', 1, 'or') }}</p>
-		<p>{{ basic.symbol('statusLichtTreppeKg', ['kg.licht.treppe.wand', 'kg.licht.treppe.orientierung'], 'Treppenhaus: Licht an.', icon0~'scene_stairs.png', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusKgGesamt', ['kg.licht.treppe.wand', 'kg.licht.treppe.orientierung', 'kg.licht.diele', 'kg.licht.vorrat', 'kg.steckdosen.multimedia.beamer', 'kg.steckdosen.multimedia.audio', 'kg.licht.waschen', 'kg.licht.hobby', 'kg.steckdosen.multimedia.zweiundsechzig', 'kg.steckdosen.multimedia.dreiundsechzig'], 'Alles ausgeschaltet.', 'message_ok.svg', 0, 'and', 'icon1') }}</p>
+		<p>{{ basic.symbol('statusLichtWaschen', 'kg.licht.waschen', 'Waschen: Licht an.', 'scene_laundry_room_fem.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusLichtWerkstatt', 'kg.licht.hobby', 'Werkstatt: Licht an.', 'scene_workshop.svg', 1, 'or') }}</p>
+		<!--<p>todo: basic.symbol('statusLichtMultimedia', ['eg.licht.kueche.essen', 'eg.steckdosen.kueche.arbeitsplatte'], 'Hobby: Licht an.', 'scene_dinner.svg', 1, 'or') </p>-->
+		<p>{{ basic.symbol('statusSSMultimedia', ['kg.steckdosen.multimedia.zweiundsechzig', 'kg.steckdosen.multimedia.dreiundsechzig'], 'Hobby: Steckdose eingeschaltet.', 'message_socket.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusSSAudio', 'kg.steckdosen.multimedia.audio', 'Hobby: Audio eingeschaltet.', 'audio_volume_high.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusSSBeamer', 'kg.steckdosen.multimedia.beamer', 'Hobby: Beamer eingeschaltet.', 'scene_cinema.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusLichtVorratKg', 'kg.licht.vorrat', 'Vorrat: Licht an.', 'scene_cubby.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusLichtDieleKg', 'kg.licht.diele', 'Flur: Licht an.', 'scene_corridor.svg', 1, 'or') }}</p>
+		<p>{{ basic.symbol('statusLichtTreppeKg', ['kg.licht.treppe.wand', 'kg.licht.treppe.orientierung'], 'Treppenhaus: Licht an.', 'scene_stairs.svg', 1, 'or') }}</p>
 	</div>
 </div>
 {% endblock %}

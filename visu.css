@@ -94,46 +94,46 @@ div.ui-slider-switch {
 }
 
 .nav-custom .heizung .ui-icon {
-	background: url(../../icons/ws/sani_heating_temp.png) 50% 50% no-repeat;
+	background: url(../../icons/ws/sani_heating_temp.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
 }
 
 .nav-custom .ehz .ui-icon {
-	background: url(../../icons/ws/measure_power_meter.png) 50% 50% no-repeat;
+	background: url(../../icons/ws/measure_power_meter.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
 }
 
 .nav-custom .licht .ui-icon {
-	background: url(../../icons/ws/light_light.png) 50% 50% no-repeat;
+	background: url(../../icons/ws/light_light.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
 }
 
 .nav-custom .rollos .ui-icon {
-	background: url(../../icons/ws/fts_shutter.png) 50% 50% no-repeat;
+	background: url(../../icons/ws/fts_shutter.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
 }
 
 .nav-custom .smarthome .ui-icon {
-	background: url(../../icons/ws/time_graph.png) 50% 50% no-repeat;
+	background: url(../../icons/ws/time_graph.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
 }
 
 .nav-custom .system .ui-icon {
-	background: url(../../icons/ws/it_server.png) 50% 50% no-repeat;
+	background: url(../../icons/ws/it_server.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
 }
 
 .nav-custom .eingang .ui-icon {
-	background: url(../../icons/ws/status_away_2.png) 50% 50% no-repeat;
+	background: url(../../icons/ws/status_away_2.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
 }
 
 .nav-custom .garten .ui-icon {
-	background: url(../../icons/ws/scene_garden.png) 50% 50% no-repeat;
+	background: url(../../icons/ws/scene_garden.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
 }
 
 .nav-custom .garage .ui-icon {
-	background: url(../../icons/ws/fts_garage.png) 50% 50% no-repeat;
+	background: url(../../icons/ws/fts_garage.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
 }

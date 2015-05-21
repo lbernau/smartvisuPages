@@ -1,7 +1,7 @@
 {% extends "rooms.html" %}
 
 {% block content %}
-<h1><img class="icon" src='{{ icon0 }}control_building_outside.png' />Außenanlagen</h1>
+<h1><img class="icon" src='{{ icon0 }}control_building_outside.svg' />Außenanlagen</h1>
 <div data-role="navbar" class="nav-custom">
 	<ul>
 		<li><a href="index.php?page=floors/outdoor/eingang" class="eingang" data-icon="custom">Eingang</a></li>
@@ -16,11 +16,11 @@
 			<h3>Terasse</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtTerasse', 'aussen.licht.terrasse', icon1~'light_wall_2.png', icon0~'light_wall_2.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtTerasse', 'aussen.licht.terrasse', 'light_wall_2.svg', 'light_wall_2.svg') }} </td>
 					<td>Licht</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdosenTerasse', 'aussen.steckdosen.terrasse', icon1~'message_socket.png', icon0~'message_socket.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdosenTerasse', 'aussen.steckdosen.terrasse', 'message_socket.svg', 'message_socket.svg') }} </td>
 					<td>Steckdosen</td>
 				</tr>
 			</table>
@@ -33,7 +33,7 @@
 			<h3>Beete</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKugeln', 'aussen.licht.beete', icon1~'light_ball.png', icon0~'light_ball.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKugeln', 'aussen.licht.beete', 'light_ball.svg', 'light_ball.svg') }} </td>
 					<td>Kugelleuchten</td>
 				</tr>
 			</table>
@@ -47,32 +47,32 @@
 			<h3>Bewässerung (Szenen)</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('szeneBewaesserungGesamt', 'aussen.bewaesserung.gesamt.szene', icon1~'sani_irrigation_pop_up_on.png', icon0~'sani_irrigation_pop_up_off.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('szeneBewaesserungGesamt', 'aussen.bewaesserung.gesamt.szene', 'sani_irrigation_pop_up_on.svg', 'sani_irrigation_pop_up_off.svg', 1, 0) }} </td>
 					<td>Freigebene Flächen bewässern</td>
 				</tr>
 				<tr>
 					<td align="left" width="100px">
-						&nbsp; <a href="#popup1" data-rel="popup"><img class="icon" src="{{ icon0~'sani_irrigation_pop_up_on.png' }}" /></a>
+						&nbsp; <a href="#popup1" data-rel="popup"><img class="icon" src="icons/ws/sani_irrigation_pop_up_on.svg" /></a>
 						<div id="popup1" data-role="popup" style="width: 250px;">
 							<table width="90%" style="margin: 0 auto;">
 								<tr>
-									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungLinks', 'aussen.bewaesserung.regner.links.szene', icon1~'sani_irrigation_pop_up_on.png', icon0~'sani_irrigation_pop_up_off.png') }} </td>
+									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungLinks', 'aussen.bewaesserung.regner.links.szene', 'sani_irrigation_pop_up_on.svg', 'sani_irrigation_pop_up_off.svg') }} </td>
 									<td >Regner links</td>
 								</tr>
 								<tr>
-									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungRechts', 'aussen.bewaesserung.regner.rechts.szene', icon1~'sani_irrigation_pop_up_on.png', icon0~'sani_irrigation_pop_up_off.png') }} </td>
+									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungRechts', 'aussen.bewaesserung.regner.rechts.szene', 'sani_irrigation_pop_up_on.svg', 'sani_irrigation_pop_up_off.svg') }} </td>
 									<td >Regner rechts</td>
 								</tr>
 								<tr>
-									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungGarage', 'aussen.bewaesserung.regner.garage.szene', icon1~'sani_irrigation_pop_up_on.png', icon0~'sani_irrigation_pop_up_off.png') }} </td>
+									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungGarage', 'aussen.bewaesserung.regner.garage.szene', 'sani_irrigation_pop_up_on.svg', 'sani_irrigation_pop_up_off.svg') }} </td>
 									<td >Regner Garage</td>
 								</tr>
 								<tr>
-									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungHecke', 'aussen.bewaesserung.tropfschlauch.hecke.szene', icon1~'sani_sprinkling.png', icon0~'sani_sprinkling.png') }} </td>
+									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungHecke', 'aussen.bewaesserung.tropfschlauch.hecke.szene', 'sani_sprinkling.svg', 'sani_sprinkling.svg') }} </td>
 									<td >Hecke</td>
 								</tr>
 								<tr>
-									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungBeete', 'aussen.bewaesserung.tropfschlauch.beete.szene', icon1~'sani_sprinkling.png', icon0~'sani_sprinkling.png') }} </td>
+									<td align="left" width="60px">&nbsp; {{ basic.switch('szeneBewaesserungBeete', 'aussen.bewaesserung.tropfschlauch.beete.szene', 'sani_sprinkling.svg', 'sani_sprinkling.svg') }} </td>
 									<td >Beete</td>
 								</tr>
 							</table>
@@ -120,24 +120,24 @@
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Bewässerung Status</h3>
 			<div style="float: left; width: 150px; text-align: left;">
-				{{ basic.symbol('statusRegnerLinksAn', 'aussen.bewaesserung.regner.links', 'Rasen links', icon1~'sani_irrigation_pop_up_on.png', 1) }}
-				{{ basic.symbol('statusRegnerLinksAus', 'aussen.bewaesserung.regner.links', 'Rasen links', icon0~'sani_irrigation_pop_up_off.png', 0) }}
+				{{ basic.symbol('statusRegnerLinksAn', 'aussen.bewaesserung.regner.links', 'Rasen links', 'sani_irrigation_pop_up_on.svg', 1) }}
+				{{ basic.symbol('statusRegnerLinksAus', 'aussen.bewaesserung.regner.links', 'Rasen links', 'sani_irrigation_pop_up_off.svg', 0) }}
 			</div>
 			<div style="float: left; width: 150px; text-align: left;">
-				{{ basic.symbol('statusRegnerRechtsAn', 'aussen.bewaesserung.regner.rechts', 'Rasen rechts', icon1~'sani_irrigation_pop_up_on.png', 1) }}
-				{{ basic.symbol('statusRegnerRechtsAus', 'aussen.bewaesserung.regner.rechts', 'Rasen rechts', icon0~'sani_irrigation_pop_up_off.png', 0) }}
+				{{ basic.symbol('statusRegnerRechtsAn', 'aussen.bewaesserung.regner.rechts', 'Rasen rechts', 'sani_irrigation_pop_up_on.svg', 1) }}
+				{{ basic.symbol('statusRegnerRechtsAus', 'aussen.bewaesserung.regner.rechts', 'Rasen rechts', 'sani_irrigation_pop_up_off.svg', 0) }}
 			</div>
 			<div style="float: left; width: 150px; text-align: left;">
-				{{ basic.symbol('statusRegnerGarageAn', 'aussen.bewaesserung.regner.garage', 'Rasen Garage', icon1~'sani_irrigation_pop_up_on.png', 1) }}
-				{{ basic.symbol('statusRegnerGarageAus', 'aussen.bewaesserung.regner.garage', 'Rasen Garage', icon0~'sani_irrigation_pop_up_off.png', 0) }}
+				{{ basic.symbol('statusRegnerGarageAn', 'aussen.bewaesserung.regner.garage', 'Rasen Garage', 'sani_irrigation_pop_up_on.svg', 1) }}
+				{{ basic.symbol('statusRegnerGarageAus', 'aussen.bewaesserung.regner.garage', 'Rasen Garage', 'sani_irrigation_pop_up_off.svg', 0) }}
 			</div>
 			<div style="float: left; width: 150px; text-align: left;">
-				{{ basic.symbol('statusSchlauchHeckeAn', 'aussen.bewaesserung.tropfschlauch.hecke', 'Hecke', icon1~'sani_sprinkling.png', 1) }}
-				{{ basic.symbol('statusSchlauchHeckeAus', 'aussen.bewaesserung.tropfschlauch.hecke', 'Hecke', icon0~'sani_sprinkling.png', 0) }}
+				{{ basic.symbol('statusSchlauchHeckeAn', 'aussen.bewaesserung.tropfschlauch.hecke', 'Hecke', 'sani_sprinkling.svg', 1) }}
+				{{ basic.symbol('statusSchlauchHeckeAus', 'aussen.bewaesserung.tropfschlauch.hecke', 'Hecke', 'sani_sprinkling.svg', 0) }}
 			</div>
 			<div style="float: left; width: 150px; text-align: left;">
-				{{ basic.symbol('statusSchlauchBeeteAn', 'aussen.bewaesserung.tropfschlauch.beete', 'Beete', icon1~'sani_sprinkling.png', 1) }}
-				{{ basic.symbol('statusSchlauchBeeteAus', 'aussen.bewaesserung.tropfschlauch.beete', 'Beete', icon0~'sani_sprinkling.png', 0) }}
+				{{ basic.symbol('statusSchlauchBeeteAn', 'aussen.bewaesserung.tropfschlauch.beete', 'Beete', 'sani_sprinkling.svg', 1) }}
+				{{ basic.symbol('statusSchlauchBeeteAus', 'aussen.bewaesserung.tropfschlauch.beete', 'Beete', 'sani_sprinkling.svg', 0) }}
 			</div>
 		</div>
 	</div>

@@ -10,7 +10,7 @@
 			<h3>Licht</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtHobbyDecke', 'kg.licht.hobby', icon1~'light_ceiling_light.png', icon0~'light_ceiling_light.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtHobbyDecke', 'kg.licht.hobby', 'light_ceiling_light.svg', 'light_ceiling_light.svg') }} </td>
 					<td>Decke</td>
 				</tr>
 			</table>
@@ -24,8 +24,8 @@
 			<h3>Heizung</h3>
 			{{ ext.rtr('heizenHobby', '', 'kg.heizen.hobby.ist', '', '', 'kg.heizen.hobby.modus', 'kg.heizen.hobby.modus', 'kg.heizen.hobby.modus', 'kg.heizen.hobby.heizen') }}
 			<br />
-			{{ basic.symbol('statusFensterHobbyOffen', 'kg.fenster.hobby', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
-			{{ basic.symbol('statusFensterHobbyZu', 'kg.fenster.hobby', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+			{{ basic.symbol('statusFensterHobbyOffen', 'kg.fenster.hobby', 'Fenster geöffnet', 'fts_window_2w_open_lr.svg', 1) }}
+			{{ basic.symbol('statusFensterHobbyZu', 'kg.fenster.hobby', 'Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 		</div>
 	</div>
 </div>

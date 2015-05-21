@@ -10,18 +10,18 @@
 		<li><a href="index.php?page=floors/outdoor/garten" class="garten" data-icon="custom">Garten</a></li>
 	</ul>
 </div>
-<hr />	
+<hr />
 <div class="block">
 	<div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Schalten</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtGarage', 'garage.licht', icon1~'light_garage.png', icon0~'light_garage.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtGarage', 'garage.licht', 'light_garage.svg', 'light_garage.svg') }} </td>
 					<td>Licht</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('pumpe', 'garage.pumpe', icon1~'sani_domestic_waterworks.png', icon0~'sani_domestic_waterworks.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('pumpe', 'garage.pumpe', 'sani_domestic_waterworks.svg', 'sani_domestic_waterworks.svg') }} </td>
 					<td>Pumpe</td>
 				</tr>
 			</table>
@@ -33,9 +33,9 @@
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Tor</h3>
 			{{ basic.button('garage.tor.auf', 'garage.tor.auf', 'Auf', 'arrow-u', '', 'midi') }}
-			{{ basic.symbol('statusTorOffen', 'garage.tor.offen', '', icon0~'fts_garage.png', 1) }}
-			{{ basic.symbol('statusTorHalbOffen', ['garage.tor.offen', 'garage.tor.geschlossen'], '', icon1~'fts_garage_door_50.png', 0, 'and') }}
-			{{ basic.symbol('statusTorZu', 'garage.tor.geschlossen', '', icon1~'fts_garage_door_100.png', 1) }}
+			{{ basic.symbol('statusTorOffen', 'garage.tor.offen', '', 'fts_garage.svg', 1) }}
+			{{ basic.symbol('statusTorHalbOffen', ['garage.tor.offen', 'garage.tor.geschlossen'], '', 'fts_garage_door_50.svg', 0, 'or', 'icon1', 'and') }}
+			{{ basic.symbol('statusTorZu', 'garage.tor.geschlossen', '', 'fts_garage_door_100.svg', 1) }}
 			{{ basic.button('garage.tor.ab', 'garage.tor.ab', 'Ab', 'arrow-d', '', 'midi') }}
 		</div>
 	</div>
@@ -47,14 +47,14 @@
 			<table width="90%">
 				<tr>
 					<td>
-						{{ basic.symbol('statusFensterGarageOffen', 'garage.fenster', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
-						{{ basic.symbol('statusFensterGarageZu', 'garage.fenster', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+						{{ basic.symbol('statusFensterGarageOffen', 'garage.fenster', 'Fenster geöffnet', 'fts_window_2w_open_lr.svg', 1) }}
+						{{ basic.symbol('statusFensterGarageZu', 'garage.fenster', 'Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 					</td>
 				</tr>
 				<tr>
 					<td>
-						{{ basic.symbol('statusTuerGarageOffen', 'garage.tuer', 'Tür geöffnet', icon0~'fts_door_open.png', 1) }}
-						{{ basic.symbol('statusTuerGarageZu', 'garage.tuer', 'Tür geschlossen', icon1~'fts_door.png', 0) }}
+						{{ basic.symbol('statusTuerGarageOffen', 'garage.tuer', 'Tür geöffnet', 'fts_door_open.svg', 1) }}
+						{{ basic.symbol('statusTuerGarageZu', 'garage.tuer', 'Tür geschlossen', 'fts_door.svg', 0, 'or', 'icon1') }}
 					</td>
 				</tr>
 			</table>

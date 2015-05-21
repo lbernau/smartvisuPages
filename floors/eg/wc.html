@@ -10,11 +10,11 @@
 			<h3>Licht</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtWcDecke', 'eg.licht.wc.decke', icon1~'light_ceiling_light.png', icon0~'light_ceiling_light.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtWcDecke', 'eg.licht.wc.decke', 'light_ceiling_light.svg', 'light_ceiling_light.svg') }} </td>
 					<td>Decke</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtWcSpiegel', 'eg.licht.wc.spiegel', icon1~'light_mirror.png', icon0~'light_mirror.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtWcSpiegel', 'eg.licht.wc.spiegel', 'light_mirror.svg', 'light_mirror.svg') }} </td>
 					<td>Spiegel</td>
 				</tr>
 			</table>
@@ -28,8 +28,8 @@
 			<h3>Heizung</h3>
 			{{ ext.rtr('heizenWc', '', 'eg.heizen.wc.ist', '', '', 'eg.heizen.wc.modus', 'eg.heizen.wc.modus', 'eg.heizen.wc.modus', 'eg.heizen.wc.heizen') }}
 			<br />
-			{{ basic.symbol('statusFensterWcOffen', 'eg.fenster.wc', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
-			{{ basic.symbol('statusFensterWcZu', 'eg.fenster.wc', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+			{{ basic.symbol('statusFensterWcOffen', 'eg.fenster.wc', 'Fenster geöffnet', 'fts_window_2w_open_lr.svg', 1) }}
+			{{ basic.symbol('statusFensterWcZu', 'eg.fenster.wc', 'Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 		</div>
 	</div>
 </div>

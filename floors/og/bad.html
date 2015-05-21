@@ -11,15 +11,15 @@
 			{{ device.dimmer('lichtBadDecke', 'Decke', 'og.licht.bad.decke', 'og.licht.bad.decke.dimmen') }}
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtBadDusche', 'og.licht.bad.dusche', icon1~'light_ceiling_light.png', icon0~'light_ceiling_light.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtBadDusche', 'og.licht.bad.dusche', 'light_ceiling_light.svg', 'light_ceiling_light.svg') }} </td>
 					<td>Dusche</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtBadSpiegel', 'og.licht.bad.spiegel', icon1~'light_mirror.png', icon0~'light_mirror.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtBadSpiegel', 'og.licht.bad.spiegel', 'light_mirror.svg', 'light_mirror.svg') }} </td>
 					<td>Spiegel</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtBadKlo', 'og.steckdosen.bad.waschtisch', icon1~'light_wall_2.png', icon0~'light_wall_2.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtBadKlo', 'og.steckdosen.bad.waschtisch', 'light_wall_2.svg', 'light_wall_2.svg') }} </td>
 					<td>Toilette</td>
 				</tr>
 			</table>
@@ -33,11 +33,11 @@
 			<h3>Heizung</h3>
 			{{ ext.rtr('heizenBad', '', 'og.heizen.bad.ist', '', '', 'og.heizen.bad.modus', 'og.heizen.bad.modus', 'og.heizen.bad.modus', 'og.heizen.bad.heizen') }}
 			<br />
-			{{ basic.symbol('statusFensterBadOffen', 'og.fenster.bad.fenster', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
-			{{ basic.symbol('statusFensterBadZu', 'og.fenster.bad.fenster', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+			{{ basic.symbol('statusFensterBadOffen', 'og.fenster.bad.fenster', 'Fenster geöffnet', 'fts_window_2w_open_lr.svg', 1) }}
+			{{ basic.symbol('statusFensterBadZu', 'og.fenster.bad.fenster', 'Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 			<br />
-			{{ basic.symbol('statusVeluxBadOffen', 'og.fenster.bad.velux', 'Velux geöffnet', icon0~'fts_window_roof_open_2.png', 1) }}
-			{{ basic.symbol('statusVeluxBadZu', 'og.fenster.bad.velux', 'Velux geschlossen', icon1~'fts_window_roof.png', 0) }}
+			{{ basic.symbol('statusVeluxBadOffen', 'og.fenster.bad.velux', 'Velux geöffnet', 'fts_window_roof_open_2.svg', 1) }}
+			{{ basic.symbol('statusVeluxBadZu', 'og.fenster.bad.velux', 'Velux geschlossen', 'fts_window_roof.svg', 0, 'or', 'icon1') }}
 		</div>
 	</div>
 </div>

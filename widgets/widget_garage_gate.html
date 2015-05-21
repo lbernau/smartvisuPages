@@ -3,7 +3,7 @@
 *
 * @param       unique id for this widget
 * @param       name of the shutter
-* @param       a gad/item for move up 
+* @param       a gad/item for move up
 * @param       a gad/item for move down
 * @param       a gad/item for state open
 * @param       a gad/item for state closed
@@ -25,9 +25,9 @@
             </td>
             <td style="width: 15%">
                 {% if gad_closed %}
-					{{ basic.symbol(id~'open', gad_open, '', icon0~'fts_garage_door_10.png', 1, 'micro') }}
-					{{ basic.symbol(id~'halfOpen', [gad_open, gad_closed], '', icon0~'fts_garage_door_50.png', 0, 'micro') }}
-					{{ basic.symbol(id~'closed', gad_closed, '', icon0~'fts_garage_door_100.png', 1, 'micro') }}
+					{{ basic.symbol(id~'open', gad_open, '', 'fts_garage_door_10.svg', 1, 'micro') }}
+					{{ basic.symbol(id~'halfOpen', [gad_open, gad_closed], '', 'fts_garage_door_50.svg', 0, 'micro') }}
+					{{ basic.symbol(id~'closed', gad_closed, '', 'fts_garage_door_100.svg', 1, 'micro') }}
                 {% endif %}
             </td>
             <td style="width: 15%">

@@ -19,8 +19,8 @@
 			<h3>Heizung</h3>
 			{{ ext.rtr('heizenMultimedia', '', 'kg.heizen.multimedia.ist', '', '', 'kg.heizen.multimedia.modus', 'kg.heizen.multimedia.modus', 'kg.heizen.multimedia.modus', 'kg.heizen.multimedia.heizen') }}
 			<br />
-			{{ basic.symbol('statusFensterMultimediaOffen', 'kg.fenster.multimedia', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
-			{{ basic.symbol('statusFensterMultimediaZu', 'kg.fenster.multimedia', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+			{{ basic.symbol('statusFensterMultimediaOffen', 'kg.fenster.multimedia', 'Fenster geöffnet', 'fts_window_2w_open_lr.svg', 1) }}
+			{{ basic.symbol('statusFensterMultimediaZu', 'kg.fenster.multimedia', 'Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 		</div>
 	</div>
 </div>
@@ -31,12 +31,12 @@
 			<h3>Steckdosen</h3>
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimediaAudio', 'kg.steckdosen.multimedia.audio', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Audio</td>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimediaBeamer', 'kg.steckdosen.multimedia.beamer', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Beamer</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimediaAudio', 'kg.steckdosen.multimedia.audio', 'message_socket.svg', 'message_socket.svg') }} </td><td>Audio</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimediaBeamer', 'kg.steckdosen.multimedia.beamer', 'message_socket.svg', 'message_socket.svg') }} </td><td>Beamer</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimedia3', 'kg.steckdosen.multimedia.zweiundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Schrank</td>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimedia4', 'kg.steckdosen.multimedia.dreiundsechzig', icon1~'message_socket.png', icon0~'message_socket.png') }} </td><td>Leinwand</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimedia3', 'kg.steckdosen.multimedia.zweiundsechzig', 'message_socket.svg', 'message_socket.svg') }} </td><td>Schrank</td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseMultimedia4', 'kg.steckdosen.multimedia.dreiundsechzig', 'message_socket.svg', 'message_socket.svg') }} </td><td>Leinwand</td>
 				</tr>
 			</table>
 		</div>

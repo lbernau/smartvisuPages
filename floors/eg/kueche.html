@@ -11,14 +11,14 @@
 			{{ device.dimmer('lichtKuecheEsstisch', 'Esstisch', 'eg.licht.kueche.essen', 'eg.licht.kueche.essen.dimmen') }}
 			<table width="90%">
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKuecheArbeitsplatte', 'eg.steckdosen.kueche.arbeitsplatte', icon1~'light_diffused.png', icon0~'light_diffused.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKuecheArbeitsplatte', 'eg.steckdosen.kueche.arbeitsplatte', 'light_diffused.svg', 'light_diffused.svg') }} </td>
 					<td>Arbeitsplatte</td></tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKuecheVorrat', 'eg.licht.kueche.vorrat', icon1~'light_ceiling_light.png', icon0~'light_ceiling_light.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('lichtKuecheVorrat', 'eg.licht.kueche.vorrat', 'light_ceiling_light.svg', 'light_ceiling_light.svg') }} </td>
 					<td>Vorrat</td>
 				</tr>
 				<tr>
-					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseKuecheRadio', 'eg.steckdosen.kueche.radio', icon1~'it_radio.png', icon0~'it_radio.png') }} </td>
+					<td align="left" width="100px">&nbsp; {{ basic.switch('steckdoseKuecheRadio', 'eg.steckdosen.kueche.radio', 'it_radio.svg', 'it_radio.svg') }} </td>
 					<td>Radio</td>
 				</tr>
 			</table>
@@ -32,8 +32,8 @@
 			<h3>Heizung</h3>
 			{{ ext.rtr('heizenKueche', '', 'eg.heizen.kueche.ist', '', '', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.heizen') }}
 			<br /><br />
-			{{ basic.symbol('statusFensterKuecheOffen', 'eg.fenster.kueche', 'Fenster geöffnet', icon0~'fts_window_2w_open_lr.png', 1) }}
-			{{ basic.symbol('statusFensterKuecheZu', 'eg.fenster.kueche', 'Fenster geschlossen', icon1~'fts_window_2w.png', 0) }}
+			{{ basic.symbol('statusFensterKuecheOffen', 'eg.fenster.kueche', 'Fenster geöffnet', 'fts_window_2w_open_lr.svg', 1) }}
+			{{ basic.symbol('statusFensterKuecheZu', 'eg.fenster.kueche', 'Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}
 		</div>
 	</div>
 </div>
@@ -67,5 +67,5 @@
 		</div>
 	</div>
 </div>
-		
+
 {% endblock %}
