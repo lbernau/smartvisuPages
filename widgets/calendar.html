@@ -39,7 +39,8 @@
 				$('#' + uid + ' ul').html(line).trigger('prepare').listview('refresh').trigger('redraw');
 			}).error(notify.json);
 
-						var getAppointmentType =function(title) {
+			var getAppointmentType = function(title) {
+
 				switch (title) {
 					case "Bioabfall":
 						return "trash-brown";

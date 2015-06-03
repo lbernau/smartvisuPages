@@ -24,8 +24,8 @@
 	{{ weather.forecastweek('weather_forecast') }}
 
 	<hr>
-	{% import "widgets/calendar.html" as calendar %}
-	{{ calendar.list('calendarlist', 'Müllabfuhr', 5, 'green', 60) }}
+	{% import "calendar.html" as calendar %}
+	{{ calendar.list('calendarlist', 'Müllabfuhr', 5, 'green') }}
 
 	<hr>
 	{% import "phone.html" as phone %}
