@@ -73,26 +73,6 @@ div.ui-slider-switch {
 	border-radius: 0 !important;
 }
 
-.icon.trash-yellow {
-	background-color: rgb(209, 209, 83);
-}
-
-.icon.trash-green {
-	background-color: #32cd32;
-}
-
-.icon.trash-grey {
-	background-color: dimgrey;
-}
-
-.icon.trash-brown {
-	background-color: saddlebrown;
-}
-
-.icon.trash-blue {
-	background-color: rgb(42, 106, 219);;
-}
-
 .nav-custom .heizung .ui-icon {
 	background: url(../../icons/ws/sani_heating_temp.svg) 50% 50% no-repeat;
 	background-size: 36px 36px;
