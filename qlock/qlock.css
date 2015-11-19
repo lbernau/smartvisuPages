@@ -41,7 +41,7 @@
   color:#555;
   font-size:13px;
   width:160px;
-  margin:15px auto 10px auto; 
+  margin:15px auto 10px auto;
 }
 #settings a:hover{
   text-shadow: 0 0 1px #fff;
@@ -99,9 +99,9 @@
 }
 
 /* dots in the edge for showing the minutes */
-#e0,#e1,#e2,#e3{ 
+#e0,#e1,#e2,#e3{
     position:absolute;
-    color:black;    
+    color:black;
     font-size:25px;
 }
 

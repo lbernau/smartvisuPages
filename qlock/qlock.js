@@ -3,7 +3,7 @@
  	fabrice.weinberg.me
 
 
-Thanks to: 
+Thanks to:
 	Hugo Giraudel (@HugoGiraudel) for the french translation.
 	Kseso (@Kseso) for the spanish translation.
 */
@@ -23,7 +23,7 @@ language['spanish'] = {
 		    ["V", "E", "I", "N", "T", "I", "C", "I", "N", "C", "O"]],
     sentences : {
               start :  { all : [[0,1,3],[0,5,7]], 1 : [[0,0,1], [0, 5, 6]] },
-      				end   :  { all : [[5, 9, 10], [6,0,4]] }, 
+      				end   :  { all : [[5, 9, 10], [6,0,4]] },
               hours : {
                   0 : [[[5,4,7]]],
                   1 : [[[0,8,10]]],
@@ -70,7 +70,7 @@ language['italian'] = {
             ["D","I","E","C","I","L","M","E","Z","Z","O"]],
     sentences : {
               start :  { all : [[0,0,3],[0,5,6]], 1 : [[1,0], [1, 2, 5]] },
-              end   : { all : [] }, 
+              end   : { all : [] },
               hours : {
                   0 : [[[4,0,4]]],
                   1 : [[[]]],
@@ -115,7 +115,7 @@ language['french'] = {
             ["W", "V", "I", "N", "G", "T", "–", "C", "I", "N", "Q"]],
     sentences : {
     		  start :  { all : [[0,0,1],[0,3,5]]},
-          end   : { all : [[6,5,9]] }, 
+          end   : { all : [[6,5,9]] },
           hours : {
               0 : [[[5,5,9]]],
               1 : [[[0,8,10]]],
@@ -161,7 +161,7 @@ language['english'] = {
             ["T","E","N","S","E","O'","C","L","O","C","K"]],
     sentences : {
         start :  { all : [[0,0,1],[0,3,4]]},
-        end   :  { all : [[9,5,10]] }, 
+        end   :  { all : [[9,5,10]] },
         hours : {
             0 : [[[8,5,10]]],
             1 : [[[5,0,2]]],
@@ -171,8 +171,8 @@ language['english'] = {
             5 : [[[6,4,7]]] ,
             6 : [[[5,3,5]]],
             7 : [[[8,0,4]]] ,
-            8 : [[[7,0,4]]],  
-            9 : [[[4,7,10]]] ,    
+            8 : [[[7,0,4]]],
+            9 : [[[4,7,10]]] ,
             10: [[[9,0,2]]] ,
             11: [[[7,5,10]]],
             12: [[[8,5,10]]]
@@ -217,8 +217,8 @@ language['german'] = {
           5 : [[[6,0,3]]] ,
           6 : [[[6,6,10]]],
           7 : [[[7,0,5]]] ,
-          8 : [[[7,7,10]]],  
-          9 : [[[8,0,3]]] ,    
+          8 : [[[7,7,10]]],
+          9 : [[[8,0,3]]] ,
           10: [[[8,4,7]]] ,
           11: [[[8,8,10]]],
           12: [[[9,0,4]]]
@@ -254,40 +254,40 @@ var wordClock = {
                   9 : [[[2,1,3],[3,0],[3,4],[4,0],[4,4],[5,1,4],[6,4],[7,3],[8,1,2]]]
     },
 
-  
+
     letterMap       : null,
-    
+
     prevSentence    : [],
     prevSecond      : null,
     language        : null,
     letters         : null,
-    
+
     state           : 0, // 0 = Normal Clock, 1 = Show Seconds + Minutes
-  
-    
-  init : function(language){    
+
+
+  init : function(language){
     this.letters = document.getElementById('letters');
     this.language = language;
-    
+
     this.buildLetters();
-    
+
     this.startClock();
   },
-  
+
   startClock : function(){
-       
+
     this.hideLetters(this.prevSentence);
     this.hideNumber(this.prevSecond);
-       
+
     this.showMinutes();
-    
+
     if (this.state === 0){
-      this.showText(); 
+      this.showText();
     }else{
       this.showSeconds();
     }
   },
-  
+
   switchState : function(state){
     if (state !== undefined){
       this.state = state;
@@ -296,11 +296,11 @@ var wordClock = {
     }
     this.startClock();
   },
-  
+
   buildLetters : function(){
     //Clear Letters
     this.letters.innerHTML = "";
-    
+
     // Create 2D Array to store the span elements.
     this.letterMap = [];
     for (var i=0;i<this.language.map.length;i++){
@@ -309,36 +309,36 @@ var wordClock = {
     //"Draw" Letters
     for (var x=0;x<this.language.map.length;x++){
        for (var y=0;y<this.language.map[x].length;y++){
-            var span = document.createElement('span');     
+            var span = document.createElement('span');
                 span.innerHTML = this.language.map[x][y];
             // Add the letter to the lettrMap
             this.letterMap[x].push(span);
             this.letters.appendChild(span);
        }
-    } 
+    }
   },
-  
-  
+
+
   showText: function(){
     if (this.state !== 0)
       return;
-    
+
     // Hide last Sentence
     this.hideLetters(this.prevSentence);
-    
-    
+
+
     var showClock = false;
     var plural = true;
     var hours = this.getHours();
     var minutes = this.getMinutes();
-        
+
     var showArr = [];
-    
+
     var startLetters = (this.language.sentences.start[hours] !== undefined ) ? this.language.sentences.start[hours] : this.language.sentences.start.all;
-                          
-                                                                                    
+
+
      showArr.push(startLetters);
-    
+
     if (minutes < 5){
         showClock = true;
         plural = false;
@@ -350,81 +350,81 @@ var wordClock = {
             hours = (hours+1) % 12;
         }
     }
-      
+
     if (plural && (this.language.sentences.hours[hours].length === 2)){
       showArr.push(this.language.sentences.hours[hours][1]);
     }else{
         showArr.push(this.language.sentences.hours[hours][0]);
     }
-      
+
     if (showClock){
       var endLetters = (this.language.sentences.end[hours] !== undefined) ? this.language.sentences.end[hours] : this.language.sentences.end.all;
-      showArr.push(endLetters);    
+      showArr.push(endLetters);
     }
     this.showLetters(showArr);
     this.prevSentence = showArr;
-      
+
     var that = this;
         // Wait for the rest of the 5min.
         setTimeout(function(){that.showText();}, (5 - (this.getMinutes() % 5)) * 60000 - this.getSeconds()*1000 - this.getMilliseconds());
   },
-  
+
   showMinutes : function(){
     var minutes = this.getMinutes() % 5;
-    
+
     if (minutes === 0){
        this.hideMinutesDot(4);
     }else{
        this.showMinutesDot(minutes);
     }
-          
+
     var that = this;
     setTimeout(function(){that.showMinutes();}, (60-this.getSeconds())*1000 - this.getMilliseconds());
   },
-  
+
   showSeconds : function(){
       if (this.state != 1)
          return;
-    
+
       var seconds = this.getSeconds();
-    
-      this.hideNumber(this.prevSecond);       
+
+      this.hideNumber(this.prevSecond);
       this.showNumber(seconds);
-    
+
       this.prevSecond = seconds;
       var that = this;
-      setTimeout(function(){that.showSeconds();},1000-this.getMilliseconds());     
+      setTimeout(function(){that.showSeconds();},1000-this.getMilliseconds());
   },
-  
+
   getHours : function(){
     var hour = (new Date()).getHours();
         return (hour > 11) ? hour - 12 : hour;
     },
-  
+
   getMinutes : function(){
-        return (new Date()).getMinutes(); 
+        return (new Date()).getMinutes();
     },
-  
+
   getSeconds: function(){
-      return  (new Date()).getSeconds(); 
+      return  (new Date()).getSeconds();
   },
   getMilliseconds: function(){
-      return  (new Date()).getMilliseconds(); 
+      return  (new Date()).getMilliseconds();
   },
-  hideNumber : function(number){  
+  hideNumber : function(number){
           if (number === undefined || number === null) return;
           var tens = this.seconds[~~(number/10)];
-          var ones = this.seconds[(number % 10)];         
+          var ones = this.seconds[(number % 10)];
           this.changeClassLetters(tens, "", 0);
           this.changeClassLetters(ones, "", 6);
   },
-  showNumber : function(number){  
+  showNumber : function(number){
         tens = this.seconds[~~(number/10)];
         ones = this.seconds[(number % 10)];
         this.changeClassLetters(tens, "light", 0);
         this.changeClassLetters(ones, "light", 6);
   },
-  hideLetters : function(la){      
+  hideLetters : function(la){
       this.changeClassLetters(la, "", 0);
   },
   showLetters : function(la){
@@ -436,7 +436,7 @@ var wordClock = {
   showMinutesDot : function(count){
     this.changeClassMinutes(count, 'light');
   },
-  changeClassLetters: function(la, value, offset){ 
+  changeClassLetters: function(la, value, offset){
     for (var s=0;s<la.length;s++){
       for (var d=0;d<la[s].length;d++){
           var x = la[s][d][0];
@@ -450,12 +450,12 @@ var wordClock = {
              this.letterMap[x][y].className = value;
           }
       }
-    }    
+    }
   },
   changeClassMinutes : function(count, value){
-      for (var i=0;i<count;i++){          
+      for (var i=0;i<count;i++){
           document.getElementById("e"+i).className = value;
-      }          
+      }
   },
   _inArray : function(arr, obj){
     for (var i=0;i<arr.length;i++){
@@ -473,7 +473,7 @@ $('#settings a').on('click', function(e){
       if (wordClock.state){
           $(e.target).html("show text");
       }else{
-          $(e.target).html("show seconds");      
+          $(e.target).html("show seconds");
       }
   }else{
       wordClock.init(language[e.target.id]);
