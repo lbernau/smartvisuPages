@@ -6,8 +6,9 @@
 * @param       a gad/item for long move
 * @param       a gad/item for short move
 * @param       a gad/item for the actual position
+* @param	   a gad/item for the lock object
 */
-{% macro smallshut(id, txt, gad_move, gad_stop, gad_position) %}
+{% macro smallshut(id, txt, gad_move, gad_stop, gad_position, gad_lock) %}
 {% import "basic.html" as basic %}
 {% import "icon.html" as icon %}
 
@@ -17,28 +18,32 @@
 <div id="{{ uid }}" class="smallshut">
     <table style="width:100%; text-align: left;">
         <tr>
-            <th width="35%">{% if txt %} {{ txt }} {% endif %}</th>
-            <td width="15%">
+            <th width="34%">{% if txt %} {{ txt }} {% endif %}</th>
+            <td width="13%">
                 {% if gad_move %}
                     {{ basic.button(id~'up', gad_move, '', 'arrow-u', '0', 'micro') }}
                 {% endif %}
             </td>
-            <td width="15%">
+            <td width="10%">
                 {% if gad_stop %}
                     {{ basic.button(id~'stop', gad_stop, '', 'audio_stop.svg', '1', 'micro') }}
                 {% endif %}
             </td>
-            <td width="15%">
+            <td width="13%">
                 {% if gad_move %}
                     {{ basic.button(id~'down', gad_move, '', 'arrow-d', '1', 'micro') }}
                 {% endif %}
             </td>
-            <td width="20%">
+            <td width="15%">
 				{% if gad_position %}
 					{{ icon.shutter(id~'position', '', gad_position) }}
-
 				{% endif %}
             </td>
+			<td width="15%">
+				{% if gad_lock %}
+					{{ basic.switch(id~'lock', gad_lock, 'fts_shutter_locked.svg', 'fts_shutter_unlocked.svg') }}
+				{% endif %}
+			</td>
         </tr>
     </table>
 </div>

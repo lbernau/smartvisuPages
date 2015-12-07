@@ -8,7 +8,9 @@
 	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 		<div data-role="collapsible" data-collapsed="false">
 			<h3>Licht</h3>
-			Inhalt folgt....
+			{{ device.dimmer('lichtMultimediaGesamt', 'Gesamt', 'kg.licht.multimedia.gesamt', 'kg.licht.multimedia.gesamt.dimmen') }}
+			{{ device.dimmer('lichtMultimediaGalerie', 'Galerie', 'kg.licht.multimedia.galerie', 'kg.licht.multimedia.galerie.dimmen') }}
+			{{ device.dimmer('lichtMultimediaDecke', 'Decke', 'kg.licht.multimedia.decke', 'kg.licht.multimedia.decke.dimmen') }}
 		</div>
 	</div>
 </div>
