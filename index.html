@@ -1,39 +1,77 @@
+/**
+ * -----------------------------------------------------------------------------
+ * @package     smartVISU
+ * @author      Martin Gleiß
+ * @copyright   2012
+ * @license     GPL <http://www.gnu.de>
+ * -----------------------------------------------------------------------------
+ */
+
+
 {% extends "base.html" %}
 
 {% block sidebar %}
 
-	{% import "lib.html" as lib %}
-	{{ lib.updatecheck() }}
+    {{ lib.updatecheck() }}
 
-	{% import "clock.html" as clock %}
-	{{ clock.digiclock('clock') }}
+    {{ clock.digiclock('clock') }}
 
-	<div class="center">
-		{{ now|smartdate('l') }}, {{ now|smartdate() }}<br/>
-		<img src="lib/weather/pics/sun_up.png" class="sunIcon"/> {{ basic.formula('sunrise', 'env.location.sunrise', 'time') }} <img src="lib/weather/pics/sun_down.png" class="sunIcon"/> {{ basic.formula('sunset', 'env.location.sunset', 'time') }}&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src="lib/weather/pics/moon_up.png" class="moonIcon" /> {{ basic.formula('moonrise', 'env.location.moonrise', 'time') }} <img src="lib/weather/pics/moon_down.png" class="moonIcon"/> {{ basic.formula('moonset', 'env.location.moonset', 'time') }}<br/>
-	</div>
+	  <div class="center">
+        {{ clock.miniclock('', 'l, ' ~ lang('format','date') ) }}
+    </div>
 
-	<hr>
+    <hr>
 
-	{% import "weather.html" as weather %}
-	{{ weather.current('weather') }}
+    {{ weather.current('weather') }}
 
-	<hr>
+    <hr>
 
-	{{ weather.forecastweek('weather_forecast') }}
+    {{ weather.forecastweek('weather_forecast') }}
 
-	<hr>
-	{% import "calendar.html" as calendar %}
-	{{ calendar.list('calendarlist', 'Müllabfuhr', 5, 'green') }}
+    <hr>
 
-	<hr>
-	{% import "phone.html" as phone %}
-	{{ phone.list('phonelist', 'Telefonliste', 5, '15i') }}
+     {{ plot.temprose('temprose_eg',
+        ['eg.heizen.kueche.ist', 'eg.heizen.wohnzimmer.ist', 'eg.heizen.wc.ist', 'eg.heizen.diele.ist'],
+        ['eg.heizen.kueche.soll', 'eg.heizen.wohnzimmer.soll', 'eg.heizen.wc.soll', 'eg.heizen.diele.soll'],
+        ['Küche', 'Wohnen', 'Gäste WC', 'Flur' ]) }}
+	<br/>
+     {{ plot.temprose('temprose_og',
+        ['og.heizen.bad.ist', 'og.heizen.schlafzimmer.ist', 'og.heizen.kind_2.ist', 'og.heizen.kind_1.ist'],
+        ['og.heizen.bad.soll', 'og.heizen.schlafzimmer.soll', 'og.heizen.kind_2.soll', 'og.heizen.kind_1.soll'],
+        ['Bad', 'Schlafen', 'Moritz', 'Kind 2']) }}
+	<br/>
+     {{ plot.temprose('temprose_og',
+        ['kg.heizen.multimedia.ist', 'kg.heizen.waschen.ist', 'kg.heizen.hobby.ist'],
+        ['kg.heizen.multimedia.soll', 'kg.heizen.waschen.soll', 'kg.heizen.hobby.soll'],
+        ['Hobby', 'Waschen / Trocknen', 'Werkstatt']) }}
+     <!--{{ plot.temprose('temprose_all',
+        [
+			'eg.heizen.kueche.ist', 'eg.heizen.wohnzimmer.ist', 'eg.heizen.wc.ist', 'eg.heizen.diele.ist',
+			'og.heizen.bad.ist', 'og.heizen.schlafzimmer.ist', 'og.heizen.kind_2.ist', 'og.heizen.kind_1.ist',
+			'kg.heizen.multimedia.ist', 'kg.heizen.waschen.ist', 'kg.heizen.hobby.ist'
+		 ],
+        [
+			'eg.heizen.kueche.soll', 'eg.heizen.wohnzimmer.soll', 'eg.heizen.wc.soll', 'eg.heizen.diele.soll',
+			'og.heizen.bad.soll', 'og.heizen.schlafzimmer.soll', 'og.heizen.kind_2.soll', 'og.heizen.kind_1.soll',
+			'kg.heizen.multimedia.soll', 'kg.heizen.waschen.soll', 'kg.heizen.hobby.soll'
+		],
+        [
+			'Küche', 'Wohnen', 'Gäste WC', 'Flur',
+			'Bad', 'Schlafen', 'Moritz', 'Kind 2',
+			'Hobby', 'Waschen / Trocknen', 'Werkstatt'
+		]) }}
+-->
+    <hr>
+
+    {{ phone.missedlist('phonelist', 'Telefonliste', 3) }}
+
 
 {% endblock %}
 
+
 {% block content %}
-	{% include 'navigation.html' %}
+
+    {% include 'rooms_menu.html' %}
+
 {% endblock %}
 

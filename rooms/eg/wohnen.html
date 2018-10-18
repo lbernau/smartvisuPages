@@ -1,0 +1,87 @@
+/**
+ * -----------------------------------------------------------------------------
+ * @package     smartVISU
+ * @author      Martin Gleiß
+ * @copyright   2012
+ * @license     GPL <http://www.gnu.de>
+ * -----------------------------------------------------------------------------
+ */
+
+
+{% extends "rooms.html" %}
+{% block content %}
+    <h1>
+        <img class="icon icon0" src='{{ icon0 }}scene_livingroom.svg'/>
+        Wohnzimmer
+    </h1>
+    <hr />
+
+    <div class="block" >
+        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Licht</h3>
+                {{ device.dimmer('', 'Sofa', 'eg.licht.wohnzimmer.sofa', 'eg.licht.wohnzimmer.sofa.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
+                {{ device.dimmer('', 'Esstisch', 'eg.licht.wohnzimmer.essen', 'eg.licht.wohnzimmer.essen.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
+                {{ device.dimmer('', 'Wandleuchten', 'eg.licht.wohnzimmer.wand', 'eg.licht.wohnzimmer.wand.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
+            </div>
+        </div>
+    </div>
+
+    <div class="block" >
+        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Heizung</h3>
+                {{ device.rtr('', '', 'eg.heizen.wohnzimmer.ist', '', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.modus', '', '', '', '', [ icon.heating('','','eg.heizen.wohnzimmer.stellwert', 0, 90) ]) }}
+                {{ basic.symbol('', 'eg.fenster.wohnzimmer', ['Fenster geschlossen', 'Fenster geöffnet'], ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+        </div>
+        </div>
+    </div>
+
+
+    <div class="block full-width" data-role="collapsible" data-collapsed="false" data-theme="c" data-content-theme="a" data-mini="true">
+        <h3>Steckdosen</h3>
+        <table width="90%">
+            <tr>
+                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.einundsechzig', 'icon', [0, 1], 'it_radio.svg', '', ['icon0', 'icon1']) }} </td><td>Hifi</td>
+                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.zweiundsechzig', 'icon', [0, 1], 'it_television.svg', '', ['icon0', 'icon1']) }} </td><td>TV</td>
+            </tr>
+            <tr>
+                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.vierundsechzig', 'icon', [0, 1], 'message_socket.svg', '', ['icon0', 'icon1']) }} </td><td>Fenster</td>
+                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.sechsundsechzig', 'icon', [0, 1], 'message_socket.svg', '', ['icon0', 'icon1']) }} </td><td>Essbereich</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="block">
+        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Rollladen links</h3>
+                {{ device.shutter('', '', 'eg.rollos.wohnzimmer.links.fahren', 'eg.rollos.wohnzimmer.links.stop', 'eg.rollos.wohnzimmer.links.position') }}
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Rollladen rechts</h3>
+                {{ device.shutter('', '', 'eg.rollos.wohnzimmer.rechts.fahren', 'eg.rollos.wohnzimmer.rechts.stop', 'eg.rollos.wohnzimmer.rechts.position') }}
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="block">
+		<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Temperaturen</h3>
+				&lt;!&ndash;{{ plot.period('temp.raum', ['eg.heizen.kueche.ist', 'eg.heizen.kueche.soll'], 'avg', '24h', 0, 0, '', '', ['Ist', 'Soll'], '', ['spline', 'spline'], ['Zeit', 'Temperatur'], '1h') }}&ndash;&gt;
+                {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
+			</div>
+		</div>
+    </div>-->
+    <div class="block full-width">
+        <h3>Temperaturverlauf</h3>
+        {{ plot.rtr('', 'eg.heizen.wohnzimmer.ist', 'eg.heizen.wohnzimmer.soll', 'eg.heizen.wohnzimmer.heizen') }}
+    </div>
+{% endblock %}
+

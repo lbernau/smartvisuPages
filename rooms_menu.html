@@ -1,0 +1,166 @@
+/**
+ * -----------------------------------------------------------------------------
+ *		 @package     smartVISU
+ * @author      Martin Gleiß
+ * @copyright   2012
+ * @license     GPL <http://www.gnu.de>
+ * -----------------------------------------------------------------------------
+ */
+
+<ul data-role="listview" data-dividertheme="c">
+    <!-- Erdgeschoss -->
+    <li data-role="list-divider">Erdgeschoss</li>
+    <li data-icon="false">
+        <a href="index.php?page=rooms/eg/kueche">
+            <img class="icon" src="{{ icon0 }}scene_dinner.svg"/><h3>Küche</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.eg.kueche.temperatur', 'eg.heizen.kueche.ist', '°') }} <br />
+				{{ basic.symbol('nav.eg.kueche.fenster', 'eg.fenster.kueche', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/eg/wohnen">
+            <img class="icon" src="{{ icon0 }}scene_livingroom.svg"/><h3>Wohnzimmer</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.eg.wohnzimmer.temperatur', 'eg.heizen.wohnzimmer.ist', '°') }} <br />
+				{{ basic.symbol('nav.eg.wohnzimmer.fenster', 'eg.fenster.wohnzimmer', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/eg/wc">
+            <img class="icon" src="{{ icon0 }}scene_shower.svg"/><h3>Gäste WC</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.eg.wc.temperatur', 'eg.heizen.wc.ist', '°') }} <br />
+				{{ basic.symbol('nav.eg.wc.fenster', 'eg.fenster.wc', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/eg/diele">
+            <img class="icon" src="{{ icon0 }}scene_stairs.svg"/><h3>Flur / Treppe</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.eg.diele.temperatur', 'eg.heizen.diele.ist', '°') }} <br />
+				{{ basic.symbol('nav.eg.diele.fenster', 'eg.fenster.diele', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+            </div>
+        </a>
+    </li>
+    <!-- Obergeschoss -->
+	<li data-role="list-divider">Obergeschoss</li>
+    <li data-icon="false">
+        <a href="index.php?page=rooms/og/bad">
+            <img class="icon" src="{{ icon0 }}scene_bathroom.svg"/><h3>Bad</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.og.bad.temperatur', 'og.heizen.bad.ist', '°') }} <br />
+				{{ basic.symbol('nav.og.bad.fenster', 'og.fenster.bad.fenster', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+				{{ basic.symbol('nav.og.bad.velux', 'og.fenster.bad.velux', '', ['fts_window_roof.svg','fts_window_roof_open_2.svg'], [0,1], 'or', ['lime','red']) }}
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/og/schlafen">
+            <img class="icon" src="{{ icon0 }}scene_sleeping_alternat.svg"/><h3>Schlafzimmer</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.og.schlafzimmer.temperatur', 'og.heizen.schlafzimmer.ist', '°') }} <br />
+				{{ basic.symbol('nav.og.schlafzimmer.fenster', 'og.fenster.schlafzimmer', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/og/moritz">
+            <img class="icon" src="{{ icon0 }}scene_baby.svg"/><h3>Moritz</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.og.kind_2.temperatur', 'og.heizen.kind_2.ist', '°') }} <br />
+				{{ basic.symbol('nav.og.kind_2.fenster', 'og.fenster.kind_2', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/og/nele">
+            <img class="icon" src="{{ icon0 }}scene_baby.svg"/><h3>Kind 2</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.og.kind_1.temperatur', 'og.heizen.kind_1.ist', '°') }} <br />
+				{{ basic.symbol('nav.og.kind_1.fenster', 'og.fenster.kind_1', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+            </div>
+        </a>
+    </li>
+    <!-- Keller -->
+	<li data-role="list-divider">Keller</li>
+    <li data-icon="false">
+        <a href="index.php?page=rooms/kg/kino">
+            <img class="icon" src="{{ icon0 }}scene_cinema.svg"/><h3>Hobby</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.kg.multimedia.temperatur', 'kg.heizen.multimedia.ist', '°') }} <br />
+				{{ basic.symbol('nav.kg.multimedia', 'kg.fenster.multimedia', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/kg/waschen">
+            <img class="icon" src="{{ icon0 }}scene_laundry_room_fem.svg"/><h3>Waschen / Trocknen</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.kg.waschen.temperatur', 'kg.heizen.waschen.ist', '°') }} <br />
+				{{ basic.symbol('nav.kg.waschen.fenster', 'kg.fenster.waschen', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','orange']) }}
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/kg/werkstatt">
+            <img class="icon" src="{{ icon0 }}scene_workshop.svg"/><h3>Werkstatt</h3>
+            <div class="ui-li-aside">
+                {{ basic.print('nav.kg.hobby.temperatur', 'kg.heizen.hobby.ist', '°') }} <br />
+				{{ basic.symbol('nav.kg.hobby.fenster', 'kg.fenster.hobby', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','orange']) }}
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/kg/diele">
+            <img class="icon" src="{{ icon0 }}scene_stairs.svg"/><h3>Flur / Nebenräume</h3>
+        </a>
+    </li>
+    <!-- Außen -->
+	<li data-role="list-divider">Außen
+		<div class="ui-li-aside">
+			{{ basic.print('aussen.wetter.temperatur', 'zentral.wetter.temperatur', '°') }} &nbsp;&nbsp;
+			{{ basic.print('aussen.wetter.wind', 'zentral.wetter.wind', 'km/s') }} &nbsp;&nbsp;
+			{{ basic.print('aussen.wetter.helligkeit', 'zentral.wetter.helligkeit', '%01,0f lux') }} &nbsp;&nbsp;
+			{{ basic.symbol('aussen.wetter.regen', 'zentral.wetter.niederschlag', '', 'weather_rain.svg', 1, '', 'lime') }}
+		</div>
+	</li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/outdoor/eingang">
+            <img class="icon" src="{{ icon0 }}status_away_2.svg"/><h3>Eingang</h3>
+            <div class="ui-li-aside">
+                <h3>
+                    {{ basic.symbol('nav.outdoor.eingang.licht', 'aussen.licht.eingang', '', 'light_corridor.svg', [1,0], '',  ['yellow','white']) }}
+                    {{ basic.symbol('nav.outdoor.eingang.licht', 'aussen.licht.vorgarten', '', 'light_bollard_1.svg', [1,0], '',  ['yellow','white']) }}
+                </h3>
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/outdoor/garage">
+            <img class="icon" src="{{ icon0 }}fts_garage.svg"/><h3>Garage</h3>
+            <div class="ui-li-aside">
+                <h3>
+                    {{ basic.symbol('nav.outdoor.garage.licht', 'garage.licht', '', 'light_garage.svg', [1,0], '',  ['yellow','white']) }}
+                    {{ basic.symbol('nav.outdoor.garage.tor', 'garage.tor.geschlossen', '', ['fts_garage_door_100.svg','fts_garage.svg'], [1,0], 'or',  ['lime','red']) }}
+                    {{ basic.symbol('nav.outdoor.garage.tuer', 'garage.tuer', '', ['fts_door.svg','fts_door_open.svg'], [0,1], 'or', ['lime','red']) }}
+                    {{ basic.symbol('nav.outdoor.garage.fenster', 'garage.fenster', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','orange']) }}
+                </h3>
+            </div>
+        </a>
+    </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/outdoor/garten">
+            <img class="icon" src="{{ icon0 }}scene_garden.svg"/><h3>Garten</h3>
+            <div class="ui-li-aside">
+                <h3>
+                    {{ basic.symbol('nav.outdoor.garten.terrasse', 'aussen.licht.terrasse', '', 'light_wall_2.svg', [1,0], '',  ['yellow','white']) }}
+				    {{ basic.symbol('nav.outdoor.garten.beete', 'aussen.licht.beete', '', 'light_plant_spot.svg', [1,0], '',  ['yellow','white']) }}
+                </h3>
+            </div>
+        </a>
+    </li>
+</ul>

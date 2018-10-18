@@ -1,0 +1,75 @@
+/**
+ * -----------------------------------------------------------------------------
+ * @package     smartVISU
+ * @author      Martin Gleiß
+ * @copyright   2012
+ * @license     GPL <http://www.gnu.de>
+ * -----------------------------------------------------------------------------
+ */
+
+
+{% extends "rooms.html" %}
+{% block content %}
+    <h1>
+        <img class="icon icon0" src='{{ icon0 }}scene_stairs.svg'/>
+        Flur / Treppe
+    </h1>
+    <hr />
+
+    <div class="block">
+        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Licht</h3>
+                <table width="90%">
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.diele.decke', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Decke</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.diele.leuchte', 'icon', [0, 1], 'light_bedside.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Sideboard</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.treppe.wand', 'icon', [0, 1], 'light_stairs.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Treppe</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Heizung</h3>
+                {{ device.rtr('diele.device.rtr', '', 'eg.heizen.diele.ist', '', 'eg.heizen.diele.modus', 'eg.heizen.diele.modus', 'eg.heizen.diele.modus', '', '', '', '', [ icon.heating('','','eg.heizen.diele.stellwert', 0, 90) ]) }}
+                <!--{{ device.rtr('diele.device.rtr', '', 'eg.heizen.diele.ist', '', 'eg.heizen.diele.modus', 'eg.heizen.diele.modus', 'eg.heizen.diele.modus', 'eg.heizen.diele.heizen', '', '', '', '') }}-->
+                {{ basic.symbol('diele.fenster.status', 'eg.fenster.diele', ['Fenster geschlossen', 'Fenster geöffnet'], ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="block"> -->
+        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+         <div data-role="collapsible" data-collapsed="false">
+                <h3>Rollladen</h3>
+                {{ device.shutter('', '', 'eg.rollos.diele.fahren', 'eg.rollos.diele.stop', 'eg.rollos.diele.position') }}
+            </div>
+        </div>
+    <!-- </div> -->
+
+    <!--<div class="block">
+		<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Temperaturen</h3>
+				&lt;!&ndash;{{ plot.period('temp.raum', ['eg.heizen.kueche.ist', 'eg.heizen.kueche.soll'], 'avg', '24h', 0, 0, '', '', ['Ist', 'Soll'], '', ['spline', 'spline'], ['Zeit', 'Temperatur'], '1h') }}&ndash;&gt;
+                {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
+			</div>
+		</div>
+    </div>-->
+    <div class="block full-width">
+        <h3>Temperaturverlauf</h3>
+        {{ plot.rtr('', 'eg.heizen.diele.ist', 'eg.heizen.diele.soll', 'eg.heizen.diele.heizen')}}
+    </div>
+{% endblock %}
+

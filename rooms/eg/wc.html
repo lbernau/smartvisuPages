@@ -1,0 +1,73 @@
+/**
+ * -----------------------------------------------------------------------------
+ * @package     smartVISU
+ * @author      Martin Gleiß
+ * @copyright   2012
+ * @license     GPL <http://www.gnu.de>
+ * -----------------------------------------------------------------------------
+ */
+
+
+{% extends "rooms.html" %}
+{% block content %}
+    <h1>
+        <img class="icon icon0" src='{{ icon0 }}scene_shower.svg'/>
+        Gäste WC
+    </h1>
+    <hr />
+
+    <div class="block">
+        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Licht</h3>
+                <table width="90%">
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.wc.decke', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Decke</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.wc.spiegel', 'icon', [0, 1], 'light_mirror.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Spiegel</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Heizung</h3>
+                {{ device.rtr('', '', 'eg.heizen.wc.ist', '', 'eg.heizen.wc.modus', 'eg.heizen.wc.modus', 'eg.heizen.wc.modus', '', '', '', '', [ icon.heating('','','eg.heizen.wc.stellwert', 0, 90) ]) }}
+                <!--{{ device.rtr('kueche.device.rtr', '', 'eg.heizen.kueche.ist', '', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.heizen', '', '', '', '') }}-->
+                {{ basic.symbol('', 'eg.fenster.wc', ['Fenster geschlossen', 'Fenster geöffnet'], ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="block full-width">
+        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Rollladen</h3>
+                {{ device.shutter('', '', 'eg.rollos.wc.fahren', 'eg.rollos.wc.stop', 'eg.rollos.wc.position') }}
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="block">
+		<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Temperaturen</h3>
+				&lt;!&ndash;{{ plot.period('temp.raum', ['eg.heizen.kueche.ist', 'eg.heizen.kueche.soll'], 'avg', '24h', 0, 0, '', '', ['Ist', 'Soll'], '', ['spline', 'spline'], ['Zeit', 'Temperatur'], '1h') }}&ndash;&gt;
+                {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
+			</div>
+		</div>
+    </div>-->
+
+    <div class="block full-width">
+        <h3>Temperaturverlauf</h3>
+        {{ plot.rtr('', 'eg.heizen.wc.ist', 'eg.heizen.wc.soll', 'eg.heizen.wc.heizen') }}
+    </div>
+{% endblock %}
+
