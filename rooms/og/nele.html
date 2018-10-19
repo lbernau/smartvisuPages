@@ -1,80 +1,42 @@
 {% extends "rooms.html" %}
 {% block content %}
-
-    <!--<h1><img class="icon" src='{{ icon0 }}scene_cooking_hob.svg'/>Küche</h1>-->
     <h1>
-        <img class="icon icon0" src='{{ icon0 }}scene_dinner.svg'/>
-        Küche
+        <img class="icon icon0" src='{{ icon0 }}scene_baby.svg'/>
+        Kind 2
     </h1>
     <hr />
 
     <div class="block">
-        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Schalten</h3>
-                {{ device.dimmer('', 'Esstisch', 'eg.licht.kueche.essen', 'eg.licht.kueche.essen.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
-                <table width="90%">
-                    <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.kueche.arbeitsplatte', 'icon', [0, 1], 'light_diffused.svg', '', ['icon0', 'icon1']) }} </td>
-                        <td>Arbeitsplatte</td>
-                    </tr>
-                    <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.kueche.vorrat', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
-                        <td>Vorrat</td>
-                    </tr>
-                    <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.kueche.radio', 'icon', [0, 1], 'it_radio.svg', '', ['icon0', 'icon1']) }} </td>
-                        <td>Radio</td>
-                    </tr>
-                </table>
+                {{ device.dimmer('', 'Decke (Gesamt)', 'og.licht.kind_1.gesamt', 'og.licht.kind_1.gesamt.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
             </div>
         </div>
     </div>
 
     <div class="block">
-        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
 
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Heizung</h3>
-                {{ device.rtr('kueche.device.rtr', '', 'eg.heizen.kueche.ist', '', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', '', '', '', '', [ icon.heating('','','eg.heizen.kueche.stellwert', 0, 90) ]) }}
-                <!--{{ device.rtr('kueche.device.rtr', '', 'eg.heizen.kueche.ist', '', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.heizen', '', '', '', '') }}-->
-                {{ basic.symbol('kueche.fenster.status', 'eg.fenster.kueche', ['Fenster geschlossen', 'Fenster geöffnet'], ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+                {{ device.rtr('', '', 'og.heizen.kind_1.ist', '', 'og.heizen.kind_1.modus', 'og.heizen.kind_1.modus', 'og.heizen.kind_1.modus', '', '', '', '', [ icon.heating('','','og.heizen.kind_1.stellwert', 0, 90) ]) }}
+                {{ basic.symbol('', 'og.fenster.kind_1', ['Fenster geschlossen', 'Fenster geöffnet'], ['fts_door.svg','fts_door_open.svg'], [0,1], 'or', ['lime','red']) }}
             </div>
         </div>
     </div>
 
-    <div class="block">
+    <div class="block full-width">
         <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Rollladen links</h3>
-                {{ device.shutter('', '', 'eg.rollos.kueche.links.fahren', 'eg.rollos.kueche.links.stop', 'eg.rollos.kueche.links.position') }}
+                {{ device.shutter('', '', 'og.rollos.kind_1.fahren', 'og.rollos.kind_1.stop', 'og.rollos.kind_1.position') }}
             </div>
-
-        </div>
-    </div>
-    <div class="block">
-        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
-            <div data-role="collapsible" data-collapsed="false">
-                <h3>Rollladen rechts</h3>
-                {{ device.shutter('', '', 'eg.rollos.kueche.rechts.fahren', 'eg.rollos.kueche.rechts.stop', 'eg.rollos.kueche.rechts.position') }}
-            </div>
-
         </div>
     </div>
 
-    <!--<div class="block">
-		<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-			<div data-role="collapsible" data-collapsed="false">
-				<h3>Temperaturen</h3>
-				&lt;!&ndash;{{ plot.period('temp.raum', ['eg.heizen.kueche.ist', 'eg.heizen.kueche.soll'], 'avg', '24h', 0, 0, '', '', ['Ist', 'Soll'], '', ['spline', 'spline'], ['Zeit', 'Temperatur'], '1h') }}&ndash;&gt;
-                {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
-			</div>
-		</div>
-    </div>-->
     <h3>Temperaturverlauf</h3>
-    {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
+    {{ plot.rtr('', 'og.heizen.kind_1.ist', 'og.heizen.kind_1.soll', 'og.heizen.kind_1.heizen') }}
 
 {% endblock %}
 
