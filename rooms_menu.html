@@ -1,12 +1,18 @@
 <ul data-role="listview" data-dividertheme="c">
     <!-- Erdgeschoss -->
-    <li data-role="list-divider">Erdgeschoss</li>
+    <li data-role="list-divider">
+        Erdgeschoss
+        <div class="ui-li-aside">
+            {{ basic.symbol('', ['zentral.alarm.erdgeschoss', 'zentral.alarm.gesamt'], '', 'secur_alarm_alarm.svg', 1, 'or', 'orange') }}
+        </div>
+    </li>
     <li data-icon="false">
         <a href="index.php?page=rooms/eg/kueche">
             <img class="icon" src="{{ icon0 }}scene_dinner.svg"/><h3>Küche</h3>
             <div class="ui-li-aside">
                 {{ basic.print('nav.eg.kueche.temperatur', 'eg.heizen.kueche.ist', '°') }} <br />
 				{{ basic.symbol('nav.eg.kueche.fenster', 'eg.fenster.kueche', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+                {{ basic.symbol('', 'eg.rauchmelder.kueche', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
@@ -16,6 +22,7 @@
             <div class="ui-li-aside">
                 {{ basic.print('nav.eg.wohnzimmer.temperatur', 'eg.heizen.wohnzimmer.ist', '°') }} <br />
 				{{ basic.symbol('nav.eg.wohnzimmer.fenster', 'eg.fenster.wohnzimmer', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+                {{ basic.symbol('', 'eg.rauchmelder.wohnzimmer', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
@@ -34,11 +41,17 @@
             <div class="ui-li-aside">
                 {{ basic.print('nav.eg.diele.temperatur', 'eg.heizen.diele.ist', '°') }} <br />
 				{{ basic.symbol('nav.eg.diele.fenster', 'eg.fenster.diele', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+                {{ basic.symbol('', 'eg.rauchmelder.diele', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
     <!-- Obergeschoss -->
-	<li data-role="list-divider">Obergeschoss</li>
+	<li data-role="list-divider">
+        Obergeschoss
+        <div class="ui-li-aside">
+            {{ basic.symbol('', 'zentral.alarm.gesamt', '', 'secur_alarm_alarm.svg', 1, '', 'orange') }}
+        </div>
+    </li>
     <li data-icon="false">
         <a href="index.php?page=rooms/og/bad">
             <img class="icon" src="{{ icon0 }}scene_bathroom.svg"/><h3>Bad</h3>
@@ -55,6 +68,7 @@
             <div class="ui-li-aside">
                 {{ basic.print('nav.og.schlafzimmer.temperatur', 'og.heizen.schlafzimmer.ist', '°') }} <br />
 				{{ basic.symbol('nav.og.schlafzimmer.fenster', 'og.fenster.schlafzimmer', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+                {{ basic.symbol('', 'og.rauchmelder.schlafzimmer', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
@@ -64,6 +78,7 @@
             <div class="ui-li-aside">
                 {{ basic.print('nav.og.kind_2.temperatur', 'og.heizen.kind_2.ist', '°') }} <br />
 				{{ basic.symbol('nav.og.kind_2.fenster', 'og.fenster.kind_2', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+                {{ basic.symbol('', 'og.rauchmelder.kind_2', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
@@ -73,17 +88,24 @@
             <div class="ui-li-aside">
                 {{ basic.print('nav.og.kind_1.temperatur', 'og.heizen.kind_1.ist', '°') }} <br />
 				{{ basic.symbol('nav.og.kind_1.fenster', 'og.fenster.kind_1', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+                {{ basic.symbol('', 'og.rauchmelder.kind_1', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
     <!-- Keller -->
-	<li data-role="list-divider">Keller</li>
+	<li data-role="list-divider">
+        Keller
+        <div class="ui-li-aside">
+            {{ basic.symbol('', ['zentral.alarm.erdgeschoss', 'zentral.alarm.gesamt'], '', 'secur_alarm_alarm.svg', 1, 'or', 'orange') }}
+        </div>
+    </li>
     <li data-icon="false">
         <a href="index.php?page=rooms/kg/kino">
             <img class="icon" src="{{ icon0 }}scene_cinema.svg"/><h3>Hobby</h3>
             <div class="ui-li-aside">
                 {{ basic.print('nav.kg.multimedia.temperatur', 'kg.heizen.multimedia.ist', '°') }} <br />
 				{{ basic.symbol('nav.kg.multimedia', 'kg.fenster.multimedia', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+                {{ basic.symbol('', 'kg.rauchmelder.multimedia', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
@@ -93,6 +115,7 @@
             <div class="ui-li-aside">
                 {{ basic.print('nav.kg.waschen.temperatur', 'kg.heizen.waschen.ist', '°') }} <br />
 				{{ basic.symbol('nav.kg.waschen.fenster', 'kg.fenster.waschen', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','orange']) }}
+                {{ basic.symbol('', 'kg.rauchmelder.waschen', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
@@ -102,6 +125,7 @@
             <div class="ui-li-aside">
                 {{ basic.print('nav.kg.hobby.temperatur', 'kg.heizen.hobby.ist', '°') }} <br />
 				{{ basic.symbol('nav.kg.hobby.fenster', 'kg.fenster.hobby', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','orange']) }}
+                {{ basic.symbol('', 'kg.rauchmelder.hobby', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
