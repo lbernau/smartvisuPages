@@ -1,13 +1,3 @@
-/**
- * -----------------------------------------------------------------------------
- * @package     smartVISU
- * @author      Martin Gleiß
- * @copyright   2012
- * @license     GPL <http://www.gnu.de>
- * -----------------------------------------------------------------------------
- */
-
-
 {% extends "rooms.html" %}
 {% block content %}
     <h1>
@@ -22,7 +12,23 @@
                 <h3>Licht</h3>
                 {{ device.dimmer('', 'Sofa', 'eg.licht.wohnzimmer.sofa', 'eg.licht.wohnzimmer.sofa.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
                 {{ device.dimmer('', 'Esstisch', 'eg.licht.wohnzimmer.essen', 'eg.licht.wohnzimmer.essen.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
-                {{ device.dimmer('', 'Wandleuchten', 'eg.licht.wohnzimmer.wand', 'eg.licht.wohnzimmer.wand.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
+                <table width="90%">
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.wohnzimmer.wand', 'icon', [0, 1], 'light_wall_2.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Wandleuchten</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>RGB-Beleuchtung</h3>
+                <table width="90%">
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.wohnzimmer.wand', 'icon', [0, 1], 'light_led_stripe_rgb.svg', 'Lowboard', ['icon0', 'icon1']) }} </td>
+                        <td>{{ basic.color('', 'bath.color.r', 'bath.color.g', 'bath.color.b', '', '', '', '', 'slider') }}</td>
+                    </tr>
+                </table>
+
             </div>
         </div>
     </div>
@@ -33,7 +39,7 @@
                 <h3>Heizung</h3>
                 {{ device.rtr('', '', 'eg.heizen.wohnzimmer.ist', '', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.modus', 'eg.heizen.wohnzimmer.modus', '', '', '', '', [ icon.heating('','','eg.heizen.wohnzimmer.stellwert', 0, 90) ]) }}
                 {{ basic.symbol('', 'eg.fenster.wohnzimmer', ['Fenster geschlossen', 'Fenster geöffnet'], ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
-        </div>
+            </div>
         </div>
     </div>
 
@@ -70,15 +76,6 @@
         </div>
     </div>
 
-    <!--<div class="block">
-		<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-			<div data-role="collapsible" data-collapsed="false">
-				<h3>Temperaturen</h3>
-				&lt;!&ndash;{{ plot.period('temp.raum', ['eg.heizen.kueche.ist', 'eg.heizen.kueche.soll'], 'avg', '24h', 0, 0, '', '', ['Ist', 'Soll'], '', ['spline', 'spline'], ['Zeit', 'Temperatur'], '1h') }}&ndash;&gt;
-                {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
-			</div>
-		</div>
-    </div>-->
     <div class="block full-width">
         <h3>Temperaturverlauf</h3>
         {{ plot.rtr('', 'eg.heizen.wohnzimmer.ist', 'eg.heizen.wohnzimmer.soll', 'eg.heizen.wohnzimmer.heizen') }}

@@ -1,13 +1,3 @@
-/**
- * -----------------------------------------------------------------------------
- * @package     smartVISU
- * @author      Martin Gleiß
- * @copyright   2012
- * @license     GPL <http://www.gnu.de>
- * -----------------------------------------------------------------------------
- */
-
-
 {% extends "base.html" %}
 
 {% block sidebar %}
@@ -27,7 +17,7 @@
     <hr>
 
     {{ weather.forecastweek('weather_forecast') }}
-
+<!--
     <hr>
 
      {{ plot.temprose('temprose_eg',
@@ -44,7 +34,7 @@
         ['kg.heizen.multimedia.ist', 'kg.heizen.waschen.ist', 'kg.heizen.hobby.ist'],
         ['kg.heizen.multimedia.soll', 'kg.heizen.waschen.soll', 'kg.heizen.hobby.soll'],
         ['Hobby', 'Waschen / Trocknen', 'Werkstatt']) }}
-     <!--{{ plot.temprose('temprose_all',
+     {{ plot.temprose('temprose_all',
         [
 			'eg.heizen.kueche.ist', 'eg.heizen.wohnzimmer.ist', 'eg.heizen.wc.ist', 'eg.heizen.diele.ist',
 			'og.heizen.bad.ist', 'og.heizen.schlafzimmer.ist', 'og.heizen.kind_2.ist', 'og.heizen.kind_1.ist',
