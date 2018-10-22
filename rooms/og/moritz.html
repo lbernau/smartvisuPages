@@ -29,8 +29,17 @@
     <div class="block full-width">
         <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
-                <h3>Rollladen links</h3>
-                {{ device.shutter('', '', 'og.rollos.kind_2.fahren', 'og.rollos.kind_2.stop', 'og.rollos.kind_2.position') }}
+                <h3>Rollladen</h3>
+                <table class="centered">
+                    <tr>
+                        <td>
+                            {{ device.shutter('', '', 'og.rollos.kind_2.fahren', 'og.rollos.kind_2.stop', 'og.rollos.kind_2.position') }}
+                        </td>
+                        <td>
+                            {{ basic.stateswitch('', 'og.rollos.kind_2.sperre', '', [0, 1], ['secur_open.svg', 'secur_locked.svg'], '', ['icon1', 'red']) }}
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

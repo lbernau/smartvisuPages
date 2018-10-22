@@ -62,7 +62,16 @@
         <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Rollladen links</h3>
-                {{ device.shutter('', '', 'eg.rollos.wohnzimmer.links.fahren', 'eg.rollos.wohnzimmer.links.stop', 'eg.rollos.wohnzimmer.links.position') }}
+                <table class="centered">
+                    <tr>
+                        <td>
+                            {{ device.shutter('', '', 'eg.rollos.wohnzimmer.links.fahren', 'eg.rollos.wohnzimmer.links.stop', 'eg.rollos.wohnzimmer.links.position') }}
+                        </td>
+                        <td>
+                            {{ basic.stateswitch('', 'eg.rollos.wohnzimmer.links.sperre', '', [0, 1], ['secur_open.svg', 'secur_locked.svg'], '', ['icon1', 'red']) }}
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -71,7 +80,16 @@
         <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Rollladen rechts</h3>
-                {{ device.shutter('', '', 'eg.rollos.wohnzimmer.rechts.fahren', 'eg.rollos.wohnzimmer.rechts.stop', 'eg.rollos.wohnzimmer.rechts.position') }}
+                <table class="centered">
+                    <tr>
+                        <td>
+                            {{ device.shutter('', '', 'eg.rollos.wohnzimmer.rechts.fahren', 'eg.rollos.wohnzimmer.rechts.stop', 'eg.rollos.wohnzimmer.rechts.position') }}
+                        </td>
+                        <td>
+                            {{ basic.stateswitch('', 'eg.rollos.wohnzimmer.rechts.sperre', '', [0, 1], ['secur_open.svg', 'secur_locked.svg'], '', ['icon1', 'red']) }}
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

@@ -42,20 +42,36 @@
 
     <div class="block">
         <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Rollladen Fenster</h3>
-                {{ device.shutter('', '', 'og.rollos.schlafzimmer.fenster.fahren', 'og.rollos.schlafzimmer.fenster.stop', 'og.rollos.schlafzimmer.fenster.position') }}
+                <table class="centered">
+                    <tr>
+                        <td>
+                            {{ device.shutter('', '', 'og.rollos.schlafzimmer.fenster.fahren', 'og.rollos.schlafzimmer.fenster.stop', 'og.rollos.schlafzimmer.fenster.position') }}
+                        </td>
+                        <td>
+                            {{ basic.stateswitch('', 'og.rollos.schlafzimmer.fenster.sperre', '', [0, 1], ['secur_open.svg', 'secur_locked.svg'], '', ['icon1', 'red']) }}
+                        </td>
+                    </tr>
+                </table>
             </div>
 
         </div>
     </div>
     <div class="block">
         <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Rollladen Tür</h3>
-                {{ device.shutter('', '', 'og.rollos.schlafzimmer.gaube.fahren', 'og.rollos.schlafzimmer.gaube.stop', 'og.rollos.schlafzimmer.gaube.position') }}
+                <table class="centered">
+                    <tr>
+                        <td>
+                            {{ device.shutter('', '', 'og.rollos.schlafzimmer.gaube.fahren', 'og.rollos.schlafzimmer.gaube.stop', 'og.rollos.schlafzimmer.gaube.position') }}
+                        </td>
+                        <td>
+                            {{ basic.stateswitch('', 'og.rollos.schlafzimmer.gaube.sperre', '', [0, 1], ['secur_open.svg', 'secur_locked.svg'], '', ['icon1', 'red']) }}
+                        </td>
+                    </tr>
+                </table>
             </div>
 
         </div>

@@ -47,7 +47,16 @@
 
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Rollladen Fenster</h3>
-                {{ device.shutter('rolladenBadFenster', '', 'og.rollos.bad.fenster.fahren', 'og.rollos.bad.fenster.stop', 'og.rollos.bad.fenster.position') }}
+                <table class="centered">
+                    <tr>
+                        <td>
+                            {{ device.shutter('', '', 'og.rollos.bad.fenster.fahren', 'og.rollos.bad.fenster.stop', 'og.rollos.bad.fenster.position') }}
+                        </td>
+                        <td>
+                            {{ basic.stateswitch('', 'og.rollos.bad.fenster.sperre', '', [0, 1], ['secur_open.svg', 'secur_locked.svg'], '', ['icon1', 'red']) }}
+                        </td>
+                    </tr>
+                </table>
             </div>
 
         </div>
@@ -57,7 +66,7 @@
 
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Rollladen Velux</h3>
-                {{ device.shutter('rolladenBadVelux', '', 'og.rollos.bad.velux.fahren', 'og.rollos.bad.velux.stop', 'og.rollos.bad.velux.position') }}
+                {{ device.shutter('', '', 'og.rollos.bad.velux.fahren', 'og.rollos.bad.velux.stop', 'og.rollos.bad.velux.position') }}
             </div>
 
         </div>

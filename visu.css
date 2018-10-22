@@ -27,3 +27,7 @@
     min-height: 110px;
     padding: 10px 5px 10px 5px;
 }
+
+.centered {
+    margin: 0 auto;
+}

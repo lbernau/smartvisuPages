@@ -3,28 +3,36 @@
 
     <!--<h1><img class="icon" src='{{ icon0 }}scene_cooking_hob.svg'/>Küche</h1>-->
     <h1>
-        <img class="icon icon0" src='{{ icon0 }}scene_dinner.svg'/>
-        Küche
+        <img class="icon icon0" src='{{ icon0 }}scene_stairs.svg'/>
+        Flur / Nebenraum
     </h1>
     <hr />
 
     <div class="block">
         <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
-                <h3>Schalten</h3>
-                {{ device.dimmer('', 'Esstisch', 'eg.licht.kueche.essen', 'eg.licht.kueche.essen.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
+                <h3>Licht</h3>
                 <table width="90%">
                     <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.kueche.arbeitsplatte', 'icon', [0, 1], 'light_diffused.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'kg.licht.diele', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
                         <td>Arbeitsplatte</td>
                     </tr>
                     <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.kueche.vorrat', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'kg.licht.treppe.wand', 'icon', [0, 1], 'light_stairs.svg', '', ['icon0', 'icon1']) }} </td>
                         <td>Vorrat</td>
                     </tr>
                     <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.kueche.radio', 'icon', [0, 1], 'it_radio.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'kg.licht.vorrat', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
                         <td>Radio</td>
+                    </tr>
+                </table>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>Orientierungsleuchten</h3>
+                <table width="90%">
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.treppe.wand', 'icon', [0, 1], 'light_stairs.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Treppe KG</td>
                     </tr>
                 </table>
             </div>
