@@ -1,30 +1,23 @@
 {% extends "rooms.html" %}
 {% block content %}
-
-    <!--<h1><img class="icon" src='{{ icon0 }}scene_cooking_hob.svg'/>Küche</h1>-->
     <h1>
-        <img class="icon icon0" src='{{ icon0 }}scene_dinner.svg'/>
-        Küche
+        <img class="icon icon0" src='{{ icon0 }}fts_garage.svg'/>
+        Garage
     </h1>
     <hr />
 
     <div class="block">
-        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+        <div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Schalten</h3>
-                {{ device.dimmer('', 'Esstisch', 'eg.licht.kueche.essen', 'eg.licht.kueche.essen.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
                 <table width="90%">
                     <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.kueche.arbeitsplatte', 'icon', [0, 1], 'light_diffused.svg', '', ['icon0', 'icon1']) }} </td>
-                        <td>Arbeitsplatte</td>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'garage.licht', 'icon', [0, 1], 'light_garage.svg', '', ['icon0', 'icon1']) }}</td>
+                        <td>Licht</td>
                     </tr>
                     <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.kueche.vorrat', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
-                        <td>Vorrat</td>
-                    </tr>
-                    <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.kueche.radio', 'icon', [0, 1], 'it_radio.svg', '', ['icon0', 'icon1']) }} </td>
-                        <td>Radio</td>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'garage.pumpe', 'icon', [0, 1], 'sani_domestic_waterworks.svg', '', ['icon0', 'icon1']) }}</td>
+                        <td>Pumpe</td>
                     </tr>
                 </table>
             </div>
@@ -32,49 +25,36 @@
     </div>
 
     <div class="block">
-        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
+        <div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
-                <h3>Heizung</h3>
-                {{ device.rtr('kueche.device.rtr', '', 'eg.heizen.kueche.ist', '', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', '', '', '', '', [ icon.heating('','','eg.heizen.kueche.stellwert', 0, 90) ]) }}
-                <!--{{ device.rtr('kueche.device.rtr', '', 'eg.heizen.kueche.ist', '', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.heizen', '', '', '', '') }}-->
-                {{ basic.symbol('kueche.fenster.status', 'eg.fenster.kueche', ['Fenster geschlossen', 'Fenster geöffnet'], ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+                <h3>Tor</h3>
+                {{ basic.stateswitch('', 'garage.tor.auf', 'midi', [1], 'control_arrow_up.svg', 'Auf', ['icon0']) }}
+                {{ basic.symbol('', 'garage.tor.offen', '', 'fts_garage.svg', 1, '', 'red') }}
+                {{ basic.symbol('', ['garage.tor.offen', 'garage.tor.geschlossen'], '', 'fts_garage_door_50.svg', 0, 'and', 'orange') }}
+                {{ basic.symbol('', 'garage.tor.geschlossen', '', 'fts_garage_door_100.svg', 1, '', 'lime') }}
+                {{ basic.stateswitch('', 'garage.tor.ab', 'midi', [1], 'control_arrow_down.svg', 'Ab', ['icon0']) }}
             </div>
         </div>
     </div>
 
-    <div class="block">
-        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
+    <div class="block full-width">
+        <div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
-                <h3>Rollladen links</h3>
-                {{ device.shutter('', '', 'eg.rollos.kueche.links.fahren', 'eg.rollos.kueche.links.stop', 'eg.rollos.kueche.links.position') }}
+                <h3>Sicherheit</h3>
+                <table width="90%">
+                    <tr>
+                        <td>
+                            {{ basic.symbol('', 'garage.tuer', ['Tür geschlossen', 'Tür geöffnet'], ['fts_door.svg','fts_door_open.svg'], [0,1], 'or', ['lime','red']) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ basic.symbol('', 'garage.fenster', ['Fenster geschlossen', 'Fenster geöffnet'], ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','orange']) }}
+                        </td>
+                    </tr>
+                </table>
             </div>
-
         </div>
     </div>
-    <div class="block">
-        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
-            <div data-role="collapsible" data-collapsed="false">
-                <h3>Rollladen rechts</h3>
-                {{ device.shutter('', '', 'eg.rollos.kueche.rechts.fahren', 'eg.rollos.kueche.rechts.stop', 'eg.rollos.kueche.rechts.position') }}
-            </div>
-
-        </div>
-    </div>
-
-    <!--<div class="block">
-		<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-			<div data-role="collapsible" data-collapsed="false">
-				<h3>Temperaturen</h3>
-				&lt;!&ndash;{{ plot.period('temp.raum', ['eg.heizen.kueche.ist', 'eg.heizen.kueche.soll'], 'avg', '24h', 0, 0, '', '', ['Ist', 'Soll'], '', ['spline', 'spline'], ['Zeit', 'Temperatur'], '1h') }}&ndash;&gt;
-                {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
-			</div>
-		</div>
-    </div>-->
-    <h3>Temperaturverlauf</h3>
-    {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
 
 {% endblock %}
-

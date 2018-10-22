@@ -43,9 +43,9 @@
             </div>
         </div>
     </div>
-
-    <h3>Temperaturverlauf</h3>
-    {{ plot.rtr('', 'og.heizen.kind_2.ist', 'og.heizen.kind_2.soll', 'og.heizen.kind_2.heizen') }}
-
+    <div class="block full-width">
+        <h3>Temperaturverlauf</h3>
+        {{ plot.rtr('', 'og.heizen.kind_2.ist', 'og.heizen.kind_2.soll', 'og.heizen.kind_2.heizen') }}
+    </div>
 {% endblock %}
 

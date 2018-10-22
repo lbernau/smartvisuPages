@@ -1,30 +1,36 @@
 {% extends "rooms.html" %}
 {% block content %}
-
-    <!--<h1><img class="icon" src='{{ icon0 }}scene_cooking_hob.svg'/>Küche</h1>-->
     <h1>
-        <img class="icon icon0" src='{{ icon0 }}scene_dinner.svg'/>
-        Küche
+        <img class="icon icon0" src='{{ icon0 }}scene_garden.svg'/>
+        Garten
     </h1>
     <hr />
 
     <div class="block">
-        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+        <div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
-                <h3>Schalten</h3>
-                {{ device.dimmer('', 'Esstisch', 'eg.licht.kueche.essen', 'eg.licht.kueche.essen.dimmen', '', '', '', 'light_light_dim_100.svg', 'light_light.svg') }}
+                <h3>Terasse</h3>
                 <table width="90%">
                     <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.kueche.arbeitsplatte', 'icon', [0, 1], 'light_diffused.svg', '', ['icon0', 'icon1']) }} </td>
-                        <td>Arbeitsplatte</td>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'aussen.licht.terrasse', 'icon', [0, 1], 'light_wall_2.svg', '', ['icon0', 'yellow']) }} </td>
+                        <td>Licht</td>
                     </tr>
                     <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.kueche.vorrat', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
-                        <td>Vorrat</td>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'aussen.steckdosen.terrasse', 'icon', [0, 1], 'message_socket.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Steckdosen</td>
                     </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Beete</h3>
+                <table width="90%">
                     <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.kueche.radio', 'icon', [0, 1], 'it_radio.svg', '', ['icon0', 'icon1']) }} </td>
-                        <td>Radio</td>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'aussen.licht.beete', 'icon', [0, 1], 'light_plant_spot.svg', '', ['icon0', 'yellow']) }} </td>
+                        <td>Strahler</td>
                     </tr>
                 </table>
             </div>
@@ -32,49 +38,103 @@
     </div>
 
     <div class="block">
+        <div class="set-4" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Bewässerung (Gesamt)</h3>
+                <table width="90%">
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'aussen.bewaesserung.gesamt.szene', 'icon', [0, 1], ['sani_irrigation_pop_up_off.svg', 'sani_irrigation_pop_up_on.svg'], '', ['icon0', 'icon1']) }} </td>
+                        <td>Freigebene Flächen bewässern</td>
+                    </tr>
+                </table>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>Bewässerung (Einzeln)</h3>
+                <table width="90%" style="margin: 0 auto;">
+                    <tr>
+                        <td align="left" width="60px">&nbsp;
+                            {{ basic.stateswitch('', 'aussen.bewaesserung.regner.links', 'icon', [0, 1], ['sani_irrigation_pop_up_off.svg', 'sani_irrigation_pop_up_on.svg'], '', ['icon0', 'icon1']) }} </td>
+                        <td >Regner links</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="60px">&nbsp;
+                            {{ basic.stateswitch('', 'aussen.bewaesserung.regner.rechts', 'icon', [0, 1], ['sani_irrigation_pop_up_off.svg', 'sani_irrigation_pop_up_on.svg'], '', ['icon0', 'icon1']) }} </td>
+                        <td >Regner rechts</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="60px">&nbsp;
+                            {{ basic.stateswitch('', 'aussen.bewaesserung.regner.garage', 'icon', [0, 1], ['sani_irrigation_pop_up_off.svg', 'sani_irrigation_pop_up_on.svg'], '', ['icon0', 'icon1']) }} </td>
+                        <td >Regner Garage</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="60px">&nbsp;
+                            {{ basic.stateswitch('', 'aussen.bewaesserung.tropfschlauch.hecke', 'icon', [0, 1], ['sani_sprinkling.svg', 'sani_sprinkling.svg'], '', ['icon0', 'icon1']) }} </td>
+                        <td >Hecke</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="60px">&nbsp;
+                            {{ basic.stateswitch('', 'aussen.bewaesserung.tropfschlauch.beete', 'icon', [0, 1], ['sani_sprinkling.svg', 'sani_sprinkling.svg'], '', ['icon0', 'icon1']) }} </td>
+                        <td >Beete</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="60px">&nbsp; {{ basic.stateswitch('', 'aussen.bewaesserung.tropfschlauch.vorgarten', 'icon', [0, 1], ['sani_sprinkling.svg', 'sani_sprinkling.svg'], '', ['icon0', 'icon1']) }} </td>
+                        <td >Vorgarten</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Freigabe</h3>
+                <table width="90%">
+                    <tr>
+                        <td width="100px">{{ basic.flip('', 'aussen.bewaesserung.regner.links.freigabe', '1', '0') }} </td>
+                        <td>Rasen links</td>
+                    </tr>
+                    <tr>
+                        <td width="100px">{{ basic.flip('', 'aussen.bewaesserung.regner.rechts.freigabe', '1', '0') }} </td>
+                        <td>Rasen rechts</td>
+                    </tr>
+                    <tr>
+                        <td width="100px">{{ basic.flip('', 'aussen.bewaesserung.regner.garage.freigabe', '1', '0') }} </td>
+                        <td>Rasen Garage</td>
+                    </tr>
+                    <tr>
+                        <td width="100px">{{ basic.flip('', 'aussen.bewaesserung.tropfschlauch.hecke.freigabe', '1', '0') }} </td>
+                        <td>Hecke</td>
+                    </tr>
+                    <tr>
+                        <td width="100px">{{ basic.flip('', 'aussen.bewaesserung.tropfschlauch.beete.freigabe', '1', '0') }} </td>
+                        <td>Beete</td>
+                    </tr>
+                    <tr>
+                        <td width="100px">{{ basic.flip('', 'aussen.bewaesserung.tropfschlauch.vorgarten.freigabe', '1', '0') }} </td>
+                        <td>Vorgarten</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="block full-width">
         <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
             <div data-role="collapsible" data-collapsed="false">
-                <h3>Heizung</h3>
-                {{ device.rtr('kueche.device.rtr', '', 'eg.heizen.kueche.ist', '', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', '', '', '', '', [ icon.heating('','','eg.heizen.kueche.stellwert', 0, 90) ]) }}
-                <!--{{ device.rtr('kueche.device.rtr', '', 'eg.heizen.kueche.ist', '', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.modus', 'eg.heizen.kueche.heizen', '', '', '', '') }}-->
-                {{ basic.symbol('kueche.fenster.status', 'eg.fenster.kueche', ['Fenster geschlossen', 'Fenster geöffnet'], ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+                <h3>Bewässerung Status</h3>
+                {{ basic.symbol('', 'aussen.bewaesserung.regner.links', 'Rasen links', ['sani_irrigation_pop_up_off.svg','sani_irrigation_pop_up_on.svg'], [0,1], '', ['icon0','icon1']) }} &nbsp;&nbsp;
+                {{ basic.symbol('', 'aussen.bewaesserung.regner.rechts', 'Rasen rechts', ['sani_irrigation_pop_up_off.svg','sani_irrigation_pop_up_on.svg'], [0,1], '', ['icon0','icon1']) }} &nbsp;&nbsp;
+                {{ basic.symbol('', 'aussen.bewaesserung.tropfschlauch.hecke', 'Hecke', ['sani_sprinkling.svg','sani_sprinkling.svg'], [0,1], '', ['icon0','icon1']) }} &nbsp;&nbsp;
+                {{ basic.symbol('', 'aussen.bewaesserung.tropfschlauch.beete', 'Beete', ['sani_sprinkling.svg','sani_sprinkling.svg'], [0,1], '', ['icon0','icon1']) }} &nbsp;&nbsp;
+                {{ basic.symbol('', 'aussen.bewaesserung.tropfschlauch.vorgarten', 'Vorgarten', ['sani_sprinkling.svg','sani_sprinkling.svg'], [0,1], '', ['icon0','icon1']) }}
             </div>
         </div>
     </div>
 
-    <div class="block">
-        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
-            <div data-role="collapsible" data-collapsed="false">
-                <h3>Rollladen links</h3>
-                {{ device.shutter('', '', 'eg.rollos.kueche.links.fahren', 'eg.rollos.kueche.links.stop', 'eg.rollos.kueche.links.position') }}
-            </div>
-
-        </div>
+    <div class="block full-width">
+        <h3>Temperaturverlauf</h3>
+        {{ plot.period('', 'zentral.wetter.temperatur', 'minmaxavg', '7d', '', '', '', 7, '', '', '', ['', 'Temperatur in °C'], '', '', '', '', '', '°') }}
     </div>
-    <div class="block">
-        <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-
-            <div data-role="collapsible" data-collapsed="false">
-                <h3>Rollladen rechts</h3>
-                {{ device.shutter('', '', 'eg.rollos.kueche.rechts.fahren', 'eg.rollos.kueche.rechts.stop', 'eg.rollos.kueche.rechts.position') }}
-            </div>
-
-        </div>
-    </div>
-
-    <!--<div class="block">
-		<div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
-			<div data-role="collapsible" data-collapsed="false">
-				<h3>Temperaturen</h3>
-				&lt;!&ndash;{{ plot.period('temp.raum', ['eg.heizen.kueche.ist', 'eg.heizen.kueche.soll'], 'avg', '24h', 0, 0, '', '', ['Ist', 'Soll'], '', ['spline', 'spline'], ['Zeit', 'Temperatur'], '1h') }}&ndash;&gt;
-                {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
-			</div>
-		</div>
-    </div>-->
-    <h3>Temperaturverlauf</h3>
-    {{ plot.rtr('kueche.plot.rtr', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', 'eg.heizen.kueche.heizen') }}
-
 {% endblock %}
 

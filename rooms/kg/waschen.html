@@ -31,8 +31,9 @@
         </div>
     </div>
 
-    <h3>Temperaturverlauf</h3>
-    {{ plot.rtr('', 'kg.heizen.waschen.ist', 'kg.heizen.waschen.soll', 'kg.heizen.waschen.heizen') }}
-
+    <div class="block full-width">
+        <h3>Temperaturverlauf</h3>
+        {{ plot.rtr('', 'kg.heizen.waschen.ist', 'kg.heizen.waschen.soll', 'kg.heizen.waschen.heizen') }}
+    </div>
 {% endblock %}
 

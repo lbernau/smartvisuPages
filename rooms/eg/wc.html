@@ -39,7 +39,16 @@
         <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Rollladen</h3>
-                {{ device.shutter('', '', 'eg.rollos.wc.fahren', 'eg.rollos.wc.stop', 'eg.rollos.wc.position') }}
+                <table class="centered">
+                    <tr>
+                        <td>
+                            {{ device.shutter('', '', 'eg.rollos.wc.fahren', 'eg.rollos.wc.stop', 'eg.rollos.wc.position') }}
+                        </td>
+                        <td>
+                            {{ basic.stateswitch('', 'eg.rollos.wc.sperre', '', [0, 1], ['secur_open.svg', 'secur_locked.svg'], '', ['icon1', 'red']) }}
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

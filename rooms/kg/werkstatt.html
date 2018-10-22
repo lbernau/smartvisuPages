@@ -30,9 +30,9 @@
         </div>
     </div>
 </div>
-
-<h3>Temperaturverlauf</h3>
-{{ plot.rtr('', 'kg.heizen.hobby.ist', 'kg.heizen.hobby.soll', 'kg.heizen.hobby.heizen') }}
-
+<div class="block full-width">
+    <h3>Temperaturverlauf</h3>
+    {{ plot.rtr('', 'kg.heizen.hobby.ist', 'kg.heizen.hobby.soll', 'kg.heizen.hobby.heizen') }}
+</div>
 {% endblock %}
 
