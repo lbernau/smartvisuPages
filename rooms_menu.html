@@ -66,8 +66,9 @@
         <a href="index.php?page=rooms/og/schlafen">
             <img class="icon" src="{{ icon0 }}scene_sleeping_alternat.svg"/><h3>Schlafzimmer</h3>
             <div class="ui-li-aside">
-                {{ basic.print('nav.og.schlafzimmer.temperatur', 'og.heizen.schlafzimmer.ist', '°') }} <br />
+                {{ basic.print('', 'og.heizen.schlafzimmer.ist', '°') }} <br />
 				{{ basic.symbol('nav.og.schlafzimmer.fenster', 'og.fenster.schlafzimmer', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
+                {{ basic.symbol('', ['og.rollos.schlafzimmer.fenster.gaube', 'og.rollos.schlafzimmer.gaube.sperre'], '', 'fts_shutter_locked.svg', 1, 'or', 'icon1') }}
                 {{ basic.symbol('', 'og.rauchmelder.schlafzimmer', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
@@ -76,8 +77,9 @@
         <a href="index.php?page=rooms/og/moritz">
             <img class="icon" src="{{ icon0 }}scene_childs_room.svg"/><h3>Moritz</h3>
             <div class="ui-li-aside">
-                {{ basic.print('nav.og.kind_2.temperatur', 'og.heizen.kind_2.ist', '°') }} <br />
-				{{ basic.symbol('nav.og.kind_2.fenster', 'og.fenster.kind_2', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+                {{ basic.print('', 'og.heizen.kind_2.ist', '°') }} <br />
+				{{ basic.symbol('', 'og.fenster.kind_2', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+                {{ basic.symbol('', 'og.rollos.kind_2.sperre', '', 'fts_shutter_locked.svg', 1, '', 'icon1') }}
                 {{ basic.symbol('', 'og.rauchmelder.kind_2', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
@@ -86,8 +88,9 @@
         <a href="index.php?page=rooms/og/nele">
             <img class="icon" src="{{ icon0 }}scene_baby.svg"/><h3>Kind 2</h3>
             <div class="ui-li-aside">
-                {{ basic.print('nav.og.kind_1.temperatur', 'og.heizen.kind_1.ist', '°') }} <br />
-				{{ basic.symbol('nav.og.kind_1.fenster', 'og.fenster.kind_1', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+                {{ basic.print('', 'og.heizen.kind_1.ist', '°') }} <br />
+				{{ basic.symbol('', 'og.fenster.kind_1', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or',  ['lime','red']) }}
+                {{ basic.symbol('', 'og.rollos.kind_1.sperre', '', 'fts_shutter_locked.svg', 1, '', 'icon1') }}
                 {{ basic.symbol('', 'og.rauchmelder.kind_1', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>

@@ -24,8 +24,8 @@
                 <h3>RGB-Beleuchtung</h3>
                 <table width="90%">
                     <tr>
-                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.wohnzimmer.wand', 'icon', [0, 1], 'light_led_stripe_rgb.svg', 'Lowboard', ['icon0', 'icon1']) }} </td>
-                        <td>{{ basic.color('', 'bath.color.r', 'bath.color.g', 'bath.color.b', '', '', '', '', 'slider') }}</td>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.licht.wohnzimmer.lowboard', 'icon', [0, 1], 'light_led_stripe_rgb.svg', 'Lowboard', ['icon0', 'icon1']) }} </td>
+                        <td>{{ basic.color('', 'eg.licht.wohnzimmer.lowboard.rgb', 'eg.licht.wohnzimmer.lowboard.sat', 'eg.licht.wohnzimmer.lowboard.hue', '', '', '', '', 'slider') }}</td>
                     </tr>
                 </table>
 
@@ -48,13 +48,17 @@
         <h3>Steckdosen</h3>
         <table width="90%">
             <tr>
-                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.einundsechzig', 'icon', [0, 1], 'it_radio.svg', '', ['icon0', 'icon1']) }} </td><td>Hifi</td>
-                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.zweiundsechzig', 'icon', [0, 1], 'it_television.svg', '', ['icon0', 'icon1']) }} </td><td>TV</td>
+                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.tv', 'icon', [0, 1], 'it_television.svg', '', ['icon0', 'icon1']) }} </td><td>TV</td>
+                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.fenster', 'icon', [0, 1], 'message_socket.svg', '', ['icon0', 'icon1']) }} </td><td>Fenster</td>
             </tr>
             <tr>
-                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.vierundsechzig', 'icon', [0, 1], 'message_socket.svg', '', ['icon0', 'icon1']) }} </td><td>Fenster</td>
-                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.sechsundsechzig', 'icon', [0, 1], 'message_socket.svg', '', ['icon0', 'icon1']) }} </td><td>Essbereich</td>
+                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.audio', 'icon', [0, 1], 'it_radio.svg', '', ['icon0', 'icon1']) }} </td><td>Hifi</td>
+                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.sitzbereich', 'icon', [0, 1], 'message_socket.svg', '', ['icon0', 'icon1']) }} </td><td>Sitzbereich</td>
             </tr>
+            <tr>
+                <td></td><td width="50%"></td>
+                <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'eg.steckdosen.wohnzimmer.essbereich', 'icon', [0, 1], 'message_socket.svg', '', ['icon0', 'icon1']) }} </td><td>Essbereich</td>
+
         </table>
     </div>
 
