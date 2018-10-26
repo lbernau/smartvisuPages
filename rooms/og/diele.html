@@ -1,0 +1,44 @@
+{% extends "rooms.html" %}
+{% block content %}
+    <h1>
+        <img class="icon icon0" src='{{ icon0 }}scene_stairs.svg'/>
+        Flur / Nebenraum
+    </h1>
+    <hr />
+
+    <div class="block">
+        <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Licht</h3>
+                <table width="90%">
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'og.licht.diele.decke', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Decke</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'dg.licht', 'icon', [0, 1], 'light_ceiling_light.svg', '', ['icon0', 'icon1']) }} </td>
+                        <td>Spitzboden</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+<div class="block">
+    <div class="set-1" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+        <div data-role="collapsible" data-collapsed="false">
+            <h3>Orientierungsleuchten</h3>
+            <table width="90%">
+				<tr>
+                    <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'og.licht.diele.orientierung', 'icon', [0, 1], 'light_stairs.svg', '', ['icon0', 'icon1']) }} </td>
+                    <td>Flur</td>
+                </tr>
+                <tr>
+                    <td align="left" width="100px">&nbsp; {{ basic.stateswitch('', 'og.licht.treppe.orientierung', 'icon', [0, 1], 'light_stairs.svg', '', ['icon0', 'icon1']) }} </td>
+                    <td>Treppe OG</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
