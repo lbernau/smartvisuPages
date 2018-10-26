@@ -68,7 +68,7 @@
             <div class="ui-li-aside">
                 {{ basic.print('', 'og.heizen.schlafzimmer.ist', '°') }} <br />
 				{{ basic.symbol('nav.og.schlafzimmer.fenster', 'og.fenster.schlafzimmer', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','red']) }}
-                {{ basic.symbol('', ['og.rollos.schlafzimmer.fenster.gaube', 'og.rollos.schlafzimmer.gaube.sperre'], '', 'fts_shutter_locked.svg', 1, 'or', 'icon1') }}
+                {{ basic.symbol('', ['og.rollos.schlafzimmer.fenster.sperre', 'og.rollos.schlafzimmer.gaube.sperre'], '', 'fts_shutter_locked.svg', 1, 'or', 'icon1') }}
                 {{ basic.symbol('', 'og.rauchmelder.schlafzimmer', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
@@ -95,6 +95,11 @@
             </div>
         </a>
     </li>
+	<li data-icon="false">
+        <a href="index.php?page=rooms/og/diele">
+            <img class="icon" src="{{ icon0 }}scene_stairs.svg"/><h3>Flur / Treppe</h3>
+        </a>
+    </li>
     <!-- Keller -->
 	<li data-role="list-divider">
         Keller
@@ -118,7 +123,6 @@
             <div class="ui-li-aside">
                 {{ basic.print('nav.kg.waschen.temperatur', 'kg.heizen.waschen.ist', '°') }} <br />
 				{{ basic.symbol('nav.kg.waschen.fenster', 'kg.fenster.waschen', '', ['fts_window_2w.svg','fts_window_2w_open_lr.svg'], [0,1], 'or', ['lime','orange']) }}
-                {{ basic.symbol('', 'kg.rauchmelder.waschen', '', 'secur_smoke_detector.svg', 1, '', 'red') }}
             </div>
         </a>
     </li>
