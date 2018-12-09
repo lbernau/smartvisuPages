@@ -1,3 +1,4 @@
+{% import "widgets/widget_shutter_small.html" as smallshutter %}
 {% extends "stats.html" %}
 {% block content %}
     <h1>
@@ -9,49 +10,54 @@
     <div class="block full-width">
         <div class="ui-bar-c ui-li-divider ui-corner-top">Zentral</div>
         <div class="ui-fixed ui-body-a ui-corner-bottom" style="min-height: 50px">
-            {{ smallshutter.smallshut('sshut_zentral', 'Rolladen Gesamt', 'zentral.rollos.fahren', 'zentral.rollos.stop', '') }}
+            {{ smallshutter.smallshut('', 'Rolladen Gesamt', 'zentral.rollos.fahren', 'zentral.rollos.stop', '') }}
             <br />
             <table style="width: 70%; margin: auto">
                 <tr>
-                    <td style="width: 100px;">&nbsp; {{ basic.switch('rolloAutomatik', 'zentral.rollos.automatik', 'fts_shutter_daynight_auto.svg', 'fts_shutter_manual.svg', 1 , 0) }} </td>
+                    <td style="width: 100px;">&nbsp; {{ basic.switch('', 'zentral.rollos.automatik', 'fts_shutter_daynight_auto.svg', 'fts_shutter_manual.svg', 1 , 0) }} </td>
                     <td style ="text-align: left">Automatik</td>
-                    <td style="width: 100px;">&nbsp; {{ basic.switch('rolloSonnenschutz', 'zentral.rollos.sonnenschutz', 'fts_shutter_auto.svg', 'fts_shutter_manual.svg', 0, 1) }} </td>
+                    <td style="width: 100px;">&nbsp; {{ basic.switch('', 'zentral.rollos.sonnenschutz', 'fts_shutter_automatic.svg', 'fts_shutter_manual.svg', 0, 1) }} </td>
                     <td style ="text-align: left">Sonnenschutz</td>
                 </tr>
             </table>
         </div>
     </div>
 
-    <div class="block one-third window-status">
-        <div class="ui-bar-c ui-li-divider ui-corner-top">Fenster Erdgeschoss</div>
-        <div class="ui-fixed ui-body-a ui-corner-bottom">
-            <p>{{ basic.symbol('', 'eg.fenster.gesamt', 'Alle Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}</p>
-            <p>{{ basic.symbol('', 'eg.fenster.kueche', 'Küche geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
-            <p>{{ basic.symbol('', 'eg.fenster.wohnzimmer', 'Wohnzimmer geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
-            <p>{{ basic.symbol('', 'eg.fenster.wc', 'Gäste WC geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
-            <p>{{ basic.symbol('', 'eg.fenster.diele', 'Flur geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
-        </div>
-    </div>
+	<div class="block full-width">
+		<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Erdgeschoss</h3>
+				{{ smallshutter.smallshut('', 'Wohnzimmer links', 'eg.rollos.wohnzimmer.links.fahren', 'eg.rollos.wohnzimmer.links.stop', 'eg.rollos.wohnzimmer.links.position', 'eg.rollos.wohnzimmer.links.sperre') }}
+				{{ smallshutter.smallshut('', 'Wohnzimmer rechts', 'eg.rollos.wohnzimmer.rechts.fahren', 'eg.rollos.wohnzimmer.rechts.stop', 'eg.rollos.wohnzimmer.rechts.position', 'eg.rollos.wohnzimmer.rechts.sperre') }}
+				{{ smallshutter.smallshut('', 'Küche Links', 'eg.rollos.kueche.links.fahren', 'eg.rollos.kueche.links.stop', 'eg.rollos.kueche.links.position', 'eg.rollos.kueche.links.sperre') }}
+				{{ smallshutter.smallshut('', 'Küche Rechts', 'eg.rollos.kueche.rechts.fahren', 'eg.rollos.kueche.rechts.stop', 'eg.rollos.kueche.rechts.position', 'eg.rollos.kueche.rechts.sperre') }}
+				{{ smallshutter.smallshut('', 'Gäste WC', 'eg.rollos.wc.fahren', 'eg.rollos.wc.stop', 'eg.rollos.wc.position', 'eg.rollos.wc.sperre') }}
+				{{ smallshutter.smallshut('', 'Flur', 'eg.rollos.diele.fahren', 'eg.rollos.diele.stop', 'eg.rollos.diele.position', 'eg.rollos.diele.sperre') }}
+			</div>
+		</div>
+	</div>
 
-    <div class="block one-third window-status">
-        <div class="ui-bar-c ui-li-divider ui-corner-top">Fenster Obergeschoss</div>
-        <div class="ui-fixed ui-body-a ui-corner-bottom">
-            <p>{{ basic.symbol('', 'og.fenster.gesamt', 'Alle Fenster geschlossen', 'fts_window_2w.svg', 0, 'or', 'icon1') }}</p>
-            <p>{{ basic.symbol('', ['og.fenster.bad.velux', 'og.fenster.bad.velux'], 'Badezimmer geöffnet', 'fts_window_2w_open_lr.svg', 1, 'or') }}</p>
-            <p>{{ basic.symbol('', 'og.fenster.schlafzimmer', 'Schlafzimmer geöffnet', 'fts_window_2w_open_lr.svg', 1, 'or') }}</p>
-            <p>{{ basic.symbol('', 'og.fenster.kind_1', 'Kind 2 geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
-            <p>{{ basic.symbol('', 'og.fenster.kind_2', 'Moritz geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
-        </div>
-    </div>
+	<div class="block full-width">
+		<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Obergeschoss</h3>
+				{{ smallshutter.smallshut('', 'Schlafzimmer Fenster', 'og.rollos.schlafzimmer.fenster.fahren', 'og.rollos.schlafzimmer.fenster.stop', 'og.rollos.schlafzimmer.fenster.position', 'og.rollos.schlafzimmer.fenster.sperre') }}
+				{{ smallshutter.smallshut('', 'Schlafzimmer Tür', 'og.rollos.schlafzimmer.gaube.fahren', 'og.rollos.schlafzimmer.gaube.stop', 'og.rollos.schlafzimmer.gaube.position', 'og.rollos.schlafzimmer.gaube.sperre') }}
+				{{ smallshutter.smallshut('', 'Büro', 'og.rollos.kind_2.fahren', 'og.rollos.kind_2.stop', 'og.rollos.kind_2.position', 'og.rollos.kind_2.sperre') }}
+				{{ smallshutter.smallshut('', 'Moritz', 'og.rollos.kind_1.fahren', 'og.rollos.kind_1.stop', 'og.rollos.kind_1.position', 'og.rollos.kind_1.sperre') }}
+				{{ smallshutter.smallshut('', 'Bad Fenster', 'og.rollos.bad.fenster.fahren', 'og.rollos.bad.fenster.stop', 'og.rollos.bad.fenster.position', 'og.rollos.bad.fenster.sperre') }}
+				{{ smallshutter.smallshut('', 'Bad Velux', 'og.rollos.bad.velux.fahren', 'og.rollos.bad.velux.stop', 'og.rollos.bad.velux.position') }}
+			</div>
+		</div>
+	</div>
 
-    <div class="block one-third window-status">
-        <div class="ui-bar-c ui-li-divider ui-corner-top">Fenster Keller</div>
-        <div class="ui-fixed ui-body-a ui-corner-bottom">
-            <p>{{ basic.symbol('', ['kg.fenster.multimedia', 'kg.fenster.waschen', 'kg.fenster.hobby'], 'Alle Fenster geschlossen', 'fts_window_2w.svg', 0, 'and', 'icon1') }}</p>
-            <p>{{ basic.symbol('', 'kg.fenster.multimedia', 'Hobby geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
-            <p>{{ basic.symbol('', 'kg.fenster.waschen', 'Waschen geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
-            <p>{{ basic.symbol('', 'kg.fenster.hobby', 'Werkstatt geöffnet', 'fts_window_2w_open_lr.svg', 1) }}</p>
-        </div>
-    </div>
+	<div class="block full-width">
+		<div class="set-5" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Keller</h3>
+				{{ smallshutter.smallshut('', 'Hobby', 'kg.rollos.multimedia.fahren', 'kg.rollos.multimedia.stop', 'kg.rollos.multimedia.position', 'kg.rollos.multimedia.sperre') }}
+			</div>
+		</div>
+	</div>
 {% endblock %}
 

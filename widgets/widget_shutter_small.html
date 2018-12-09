@@ -1,0 +1,47 @@
+/**
+* Small Shutter
+*
+* @param       unique id for this widget
+* @param       name of the shutter
+* @param       a gad/item for long move
+* @param       a gad/item for short move
+* @param       a gad/item for the actual position
+* @param	   a gad/item for the lock object
+*/
+{% macro smallshut(id, txt, gad_move, gad_stop, gad_position, gad_lock) %}
+{% import "basic.html" as basic %}
+{% import "icon.html" as icon %}
+/** Design */
+<div{% if not id is empty %} id="{{ uid(page, id) }}"{% endif %} class="smallshut">
+    <table style="width:100%; text-align: left;">
+        <tr>
+            <th width="34%">{% if txt %} {{ txt }} {% endif %}</th>
+            <td width="13%">
+                {% if gad_move %}
+					{{ basic.stateswitch('', gad_move, 'micro', 0, 'carat-u') }}
+                {% endif %}
+            </td>
+            <td width="10%">
+                {% if gad_stop %}
+                    {{ basic.stateswitch('', gad_stop, 'micro', 1, 'audio_stop.svg') }}
+                {% endif %}
+            </td>
+            <td width="13%">
+                {% if gad_move %}
+					{{ basic.stateswitch('', gad_move, 'micro', 1, 'carat-d') }}
+                {% endif %}
+            </td>
+            <td width="15%">
+				{% if gad_position %}
+					{{ icon.shutter('', '', gad_position) }}
+				{% endif %}
+            </td>
+			<td width="15%">
+				{% if gad_lock %}
+					{{ basic.stateswitch('', gad_lock, 'micro', [0, 1], ['fts_shutter_unlocked.svg', 'fts_shutter_locked.svg'], '', ['icon1', 'red']) }}
+				{% endif %}
+			</td>
+        </tr>
+    </table>
+</div>
+{% endmacro %}
