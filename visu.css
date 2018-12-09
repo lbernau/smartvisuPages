@@ -28,6 +28,25 @@
     padding: 10px 5px 10px 5px;
 }
 
+.block .ui-bar-c {
+    background-color: #333333;
+}
+
 .centered {
     margin: 0 auto;
+}
+
+@media all and (min-width: 900px) {
+    .block.one-third {
+        width: 33%;
+    }
+}
+
+.block.window-status .ui-fixed {
+    min-height: 50px;
+}
+
+.window-status p {
+    margin: 0 0 0 1em;
+    text-align: left;
 }
