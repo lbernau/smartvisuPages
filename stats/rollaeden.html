@@ -14,9 +14,9 @@
             <br />
             <table style="width: 70%; margin: auto">
                 <tr>
-                    <td style="width: 100px;">&nbsp; {{ basic.switch('', 'zentral.rollos.automatik', 'fts_shutter_daynight_auto.svg', 'fts_shutter_manual.svg', 1 , 0) }} </td>
+                    <td style="width: 100px;">&nbsp; {{ basic.stateswitch('', 'zentral.rollos.automatik', 'icon', '', ['fts_shutter_manual.svg', 'fts_shutter_daynight_auto.svg'], '') }} </td>
                     <td style ="text-align: left">Automatik</td>
-                    <td style="width: 100px;">&nbsp; {{ basic.switch('', 'zentral.rollos.sonnenschutz', 'fts_shutter_automatic.svg', 'fts_shutter_manual.svg', 0, 1) }} </td>
+                    <td style="width: 100px;">&nbsp; {{ basic.stateswitch('', 'zentral.rollos.sonnenschutz', 'icon', '', ['fts_shutter_automatic.svg', 'fts_shutter_manual.svg'], '', ['icon1', 'icon0']) }} </td>
                     <td style ="text-align: left">Sonnenschutz</td>
                 </tr>
             </table>

@@ -12,7 +12,7 @@
 {% import "basic.html" as basic %}
 {% import "icon.html" as icon %}
 /** Design */
-<div{% if not id is empty %} id="{{ uid(page, id) }}"{% endif %} class="smallshut">
+<div class="smallshut"{% if not id is empty %} id="{{ uid(page, id) }}"{% endif %}>
     <table style="width:100%; text-align: left;">
         <tr>
             <th width="34%">{% if txt %} {{ txt }} {% endif %}</th>

@@ -15,6 +15,10 @@
 	width: 100%;
 }
 
+.clear{
+    clear: left;
+}
+
 .block.window-status .ui-fixed {
     min-height: 50px;
 }
