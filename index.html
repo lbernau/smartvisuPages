@@ -51,9 +51,10 @@
 			'Hobby', 'Waschen / Trocknen', 'Werkstatt'
 		]) }}
 -->
-    <hr>
-
-    {{ phone.missedlist('phonelist', 'Telefonliste', 3) }}
+    <hr/>
+	{{ calendar.list('', '', 5) }}
+	<hr/>
+    {{ phone.missedlist('phonelist', 'Telefonliste', 5) }}
 
 
 {% endblock %}

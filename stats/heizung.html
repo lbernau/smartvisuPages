@@ -9,15 +9,15 @@
 <div class="block one-third window-status">
     <div class="ui-bar-c ui-li-divider ui-corner-top">Erdgeschoss</div>
     <div class="ui-fixed ui-body-a ui-corner-bottom">
-        <div class="">{{ device.rtr('', 'Küche', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.sollwertverschiebung', '', '', '', '', '', '', 'eg.heizen.kueche.soll' ) }}</div>
-        <div class="">{{ device.rtr('', 'Wohnzimmer', 'eg.heizen.wohnen.ist', 'eg.heizen.wohnen.sollwertverschiebung', '', '', '', '', '', '', 'eg.heizen.wohnen.soll' ) }}</div>
-        <div class="">{{ device.rtr('', 'Gäste WC', 'eg.heizen.wc.ist', 'eg.heizen.wc.sollwertverschiebung', '', '', '', '', '', '', 'eg.heizen.wc.soll' ) }}</div>
-        <div class="">{{ device.rtr('', 'Flur', 'eg.heizen.diele.ist', 'eg.heizen.diele.sollwertverschiebung', '', '', '', '', '', '', 'eg.heizen.diele.soll' ) }}</div>
+        <div class="">{{ device.rtr('', 'Küche', 'eg.heizen.kueche.ist', 'eg.heizen.kueche.soll', '', '', '', '', '', '', 'eg.heizen.kueche.sollwertverschiebung' ) }}</div>
+        <div class="">{{ device.rtr('', 'Wohnzimmer', 'eg.heizen.wohnzimmer.ist', 'eg.heizen.wohnzimmer.soll', '', '', '', '', '', '', 'eg.heizen.wohnzimmer.sollwertverschiebung' ) }}</div>
+        <div class="">{{ device.rtr('', 'Gäste WC', 'eg.heizen.wc.ist', 'eg.heizen.wc.soll', '', '', '', '', '', '', 'eg.heizen.wc.sollwertverschiebung' ) }}</div>
+        <div class="">{{ device.rtr('', 'Flur', 'eg.heizen.diele.ist', 'eg.heizen.diele.soll', '', '', '', '', '', '', 'eg.heizen.diele.sollwertverschiebung' ) }}</div>
         <br/>
         <div>
             {{ plot.temprose('temprose_eg',
             ['eg.heizen.kueche.ist', 'eg.heizen.wohnzimmer.ist', 'eg.heizen.wc.ist', 'eg.heizen.diele.ist'],
-            ['eg.heizen.kueche.soll', 'eg.heizen.wohnzimmer.soll', 'eg.heizen.wc.soll', 'eg.heizen.diele.soll'],
+            ['eg.heizen.kueche.sollwertverschiebung', 'eg.heizen.wohnzimmer.sollwertverschiebung', 'eg.heizen.wc.sollwertverschiebung', 'eg.heizen.diele.sollwertverschiebung'],
             ['Küche', 'Wohnen', 'Gäste WC', 'Flur' ]) }}
         </div>
     </div>
@@ -26,15 +26,15 @@
 <div class="block one-third window-status">
     <div class="ui-bar-c ui-li-divider ui-corner-top">Obergeschoss</div>
     <div class="ui-fixed ui-body-a ui-corner-bottom">
-        <div class="">{{ device.rtr('', 'Bad', 'og.heizen.bad.ist', 'og.heizen.bad.sollwertverschiebung', '', '', '', '', '', '', 'og.heizen.bad.soll' ) }}</div>
-        <div class="">{{ device.rtr('', 'Schlafzimmer', 'og.heizen.schlafen.ist', 'og.heizen.schlafen.sollwertverschiebung', '', '', '', '', '', '', 'og.heizen.schlafen.soll' ) }}</div>
-        <div class="">{{ device.rtr('', 'Moritz', 'og.heizen.kind_2.ist', 'og.heizen.kind_2.sollwertverschiebung', '', '', '', '', '', '', 'og.heizen.kind_2.soll' ) }}</div>
-        <div class="">{{ device.rtr('', 'Kind 2', 'og.heizen.kind_1.ist', 'og.heizen.kind_1.sollwertverschiebung', '', '', '', '', '', '', 'og.heizen.kind_1.soll' ) }}</div>
+        <div class="">{{ device.rtr('', 'Bad', 'og.heizen.bad.ist', 'og.heizen.bad.soll', '', '', '', '', '', '', 'og.heizen.bad.sollwertverschiebung' ) }}</div>
+        <div class="">{{ device.rtr('', 'Schlafzimmer', 'og.heizen.schlafzimmer.ist', 'og.heizen.schlafzimmer.soll', '', '', '', '', '', '', 'og.heizen.schlafzimmer.sollwertverschiebung' ) }}</div>
+        <div class="">{{ device.rtr('', 'Moritz', 'og.heizen.kind_2.ist', 'og.heizen.kind_2.soll', '', '', '', '', '', '', 'og.heizen.kind_2.sollwertverschiebung' ) }}</div>
+        <div class="">{{ device.rtr('', 'Kind 2', 'og.heizen.kind_1.ist', 'og.heizen.kind_1.soll', '', '', '', '', '', '', 'og.heizen.kind_1.sollwertverschiebung' ) }}</div>
         <br/>
         <div>
             {{ plot.temprose('temprose_og',
             ['og.heizen.bad.ist', 'og.heizen.schlafzimmer.ist', 'og.heizen.kind_2.ist', 'og.heizen.kind_1.ist'],
-            ['og.heizen.bad.soll', 'og.heizen.schlafzimmer.soll', 'og.heizen.kind_2.soll', 'og.heizen.kind_1.soll'],
+            ['og.heizen.bad.sollwertverschiebung', 'og.heizen.schlafzimmer.sollwertverschiebung', 'og.heizen.kind_2.sollwertverschiebung', 'og.heizen.kind_1.sollwertverschiebung'],
             ['Bad', 'Schlafen', 'Moritz', 'Kind 2']) }}
         </div>
     </div>
@@ -43,15 +43,15 @@
 <div class="block one-third window-status">
     <div class="ui-bar-c ui-li-divider ui-corner-top">Keller</div>
     <div class="ui-fixed ui-body-a ui-corner-bottom">
-        <div class="">{{ device.rtr('', 'Hobby', 'kg.heizen.multimedia.ist', 'kg.heizen.multimedia.sollwertverschiebung', '', '', '', '', '', '', 'kg.heizen.hobby.bad.soll') }}</div>
-        <div class="">{{ device.rtr('', 'Waschen / Trocknen', 'kg.heizen.waschen.ist', 'kg.heizen.waschen.sollwertverschiebung', '', '', '', '', '', '', 'kg.heizen.hobby.bad.soll') }}</div>
-        <div class="">{{ device.rtr('', 'Werkstatt', 'kg.heizen.hobby.ist', 'kg.heizen.hobby.sollwertverschiebung', '', '', '', '', '', '', 'kg.heizen.hobby.bad.soll') }}</div>
+        <div class="">{{ device.rtr('', 'Hobby', 'kg.heizen.multimedia.ist', 'kg.heizen.multimedia.soll', '', '', '', '', '', '', 'kg.heizen.hobby.sollwertverschiebung') }}</div>
+        <div class="">{{ device.rtr('', 'Waschen / Trocknen', 'kg.heizen.waschen.ist', 'kg.heizen.waschen.soll', '', '', '', '', '', '', 'kg.heizen.hobby.sollwertverschiebung') }}</div>
+        <div class="">{{ device.rtr('', 'Werkstatt', 'kg.heizen.hobby.ist', 'kg.heizen.hobby.soll', '', '', '', '', '', '', 'kg.heizen.hobby.sollwertverschiebung') }}</div>
         <div style="height: 115px;">&nbsp;</div>
         <br/>
         <div>
             {{ plot.temprose('temprose_og',
             ['kg.heizen.multimedia.ist', 'kg.heizen.waschen.ist', 'kg.heizen.hobby.ist'],
-            ['kg.heizen.multimedia.soll', 'kg.heizen.waschen.soll', 'kg.heizen.hobby.soll'],
+            ['kg.heizen.multimedia.sollwertverschiebung', 'kg.heizen.waschen.sollwertverschiebung', 'kg.heizen.hobby.sollwertverschiebung'],
             ['Hobby', 'Waschen / Trocknen', 'Werkstatt']) }}
         </div>
     </div>
